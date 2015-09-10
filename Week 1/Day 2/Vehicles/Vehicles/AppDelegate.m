@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "Vehicle.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    Vehicle *vehicle = [Vehicle vehicleWithModelYear:2015 numberOfWheels:4 powerSource:@"Electric" brandName:@"BMW" modelName:@"i300"];
+    NSLog(@"%@", [vehicle turn:-450]);
+    
     return YES;
 }
 

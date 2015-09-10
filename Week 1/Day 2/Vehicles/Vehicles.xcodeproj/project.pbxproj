@@ -16,6 +16,7 @@
 		8CEC119F1B9DF408002DC1C7 /* VehicleListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC119E1B9DF408002DC1C7 /* VehicleListTableViewController.m */; };
 		8CEC11A21B9DF434002DC1C7 /* Vehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC11A11B9DF434002DC1C7 /* Vehicle.m */; };
 		8CEC11A51B9DF463002DC1C7 /* VehicleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC11A41B9DF463002DC1C7 /* VehicleDetailViewController.m */; };
+		E202CA5E1BA1C60E00A071A2 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = E202CA5D1BA1C60E00A071A2 /* Car.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		8CEC11A11B9DF434002DC1C7 /* Vehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vehicle.m; sourceTree = "<group>"; };
 		8CEC11A31B9DF463002DC1C7 /* VehicleDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleDetailViewController.h; sourceTree = "<group>"; };
 		8CEC11A41B9DF463002DC1C7 /* VehicleDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleDetailViewController.m; sourceTree = "<group>"; };
+		E202CA5C1BA1C60E00A071A2 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		E202CA5D1BA1C60E00A071A2 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 			children = (
 				8CEC11A01B9DF434002DC1C7 /* Vehicle.h */,
 				8CEC11A11B9DF434002DC1C7 /* Vehicle.m */,
+				E202CA5C1BA1C60E00A071A2 /* Car.h */,
+				E202CA5D1BA1C60E00A071A2 /* Car.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -237,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E202CA5E1BA1C60E00A071A2 /* Car.m in Sources */,
 				8CEC11A21B9DF434002DC1C7 /* Vehicle.m in Sources */,
 				8CEC11A51B9DF463002DC1C7 /* VehicleDetailViewController.m in Sources */,
 				8CEC117D1B9DF3BC002DC1C7 /* AppDelegate.m in Sources */,

@@ -8,6 +8,8 @@
 
 #import "VehicleDetailViewController.h"
 
+#import "Vehicle.h"
+
 @interface VehicleDetailViewController ()
 
 @property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
@@ -55,7 +57,7 @@
 {
     // Update the user interface for the detail item.
     if (self.detailVehicle) {
-        //TODO: Fill this in.
+        self.vehicleDetailsLabel.text = [self.detailVehicle vehicleDetailsString];
     }
 }
 

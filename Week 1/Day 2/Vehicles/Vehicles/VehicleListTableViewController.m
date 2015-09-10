@@ -10,6 +10,7 @@
 
 #import "VehicleDetailViewController.h"
 #import "Vehicle.h"
+#import "Car.h"
 
 @interface VehicleListTableViewController ()
 @property (nonatomic, strong) NSMutableArray *vehicles;
@@ -21,6 +22,9 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    
+    [self setupVehicleArray];
+    self.title = @"Vehicles";
 }
 
 - (void)viewDidLoad
@@ -54,7 +58,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     Vehicle *rowVehicle = self.vehicles[indexPath.row];
-    cell.textLabel.text = [rowVehicle description];
+    cell.textLabel.text = [rowVehicle vehicleTitleString];
     return cell;
 }
 
@@ -66,6 +70,42 @@
         Vehicle *selectedVehicle = self.vehicles[indexPath.row];
         [[segue destinationViewController] setDetailVehicle:selectedVehicle];
     }
+}
+
+#pragma mark - Private Methods
+
+- (NSMutableArray *)vehicles {
+    if (!_vehicles) {
+        _vehicles = [NSMutableArray new];
+    }
+    return _vehicles;
+}
+
+- (void)setupVehicleArray {
+    Vehicle *vehicle1 = [Vehicle vehicleWithModelYear:2015
+                                       numberOfWheels:8
+                                          powerSource:@"Gasoline"
+                                            brandName:@"Volvo"
+                                            modelName:@"200 Truck"];
+    
+    Car *vehicle2 = [Car carWithModelYear:2015
+                              powerSource:@"Gasoline"
+                                brandName:@"SEAT"
+                                modelName:@"Panda"
+                            numberOfDoors:2
+                              convertible:YES
+                                hatchback:YES
+                                  sunroof:YES];
+    
+    Vehicle *vehicle3 = [Vehicle vehicleWithModelYear:2015
+                                       numberOfWheels:8
+                                          powerSource:@"Electric"
+                                            brandName:@"BMW"
+                                            modelName:@"i300"];
+    
+    [self.vehicles addObjectsFromArray:@[vehicle1, vehicle2, vehicle3]];
+    
+    
 }
 
 @end
