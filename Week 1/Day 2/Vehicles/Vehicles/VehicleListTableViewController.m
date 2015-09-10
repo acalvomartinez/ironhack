@@ -11,6 +11,7 @@
 #import "VehicleDetailViewController.h"
 #import "Vehicle.h"
 #import "Car.h"
+#import "Motorcycle.h"
 
 @interface VehicleListTableViewController ()
 @property (nonatomic, strong) NSMutableArray *vehicles;
@@ -97,13 +98,17 @@
                                 hatchback:YES
                                   sunroof:YES];
     
-    Vehicle *vehicle3 = [Vehicle vehicleWithModelYear:2015
-                                       numberOfWheels:8
-                                          powerSource:@"Electric"
-                                            brandName:@"BMW"
-                                            modelName:@"i300"];
+    Motorcycle *vehicle3 = [Motorcycle motorcycleWithModelYear:2014
+                                                     brandName:@"Honda"
+                                                     modelName:@"PCX 125"
+                                                   engineNoise:@"BRRRRRRM"];
     
-    [self.vehicles addObjectsFromArray:@[vehicle1, vehicle2, vehicle3]];
+    Motorcycle *vehicle4 = [Motorcycle motorcycleWithModelYear:2014
+                                                     brandName:@"Honda"
+                                                     modelName:@"CBR 125"
+                                                   engineNoise:@"RRRRRUUUM"];
+    
+    [self.vehicles addObjectsFromArray:@[vehicle1, vehicle2, vehicle3, vehicle4]];
     
     
 }

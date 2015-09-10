@@ -13,7 +13,7 @@
 @property (nonatomic) NSUInteger modelYear;
 @property (nonatomic) NSUInteger numberOfWheels;
 
-@property (copy, nonatomic) NSString *powerSource;
+@property (strong, nonatomic) NSString *powerSource;
 @property (copy, nonatomic) NSString *brandName;
 @property (copy, nonatomic) NSString *modelName;
 

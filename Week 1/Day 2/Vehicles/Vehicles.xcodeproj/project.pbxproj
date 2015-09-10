@@ -17,6 +17,8 @@
 		8CEC11A21B9DF434002DC1C7 /* Vehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC11A11B9DF434002DC1C7 /* Vehicle.m */; };
 		8CEC11A51B9DF463002DC1C7 /* VehicleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEC11A41B9DF463002DC1C7 /* VehicleDetailViewController.m */; };
 		E202CA5E1BA1C60E00A071A2 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = E202CA5D1BA1C60E00A071A2 /* Car.m */; };
+		E202CA611BA1EBE200A071A2 /* Motorcycle.m in Sources */ = {isa = PBXBuildFile; fileRef = E202CA601BA1EBE200A071A2 /* Motorcycle.m */; };
+		E202CA641BA1F00200A071A2 /* Truck.m in Sources */ = {isa = PBXBuildFile; fileRef = E202CA631BA1F00200A071A2 /* Truck.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,10 @@
 		8CEC11A41B9DF463002DC1C7 /* VehicleDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleDetailViewController.m; sourceTree = "<group>"; };
 		E202CA5C1BA1C60E00A071A2 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
 		E202CA5D1BA1C60E00A071A2 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		E202CA5F1BA1EBE200A071A2 /* Motorcycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Motorcycle.h; sourceTree = "<group>"; };
+		E202CA601BA1EBE200A071A2 /* Motorcycle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Motorcycle.m; sourceTree = "<group>"; };
+		E202CA621BA1F00200A071A2 /* Truck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Truck.h; sourceTree = "<group>"; };
+		E202CA631BA1F00200A071A2 /* Truck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Truck.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,10 @@
 				8CEC11A11B9DF434002DC1C7 /* Vehicle.m */,
 				E202CA5C1BA1C60E00A071A2 /* Car.h */,
 				E202CA5D1BA1C60E00A071A2 /* Car.m */,
+				E202CA5F1BA1EBE200A071A2 /* Motorcycle.h */,
+				E202CA601BA1EBE200A071A2 /* Motorcycle.m */,
+				E202CA621BA1F00200A071A2 /* Truck.h */,
+				E202CA631BA1F00200A071A2 /* Truck.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -245,9 +255,11 @@
 				E202CA5E1BA1C60E00A071A2 /* Car.m in Sources */,
 				8CEC11A21B9DF434002DC1C7 /* Vehicle.m in Sources */,
 				8CEC11A51B9DF463002DC1C7 /* VehicleDetailViewController.m in Sources */,
+				E202CA641BA1F00200A071A2 /* Truck.m in Sources */,
 				8CEC117D1B9DF3BC002DC1C7 /* AppDelegate.m in Sources */,
 				8CEC117A1B9DF3BC002DC1C7 /* main.m in Sources */,
 				8CEC119F1B9DF408002DC1C7 /* VehicleListTableViewController.m in Sources */,
+				E202CA611BA1EBE200A071A2 /* Motorcycle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
