@@ -1,0 +1,19 @@
+//
+//  ViewController.h
+//  MyFirstApp
+//
+//  Created by Toni on 08/09/15.
+//  Copyright (c) 2015 Toni. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface ViewController : UIViewController
+
+@property (assign, nonatomic) BOOL doThingsExecuted;
+
+- (void)doThings;
+
+
+@end
+
