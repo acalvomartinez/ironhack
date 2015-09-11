@@ -35,6 +35,7 @@
 - (NSString *)goForward;
 - (NSString *)goBackward;
 - (NSString *)stop;
+- (NSString *)start;
 - (NSString *)makeNoise;
 - (NSString *)changeGear:(NSString *)gear;
 - (NSString *)turn:(NSInteger)degrees;

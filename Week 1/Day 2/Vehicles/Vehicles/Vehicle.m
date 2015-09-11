@@ -56,6 +56,11 @@
     return self;
 }
 
+
+- (NSString *)start {
+    return @"Power source has started.";
+}
+
 - (NSString *)goForward {
     return nil;
 }

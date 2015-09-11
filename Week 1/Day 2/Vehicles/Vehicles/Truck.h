@@ -10,4 +10,6 @@
 
 @interface Truck : Vehicle
 
+@property (nonatomic) NSUInteger *cargoCapacityCubicFeet;
+
 @end

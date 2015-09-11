@@ -35,7 +35,23 @@
     return self;
 }
 
+- (NSString *)makeNoise{
+    return self.engineNoise;
+}
+
 #pragma mark - Override Methods
+
+- (NSString *)goForward {
+    return [NSString stringWithFormat:@"%@\n%@", [self start], @"Turn the gas handgrip"];
+}
+
+- (NSString *)goBackward {
+    return [NSString stringWithFormat:@"%@\n%@", [self turn:180], @"Turn the gas handgrip"];
+}
+
+- (NSString *)stop {
+    return [NSString stringWithFormat:@"%@", @"Pull the break"];
+}
 
 - (NSString *)vehicleDetailsString {
     NSString *superDetail = [super vehicleDetailsString];

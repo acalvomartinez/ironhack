@@ -63,11 +63,6 @@
 }
 
 
-- (NSString *)start {
-    return @"Power source has started.";
-}
-
-
 - (NSString *)goForward {
     return [NSString stringWithFormat:@"%@\n%@\n%@", [self start], [self changeGear:@"D"], @"Depress the gas pedal"];
 }
