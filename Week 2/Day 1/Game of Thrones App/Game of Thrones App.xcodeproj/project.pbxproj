@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E200F3ED1BA72E9F001956C9 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E200F3EC1BA72E9F001956C9 /* BaseViewController.m */; };
+		E200F3F01BA73785001956C9 /* CharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E200F3EF1BA73785001956C9 /* CharacterViewController.m */; };
 		E21849581BA6B0A8003DA3AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E21849571BA6B0A8003DA3AD /* main.m */; };
 		E218495B1BA6B0A8003DA3AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E218495A1BA6B0A8003DA3AD /* AppDelegate.m */; };
 		E218495E1BA6B0A8003DA3AD /* AddCharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E218495D1BA6B0A8003DA3AD /* AddCharacterViewController.m */; };
@@ -14,11 +16,6 @@
 		E21849631BA6B0A8003DA3AD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E21849621BA6B0A8003DA3AD /* Images.xcassets */; };
 		E21849661BA6B0A8003DA3AD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E21849641BA6B0A8003DA3AD /* LaunchScreen.xib */; };
 		E21849721BA6B0A8003DA3AD /* Game_of_Thrones_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E21849711BA6B0A8003DA3AD /* Game_of_Thrones_AppTests.m */; };
-		E265EEB11BA6CD1800192803 /* baratheon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E265EEAC1BA6CD1800192803 /* baratheon.jpg */; };
-		E265EEB21BA6CD1800192803 /* lannister.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E265EEAD1BA6CD1800192803 /* lannister.jpg */; };
-		E265EEB31BA6CD1800192803 /* stark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E265EEAE1BA6CD1800192803 /* stark.jpg */; };
-		E265EEB41BA6CD1800192803 /* targaryen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E265EEAF1BA6CD1800192803 /* targaryen.jpg */; };
-		E265EEB51BA6CD1800192803 /* tully.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E265EEB01BA6CD1800192803 /* tully.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E200F3EB1BA72E9F001956C9 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		E200F3EC1BA72E9F001956C9 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		E200F3EE1BA73785001956C9 /* CharacterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterViewController.h; sourceTree = "<group>"; };
+		E200F3EF1BA73785001956C9 /* CharacterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterViewController.m; sourceTree = "<group>"; };
 		E21849521BA6B0A8003DA3AD /* Game of Thrones App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game of Thrones App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E21849561BA6B0A8003DA3AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E21849571BA6B0A8003DA3AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -45,11 +46,6 @@
 		E218496B1BA6B0A8003DA3AD /* Game of Thrones AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Game of Thrones AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E21849701BA6B0A8003DA3AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E21849711BA6B0A8003DA3AD /* Game_of_Thrones_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Game_of_Thrones_AppTests.m; sourceTree = "<group>"; };
-		E265EEAC1BA6CD1800192803 /* baratheon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = baratheon.jpg; sourceTree = "<group>"; };
-		E265EEAD1BA6CD1800192803 /* lannister.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lannister.jpg; sourceTree = "<group>"; };
-		E265EEAE1BA6CD1800192803 /* stark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stark.jpg; sourceTree = "<group>"; };
-		E265EEAF1BA6CD1800192803 /* targaryen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = targaryen.jpg; sourceTree = "<group>"; };
-		E265EEB01BA6CD1800192803 /* tully.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tully.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,15 +87,18 @@
 		E21849541BA6B0A8003DA3AD /* Game of Thrones App */ = {
 			isa = PBXGroup;
 			children = (
-				E265EEAB1BA6CD0B00192803 /* Resources */,
 				E21849591BA6B0A8003DA3AD /* AppDelegate.h */,
 				E218495A1BA6B0A8003DA3AD /* AppDelegate.m */,
 				E218495C1BA6B0A8003DA3AD /* AddCharacterViewController.h */,
 				E218495D1BA6B0A8003DA3AD /* AddCharacterViewController.m */,
+				E200F3EB1BA72E9F001956C9 /* BaseViewController.h */,
+				E200F3EC1BA72E9F001956C9 /* BaseViewController.m */,
 				E218495F1BA6B0A8003DA3AD /* Main.storyboard */,
 				E21849621BA6B0A8003DA3AD /* Images.xcassets */,
 				E21849641BA6B0A8003DA3AD /* LaunchScreen.xib */,
 				E21849551BA6B0A8003DA3AD /* Supporting Files */,
+				E200F3EE1BA73785001956C9 /* CharacterViewController.h */,
+				E200F3EF1BA73785001956C9 /* CharacterViewController.m */,
 			);
 			path = "Game of Thrones App";
 			sourceTree = "<group>";
@@ -128,18 +127,6 @@
 				E21849701BA6B0A8003DA3AD /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E265EEAB1BA6CD0B00192803 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				E265EEAC1BA6CD1800192803 /* baratheon.jpg */,
-				E265EEAD1BA6CD1800192803 /* lannister.jpg */,
-				E265EEAE1BA6CD1800192803 /* stark.jpg */,
-				E265EEAF1BA6CD1800192803 /* targaryen.jpg */,
-				E265EEB01BA6CD1800192803 /* tully.jpg */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,12 +209,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E265EEB11BA6CD1800192803 /* baratheon.jpg in Resources */,
-				E265EEB31BA6CD1800192803 /* stark.jpg in Resources */,
-				E265EEB51BA6CD1800192803 /* tully.jpg in Resources */,
 				E21849611BA6B0A8003DA3AD /* Main.storyboard in Resources */,
-				E265EEB41BA6CD1800192803 /* targaryen.jpg in Resources */,
-				E265EEB21BA6CD1800192803 /* lannister.jpg in Resources */,
 				E21849661BA6B0A8003DA3AD /* LaunchScreen.xib in Resources */,
 				E21849631BA6B0A8003DA3AD /* Images.xcassets in Resources */,
 			);
@@ -248,6 +230,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E218495E1BA6B0A8003DA3AD /* AddCharacterViewController.m in Sources */,
+				E200F3F01BA73785001956C9 /* CharacterViewController.m in Sources */,
+				E200F3ED1BA72E9F001956C9 /* BaseViewController.m in Sources */,
 				E218495B1BA6B0A8003DA3AD /* AppDelegate.m in Sources */,
 				E21849581BA6B0A8003DA3AD /* main.m in Sources */,
 			);

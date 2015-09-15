@@ -8,18 +8,25 @@
 
 #import "AddCharacterViewController.h"
 
-static CGFloat const padding = 8;
-static CGFloat const margin = 10;
-static CGFloat const heightUnit = 40;
-static CGFloat const initialUpperMargin = 40;
+#import "CharacterViewController.h"
+
+typedef NS_ENUM(NSUInteger, Evilness) {
+    EvilnessGood,
+    EvilnessBad,
+    EvilnessVeryBad,
+    EvilnessTrueEvil
+};
 
 @interface AddCharacterViewController () <UITextFieldDelegate, UITextViewDelegate>
 
+@property (nonatomic, strong) UIButton *imageButton;
 @property (nonatomic, strong) UITextField *nameTextField;
-@property (nonatomic, assign) CGSize screenSize;
 @property (nonatomic, strong) UITextView *bioTextView;
 @property (nonatomic, strong) UISegmentedControl *houseSegmentedControl;
 @property (nonatomic, strong) UIButton *addCharacterButton;
+@property (nonatomic, strong) UISlider *evilnessSlider;
+@property (nonatomic, strong) UISwitch *killSwitch;
+@property (nonatomic, strong) UILabel *killLabel;
 
 @end
 
@@ -30,24 +37,39 @@ static CGFloat const initialUpperMargin = 40;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.screenSize = self.view.frame.size;
-    
     [self drawControls];
 }
 
 #pragma mark - Private Methods
 
 - (void)drawControls {
+    
+    [self drawImageButton];
     [self drawName];
     [self drawBiography];
     [self drawHouseSegmentedControl];
+    [self drawEvil];
+    [self drawKillSwitch];
     [self drawAddCharacterButton];
+    
+}
+
+- (void)drawImageButton {
+    self.imageButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.imageButton.contentMode = UIViewContentModeScaleAspectFit;
+    [self.imageButton setImage:[UIImage imageNamed:@"no_image"] forState:UIControlStateNormal];
+    self.imageButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [self placeView:self.imageButton underView:nil withHeightUnits:3];
+
+    [self.imageButton addTarget:self
+                         action:@selector(presentCharacterController)
+               forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)drawName {
     UILabel *nameLabel = [UILabel new];
     nameLabel.text = @"Name";
-    [self placeView:nameLabel underView:nil withHeightUnits:1];
+    [self placeView:nameLabel underView:self.imageButton withHeightUnits:1];
     
     self.nameTextField = [UITextField new];
     self.nameTextField.borderStyle = UITextBorderStyleRoundedRect;
@@ -72,13 +94,52 @@ static CGFloat const initialUpperMargin = 40;
                                                                              @"Targaryen",
                                                                              @"Baratheon",
                                                                              @"Tully"]];
+    [self.houseSegmentedControl addTarget:self
+                                   action:@selector(houseSelected:)
+                         forControlEvents:UIControlEventValueChanged];
     [self placeView:self.houseSegmentedControl underView:self.bioTextView withHeightUnits:1];
+}
+
+- (void)drawEvil {
+    UILabel *evilLabel = [UILabel new];
+    evilLabel.text = @"Evil";
+    [self placeView:evilLabel underView:self.houseSegmentedControl withHeightUnits:1];
+    
+    self.evilnessSlider = [UISlider new];
+    self.evilnessSlider.minimumValue = 0;
+    self.evilnessSlider.maximumValue = 100;
+    self.evilnessSlider.minimumTrackTintColor = [UIColor redColor];
+    self.evilnessSlider.maximumTrackTintColor = [UIColor greenColor];
+    [self addEvilness:EvilnessGood toTextFieldLeftImage:self.nameTextField];
+    [self.evilnessSlider addTarget:self action:@selector(evilnessChanged:) forControlEvents:UIControlEventValueChanged];
+    [self placeView:self.evilnessSlider underView:evilLabel withHeightUnits:1];
+}
+
+- (void)drawKillSwitch {
+    UIView *killView = [UIView new];
+    [self placeView:killView underView:self.evilnessSlider withHeightUnits:1];
+    
+    self.killSwitch = [UISwitch new];
+    [self.killSwitch addTarget:self action:@selector(killChanged:) forControlEvents:UIControlEventValueChanged];
+    [killView addSubview:self.killSwitch];
+    
+    CGFloat labelX = self.killSwitch.frame.origin.x + self.killSwitch.frame.size.width + padding;
+    CGFloat labelWidth = killView.frame.size.width - self.killSwitch.frame.size.width - padding;
+    
+    self.killLabel = [[UILabel alloc] initWithFrame:CGRectMake(labelX, self.killSwitch.frame.origin.y, labelWidth, self.killSwitch.frame.size.height)];
+    
+    self.killLabel.text = @"Alive";
+    
+    [killView addSubview:self.killLabel];
 }
 
 - (void)drawAddCharacterButton {
     self.addCharacterButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [self.addCharacterButton setTitle:@"Add Character" forState:UIControlStateNormal];
-    [self placeView:self.addCharacterButton underView:self.houseSegmentedControl withHeightUnits:1];
+    [self placeView:self.addCharacterButton underView:self.killSwitch.superview withHeightUnits:1];
+    [self.addCharacterButton addTarget:self
+                                action:@selector(presentNextViewController)
+                      forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)addBiographyPlaceholder {
@@ -87,30 +148,84 @@ static CGFloat const initialUpperMargin = 40;
     self.bioTextView.tag = 0;
 }
 
-#pragma mark - Control Positioning
+#pragma mark - Target Actions
 
-- (void)placeView:(UIView *)bottomView underView:(UIView *)upperWiew withHeightUnits:(CGFloat)heightUnits {
-    if (!upperWiew) {
-        bottomView.frame = CGRectMake(padding, initialUpperMargin, self.screenSize.width - (padding*2), heightUnits * heightUnit);
-    } else {
-        bottomView.frame = [self frameUnderFrame:upperWiew.frame withHeightUnits:heightUnits];
+- (void)evilnessChanged:(UISlider *)evilnessSlider {
+    Evilness evilness = (NSUInteger)evilnessSlider.value * (EvilnessTrueEvil / evilnessSlider.maximumValue) ;
+    
+    [self addEvilness:evilness toTextFieldLeftImage:self.nameTextField];
+}
+
+- (void)addEvilness:(Evilness)evilness toTextFieldLeftImage:(UITextField *)textField {
+    UILabel *evilnessLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, heightUnit, heightUnit)];
+    
+    switch (evilness) {
+        case EvilnessGood:
+            evilnessLabel.text = @"😇";
+            break;
+        case EvilnessBad:
+            evilnessLabel.text = @"😠";
+            break;
+        case EvilnessVeryBad:
+            evilnessLabel.text = @"😡";
+            break;
+        case EvilnessTrueEvil:
+            evilnessLabel.text = @"👿";
+            break;
+        default:
+            break;
     }
     
-    [self.view addSubview:bottomView];
+    textField.rightView = evilnessLabel;
+    textField.rightViewMode = UITextFieldViewModeAlways;
 }
 
-- (CGRect)frameUnderFrame:(CGRect)sourceFrame withHeightUnits:(CGFloat)heightUnits {
-    CGFloat y = sourceFrame.origin.y + sourceFrame.size.height + margin;
-    return CGRectMake(padding, y, self.screenSize.width - (padding*2), heightUnit * heightUnits);
+- (void)houseSelected:(UISegmentedControl *)segmentedControl {
+    NSString *imageName = [segmentedControl titleForSegmentAtIndex:segmentedControl.selectedSegmentIndex];
+    
+    [self addImageNamed:imageName toTextFieldLeftImage:self.nameTextField];
 }
 
+
+- (void)addImageNamed:(NSString *)imageName toTextFieldLeftImage:(UITextField *)textField {
+    CGFloat height = textField.frame.size.height;
+    
+    UIImageView *houseImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, height, height)];
+    houseImageView.image = [UIImage imageNamed:imageName];
+    
+    textField.leftView = houseImageView;
+    textField.leftViewMode = UITextFieldViewModeAlways;
+}
+
+- (void)killChanged:(UISwitch *)killSwitch {
+    [self killChangeTo:killSwitch.on];
+}
+
+- (void)killChangeTo:(BOOL)value {
+    self.killLabel.text = value ? @"Dead" : @"Alive";
+    self.killLabel.textColor = value ? [UIColor redColor] : [UIColor blackColor];
+}
+
+- (void)presentCharacterController {
+    
+    CharacterViewController *vc = [[CharacterViewController alloc] init];
+    
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
+#pragma mark - Gesture Methods
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+    [super touchesBegan:touches withEvent:event];
+}
 
 #pragma mark - UITextField Delegate
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     if (textField == self.nameTextField) {
         NSString *name = textField.text;
-        
+
         [self.addCharacterButton setTitle:[NSString stringWithFormat:@"Add %@", name]
                                  forState:UIControlStateNormal];
     }
