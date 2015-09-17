@@ -12,7 +12,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="97" sectionHeaderHeight="22" sectionFooterHeight="22" id="CTS-Q2-cLv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="98" id="Z4A-c1-HqU" customClass="CustomTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -39,6 +39,7 @@
                                     <outlet property="imageCharacterView" destination="MEd-tz-Wu1" id="OXq-94-Szk"/>
                                     <outlet property="imageView" destination="MEd-tz-Wu1" id="qIC-iB-8f1"/>
                                     <outlet property="nameLabel" destination="qRD-rn-tBn" id="PZ6-HJ-B2n"/>
+                                    <segue destination="PAw-p0-GDn" kind="push" id="bmd-vH-gTi"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -52,6 +53,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hh-o7-9ww" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="975" y="102"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="92t-KO-DFz">
+            <objects>
+                <viewController id="PAw-p0-GDn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nMD-nx-pi9"/>
+                        <viewControllerLayoutGuide type="bottom" id="AbR-nU-y3s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uVl-Fd-HWH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7mZ-RQ-hpv">
+                                <rect key="frame" x="0.0" y="64" width="320" height="263"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAX-C1-kIe">
+                                <rect key="frame" x="16" y="284" width="288" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="23"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uu8-hF-9XY">
+                                <rect key="frame" x="11" y="335" width="293" height="220"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aTk-GG-yVz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ht-Tk-SaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1431" y="102"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="go5-61-A2X">
