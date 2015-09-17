@@ -85,6 +85,8 @@
     customCell.backgroundImageView.clipsToBounds = YES;
     customCell.contentView.clipsToBounds = YES;
     
+    //NSLog(@"%@, %.2f",NSStringFromCGRect(customCell.frame), self.tableView.contentOffset.y);
+    
     return customCell;
     
 }
@@ -154,6 +156,15 @@
 {
     [self.model removeCharacter:personaje];
     [self.tableView reloadData];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    for (CustomTableViewCell* cell in self.tableView.visibleCells) {
+        float distancia = cell.frame.origin.y-scrollView.contentOffset.y;
+        //NSLog(@"%.2f %.2f",distancia, self.view.bounds.size.height);
+        [cell setOffset:distancia/self.view.bounds.size.height];
+    }
 }
 
 

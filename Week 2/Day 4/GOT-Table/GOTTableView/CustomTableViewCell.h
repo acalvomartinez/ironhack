@@ -14,5 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageCharacterView;
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 
+- (void)setOffset:(float)p;
+
 
 @end
