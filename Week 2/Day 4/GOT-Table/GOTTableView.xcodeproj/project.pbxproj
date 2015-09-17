@@ -119,6 +119,7 @@
 		8CD142D41946E790003AE87B /* Casa.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD142D31946E790003AE87B /* Casa.m */; };
 		8CD142D71946E7B7003AE87B /* Personaje.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD142D61946E7B7003AE87B /* Personaje.m */; };
 		E2F07AE61BAAA7A200DC3F6F /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F07AE51BAAA7A200DC3F6F /* TableViewController.m */; };
+		E2F07AEB1BAAB73300DC3F6F /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F07AEA1BAAB73300DC3F6F /* TableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -252,6 +253,8 @@
 		8CD142D61946E7B7003AE87B /* Personaje.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Personaje.m; path = modelo/Personaje.m; sourceTree = "<group>"; };
 		E2F07AE41BAAA7A200DC3F6F /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		E2F07AE51BAAA7A200DC3F6F /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		E2F07AE91BAAB73300DC3F6F /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		E2F07AEA1BAAB73300DC3F6F /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -479,9 +482,19 @@
 			isa = PBXGroup;
 			children = (
 				E2F07AE41BAAA7A200DC3F6F /* TableViewController.h */,
+				E2F07AE81BAAB70500DC3F6F /* View */,
 				E2F07AE51BAAA7A200DC3F6F /* TableViewController.m */,
 			);
 			name = controllers;
+			sourceTree = "<group>";
+		};
+		E2F07AE81BAAB70500DC3F6F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E2F07AE91BAAB73300DC3F6F /* TableViewCell.h */,
+				E2F07AEA1BAAB73300DC3F6F /* TableViewCell.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -676,6 +689,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2F07AEB1BAAB73300DC3F6F /* TableViewCell.m in Sources */,
 				8CD142D41946E790003AE87B /* Casa.m in Sources */,
 				E2F07AE61BAAA7A200DC3F6F /* TableViewController.m in Sources */,
 				8CD142D11946E592003AE87B /* GotModel.m in Sources */,

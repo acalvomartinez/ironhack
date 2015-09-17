@@ -7,7 +7,7 @@
 //
 
 #import "TableViewController.h"
-
+#import "TableViewCell.h"
 #import "GotModel.h"
 #import "Casa.h"
 #import "Personaje.h"
@@ -60,14 +60,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
    
     Casa *house = [self.model.casas objectAtIndex:indexPath.section];
     
     Personaje *character = [house.personajes objectAtIndex:indexPath.row];
     
-    cell.imageView.image = [UIImage imageNamed:character.imagen];
-    cell.textLabel.text = character.nombre;
+    cell.imageCharacterView.image = [UIImage imageNamed:character.imagen];
+    cell.nameLabel.text = character.nombre;
     
     return cell;
 }
