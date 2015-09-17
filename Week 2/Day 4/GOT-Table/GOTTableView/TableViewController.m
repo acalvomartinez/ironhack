@@ -26,7 +26,8 @@
     [super viewDidLoad];
     
     [self loadModel];
-    
+    //self.navigationController.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem=self.editButtonItem;
 }
 
 - (void)loadModel {
@@ -92,6 +93,11 @@
     return 98;
 }
 
+-(NSString *) tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return @"mataaaaaar";
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -100,17 +106,27 @@
 }
 */
 
-/*
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+    
+        Casa *house = [self.model.casas objectAtIndex:indexPath.section];
+        
+        Personaje *character = [house.personajes objectAtIndex:indexPath.row];
+        NSMutableArray *characterarray= [house.personajes mutableCopy];
+        [characterarray removeObject:character];
+        house.personajes = [characterarray copy];
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+
+        
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.
