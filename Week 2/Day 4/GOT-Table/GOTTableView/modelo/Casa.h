@@ -15,4 +15,6 @@
 @property (nonatomic, strong) NSString* lema;
 @property (nonatomic, strong) NSArray* personajes;
 - (void) addPersonaje:(Personaje *) personaje;
+- (void)removePersonaje:(Personaje *) personaje;
+- (void)removePersonajeAtIndex:(NSUInteger)index;
 @end

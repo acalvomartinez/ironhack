@@ -114,10 +114,11 @@
     
         Casa *house = [self.model.casas objectAtIndex:indexPath.section];
         
-        Personaje *character = [house.personajes objectAtIndex:indexPath.row];
-        NSMutableArray *characterarray= [house.personajes mutableCopy];
-        [characterarray removeObject:character];
-        house.personajes = [characterarray copy];
+        //Personaje *character = [house.personajes objectAtIndex:indexPath.row];
+        
+        //[house removePersonaje:character];
+        [house removePersonajeAtIndex:indexPath.row];
+        
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 

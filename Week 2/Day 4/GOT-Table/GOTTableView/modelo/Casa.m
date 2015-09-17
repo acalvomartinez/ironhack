@@ -18,4 +18,15 @@
     _personajes = [_personajes arrayByAddingObject:personaje];
 }
 
+- (void)removePersonajeAtIndex:(NSUInteger)index {
+    Personaje *character = [self.personajes objectAtIndex:index];
+    [self removePersonaje:character];
+}
+
+- (void)removePersonaje:(Personaje *) personaje {
+    NSMutableArray *characterArray = [self.personajes mutableCopy];
+    [characterArray removeObject:personaje];
+    self.personajes = [characterArray copy];
+}
+
 @end
