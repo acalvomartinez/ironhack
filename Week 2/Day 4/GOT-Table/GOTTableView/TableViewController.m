@@ -65,9 +65,12 @@
     Casa *house = [self.model.casas objectAtIndex:indexPath.section];
     
     Personaje *character = [house.personajes objectAtIndex:indexPath.row];
-    
-    cell.imageCharacterView.image = [UIImage imageNamed:character.imagen];
+    UIImage *image =[UIImage imageNamed:character.imagen];
+
+    cell.imageCharacterView.image = image;
+    cell.backgroundImageView.image = image;
     cell.nameLabel.text = character.nombre;
+    cell.backgroundImageView.clipsToBounds = YES;
     
     return cell;
 }
