@@ -7,7 +7,7 @@
 //
 
 #import "TableViewController.h"
-#import "TableViewCell.h"
+#import "CustomTableViewCell.h"
 #import "GotModel.h"
 #import "Casa.h"
 #import "Personaje.h"
@@ -60,7 +60,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
    
     Casa *house = [self.model.casas objectAtIndex:indexPath.section];
     

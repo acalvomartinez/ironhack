@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableViewCell : UITableViewCell
+@interface CustomTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageCharacterView;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 
 
 @end

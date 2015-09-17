@@ -14,11 +14,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="98" id="Z4A-c1-HqU" customClass="TableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="98" id="Z4A-c1-HqU" customClass="CustomTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z4A-c1-HqU" id="knJ-gm-P4L">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f0y-9R-sbo">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
+                                        </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MEd-tz-Wu1">
                                             <rect key="frame" x="4" y="4" width="90" height="90"/>
                                         </imageView>
@@ -31,6 +34,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="backgroundImageView" destination="f0y-9R-sbo" id="LJu-pY-PXC"/>
                                     <outlet property="imageCharacterView" destination="MEd-tz-Wu1" id="OXq-94-Szk"/>
                                     <outlet property="imageView" destination="MEd-tz-Wu1" id="qIC-iB-8f1"/>
                                     <outlet property="nameLabel" destination="qRD-rn-tBn" id="PZ6-HJ-B2n"/>
