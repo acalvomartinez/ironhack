@@ -75,6 +75,20 @@
     return cell;
 }
 
+- (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    Casa *house = [self.model.casas objectAtIndex:section];
+    
+    UIImage *image = [UIImage imageNamed:house.imagen];
+    UIImageView *imageView = [[UIImageView alloc]initWithImage:image];
+    imageView.contentMode= UIViewContentModeScaleAspectFill;
+    return imageView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 95;
+}
 
 /*
 // Override to support conditional editing of the table view.
