@@ -120,6 +120,7 @@
 		8CD142D71946E7B7003AE87B /* Personaje.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD142D61946E7B7003AE87B /* Personaje.m */; };
 		E2F07AE61BAAA7A200DC3F6F /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F07AE51BAAA7A200DC3F6F /* TableViewController.m */; };
 		E2F07AEB1BAAB73300DC3F6F /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F07AEA1BAAB73300DC3F6F /* CustomTableViewCell.m */; };
+		E2F07AEE1BAACD4B00DC3F6F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F07AED1BAACD4B00DC3F6F /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -255,6 +256,8 @@
 		E2F07AE51BAAA7A200DC3F6F /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		E2F07AE91BAAB73300DC3F6F /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		E2F07AEA1BAAB73300DC3F6F /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		E2F07AEC1BAACD4B00DC3F6F /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		E2F07AED1BAACD4B00DC3F6F /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -484,6 +487,8 @@
 			children = (
 				E2F07AE41BAAA7A200DC3F6F /* TableViewController.h */,
 				E2F07AE51BAAA7A200DC3F6F /* TableViewController.m */,
+				E2F07AEC1BAACD4B00DC3F6F /* DetailViewController.h */,
+				E2F07AED1BAACD4B00DC3F6F /* DetailViewController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -692,6 +697,7 @@
 				E2F07AEB1BAAB73300DC3F6F /* CustomTableViewCell.m in Sources */,
 				8CD142D41946E790003AE87B /* Casa.m in Sources */,
 				E2F07AE61BAAA7A200DC3F6F /* TableViewController.m in Sources */,
+				E2F07AEE1BAACD4B00DC3F6F /* DetailViewController.m in Sources */,
 				8CD142D11946E592003AE87B /* GotModel.m in Sources */,
 				8C5026481946E511009D2C47 /* AppDelegate.m in Sources */,
 				8C5026441946E511009D2C47 /* main.m in Sources */,
