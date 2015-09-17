@@ -52,6 +52,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     Personaje *character = [self.model.personajes objectAtIndex:indexPath.row];
+    
+    cell.imageView.image = [UIImage imageNamed:character.imagen];
     cell.textLabel.text = character.nombre;
     
     return cell;
