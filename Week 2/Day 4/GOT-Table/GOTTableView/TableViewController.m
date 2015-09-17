@@ -14,7 +14,7 @@
 
 #import "DetailViewController.h"
 
-@interface TableViewController ()
+@interface TableViewController () <DetailViewControllerDelgate>
 
 @property (nonatomic, strong) GotModel *model;
 
@@ -28,6 +28,7 @@
     [self loadModel];
     //self.navigationController.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationItem.rightBarButtonItem=self.editButtonItem;
+    
 }
 
 - (void)loadModel {
@@ -99,15 +100,6 @@
     return @"KILL!";
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
@@ -124,21 +116,6 @@
 }
 
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -146,6 +123,7 @@
     
     if ([segue.identifier isEqualToString:@"detailSegue"]) {
         DetailViewController *detail = (DetailViewController *)segue.destinationViewController;
+        detail.delegate = self;
         
         NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
         
@@ -153,6 +131,14 @@
         
         detail.character = [house.personajes objectAtIndex:indexPath.row];
     }
+}
+
+#pragma mark - DetailViewController delegate
+
+- (void) didPressedKillButton:(Personaje *)personaje
+{
+    [self.model removeCharacter:personaje];
+    [self.tableView reloadData];
 }
 
 

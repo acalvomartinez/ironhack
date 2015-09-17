@@ -85,4 +85,17 @@
     [house removePersonajeAtIndex:indexPath.row];
 
 }
+
+- (void)removeCharacter:(Personaje *)characterToDelete {
+    
+    for (Casa *house in self.casas) {
+        for (Personaje *character in house.personajes) {
+            if ([character.nombre isEqualToString:characterToDelete.nombre]) {
+                [house removePersonaje:characterToDelete];
+            }
+        }
+    }
+    
+}
+
 @end

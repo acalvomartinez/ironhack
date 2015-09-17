@@ -94,7 +94,11 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="aTk-GG-yVz">
-                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="rew-se-VH3"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="rew-se-VH3">
+                            <connections>
+                                <action selector="deleteButtonPreseed:" destination="PAw-p0-GDn" id="NIQ-Gu-sFg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="backgroundImageView" destination="tE9-is-nje" id="baE-Ak-xrM"/>

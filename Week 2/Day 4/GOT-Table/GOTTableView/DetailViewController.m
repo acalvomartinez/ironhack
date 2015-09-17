@@ -17,8 +17,6 @@
 @end
 
 @implementation DetailViewController
-- (IBAction)deleteButtonPreseed:(id)sender {
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,6 +38,11 @@
 
     self.backgroundImageView.image = imageCharacter;
     self.backgroundImageView.clipsToBounds = YES;
+}
+
+- (IBAction)deleteButtonPreseed:(id)sender {
+    [self.delegate didPressedKillButton:self.character];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end
