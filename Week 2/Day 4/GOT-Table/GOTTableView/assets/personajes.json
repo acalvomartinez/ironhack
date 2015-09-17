@@ -1,0 +1,244 @@
+{
+  "houses": [
+    {
+      "name": "Stark",     
+      "image": "stark",   
+      "theme": "Winter is Coming",   
+      "people": [
+        {
+          "name": "Eddard \"Ned\" Stark",
+          "description": "Lord of Winterfell - Warden of the North - Hand of the King - Married to Catelyn (Tully) Stark",
+          "image": "eddard"
+        },
+        {
+          "name": "Catelyn (Tully) Stark",
+          "description": "Catelyn Stark is an honorable woman who always wants the best for her family. She stays true to the Tully words: Family, Duty, Honor.",
+          "image": "catelyn"
+        }, 
+        {
+          "name": "Robb Stark",
+          "description": "Son of Eddard and Catelyn Stark - Direwolf: Grey Wind",
+          "image": "robb"
+        },     
+        {
+          "name": "Sansa Stark",
+          "description": "Daughter of Eddard and Catelyn Stark - Direwolf: Lady",
+          "image": "sansa"
+        },                  
+        {
+          "name": "Arya Stark",
+          "description": "Daughter of Eddard and Catelyn Stark - Direwolf: Nymeria",
+          "image": "arya"
+        },
+        {
+          "name": "Brandon \"Bran\" Stark",
+          "description": "Son of Eddard and Catelyn Stark - Direwolf: Summer",
+          "image": "brandon"
+        },
+        {
+          "name": "Rickon Stark",
+          "description": "Son of Eddard and Catelyn Stark - Direwolf: Shaggydog",
+          "image": "rickon"
+        },
+        {
+          "name": "Jon Snow",
+          "description": "Bastard son of Eddard Stark - Steweard in the Night's Watch - Direwolf: Ghost",
+          "image": "jon"
+        },
+        {
+          "name": "Benjen Stark",
+          "description": "Brother of Eddard Stark - First ranger of the Night's Watch",
+          "image": "benjen"
+        },        
+      ]
+    },
+
+    {
+      "name": "Lannister",
+      "image": "lannister", 
+      "theme": "Hear me Roar!",                 
+      "people": [
+        {
+          "name": "Tywin Lannister",
+          "description": "Lord of Casterly Rock - Warden of the West",
+          "image": "tywin"
+        },
+        {
+          "name": "Kevan Lannister",
+          "description": "Kevan Lannister is Tywin Lannister's younger brother. Kevan accompanies Tywin in the battle in the Riverlands.",
+          "image": "kevan"
+        },  
+        {
+          "name": "Cersei (Lannister) Baratheon",
+          "description": "Married to King Robert Baratheon - Daughter of Tywin Lannister",
+          "image": "cersei"
+        },
+        {
+          "name": "Jaime Lannister",
+          "description": "The Kingslayer - Knight of the Kingsgaurd - Son of Tywin Lannister",
+          "image": "jaime"
+        },                      
+        {
+          "name": "Tyrion Lannister",
+          "description": "Son of Tywin Lannister - The Imp",
+          "image": "tyrion"
+        },
+        {
+          "name": "Lancel Lannister",
+          "description": "Lancel Lannister is the oldest son of Kevan Lannister, Tywin Lannister's younger brother.",
+          "image": "lancel"
+        }      
+      ]
+    },
+
+
+    {
+      "name": "Baratheon",
+      "image": "baratheon",            
+      "theme": "Ours is The Fury",      
+      "people": [
+        {
+          "name": "Robert Baratheon",
+          "description": "The first of his name - Lord of the Seven Kingdoms",
+          "image": "robert"
+        },
+        {
+          "name": "Cersei (Lannister) Baratheon",
+          "description": "Married to King Robert Baratheon - Daughter of Tywin Lannister",
+          "image": "cersei"
+        },        
+        {
+          "name": "Joffrey Baratheon",
+          "description": "Heir to the Iron Throne - Son of Robert and Cersei Baratheon",
+          "image": "joffrey"
+        },    
+        {
+          "name": "Myrcella Baratheon",
+          "description": "Daughter of Robert and Cersei Baratheon",
+          "image": "myrcella"
+        },    
+        {
+          "name": "Tommen Baratheon",
+          "description": "Son of Robert and Cersei Baratheon",
+          "image": "tommen"
+        },                
+        {
+          "name": "Stannis Baratheon",
+          "description": "Lord of Dragonstone - Master of Ships - Brother of Robert Baratheon",
+          "image": "stannis"
+        },
+        {
+          "name": "Renly Baratheon",
+          "description": "Lord of Storm's End - Master of Laws - Brother of Robert Baratheon",
+          "image": "renly"
+        },
+        {
+          "name": "Gendry",
+          "description": "Gendry is a former blacksmith apprentice for master Tobho Mott",
+          "image": "renly"
+        }
+      ]
+    },
+
+    {
+      "name": "Targaryen",
+      "image": "targaryen", 
+      "theme": "Fire and Blood",                 
+      "people": [
+        {
+          "name": "Daenerys Targaryen",
+          "description": "Stormborn - Khaleesi of the Dothraki - The Unburnt - Mother of Dragons - Daughter of Aerys II Targaryen \"The Mad King\"",
+          "image": "daenerys"
+        },
+        {
+          "name": "Viserys Targaryen",
+          "description": "The Beggar King - Son of Aerys II Targaryen \"The Mad King\"",
+          "image": "viserys"
+        },
+        {
+          "name": "Maester Aemon",
+          "description": "Maester Aemon, whose real name is Aemon Targaryen II, is a Maester who has served the Night's Watch for many years.",
+          "image": "aemon"
+        }        
+      ]
+    },
+
+    {
+      "name": "Greyjoy",
+      "image": "greyjoy",    
+      "theme": "We do not Sow",              
+      "people": [
+        {
+          "name": "Balon Greyjoy",
+          "description": "Lord Reaper of Pyke - Head of House Greyjoy",
+          "image": "balon"
+        },
+        {
+          "name": "Theon Greyjoy",
+          "description": "Ward of the Starks - Heir to the Iron Islands - Son of Balon Greyjoy",
+          "image": "theon"
+        },
+        {
+          "name": "Yara Greyjoy",
+          "description": "Ironborn - Son of Balon Greyjoy",
+          "image": "yara"
+        }
+
+      ]
+    },
+
+    {
+      "name": "Tyrell",
+      "image": "tyrell",   
+      "theme": "Growing Strong",               
+      "people": [
+        {
+          "name": "Margaery Tyrell",
+          "description": "Wife of Renly Baratheon - Sister of Loras Tyrell - Granddaughter of Olenna Tyrell",
+          "image": "margaery"
+        },
+        {
+          "name": "Loras Tyrell",
+          "description": "Heir to Highgarden - Commander of the Kings Gaurd - Brother of Margaery Baratheon",
+          "image": "loras"
+        },
+        {
+          "name": "Olenna Tyrell",
+          "description": "Olenna Redwyne is the mother of Lord Mace Tyrell. She is a wizened, cunning old woman with a wicked wit and a sharp tongue",
+          "image": "olenna"
+        }
+      ]
+    },
+
+    {
+      "name": "Tully",
+      "image": "tully",            
+      "theme": "Family Duty Honor",      
+      "people": [
+        {
+          "name": "Catelyn (Tully) Stark",
+          "description": "Married to Eddard Stark - Daughter of Hoster Tully",
+          "image": "catelyn"
+        },
+        {
+          "name": "Lysa (Tully) Arryn",
+          "description": "Widow of Jon Arryn - Daughter of Hoster Tully",
+          "image": "lysa"
+        },
+        {
+          "name": "Edmure Tully",
+          "description": "Heir to Riverrun - Son of Hoster Tully",
+          "image": "edmure"
+        },
+        {
+          "name": "Brynden Tully",
+          "description": "Lord of Riverrun - Head of House Tully - Brother of Hoster Tully",
+          "image": "brynden"
+        }
+
+      ]
+    },
+
+
+  ]
+}
