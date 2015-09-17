@@ -74,6 +74,7 @@
     cell.backgroundImageView.image = image;
     cell.nameLabel.text = character.nombre;
     cell.backgroundImageView.clipsToBounds = YES;
+    cell.contentView.clipsToBounds = YES;
     
     return cell;
 }
@@ -95,7 +96,7 @@
 
 -(NSString *) tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return @"mataaaaaar";
+    return @"KILL!";
 }
 
 /*
@@ -111,13 +112,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
-    
-        Casa *house = [self.model.casas objectAtIndex:indexPath.section];
-        
-        //Personaje *character = [house.personajes objectAtIndex:indexPath.row];
-        
-        //[house removePersonaje:character];
-        [house removePersonajeAtIndex:indexPath.row];
+        [self.model removeCharacterAtIndexPath:indexPath];
         
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];

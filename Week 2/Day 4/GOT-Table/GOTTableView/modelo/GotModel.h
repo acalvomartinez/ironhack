@@ -12,4 +12,5 @@
 @property (nonatomic, strong) NSArray* casas;
 @property (nonatomic, strong) NSArray* personajes;
 - (void) cargaModelo;
+- (void)removeCharacterAtIndexPath:(NSIndexPath *)indexPath;
 @end

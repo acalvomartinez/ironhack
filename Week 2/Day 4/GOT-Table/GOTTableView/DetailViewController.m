@@ -17,6 +17,8 @@
 @end
 
 @implementation DetailViewController
+- (IBAction)deleteButtonPreseed:(id)sender {
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

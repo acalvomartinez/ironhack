@@ -74,4 +74,15 @@
     self.personajes = personajesAux.copy;
     self.casas = results.copy;
 }
+
+- (void)removeCharacterAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Casa *house = [self.casas objectAtIndex:indexPath.section];
+    
+    //Personaje *character = [house.personajes objectAtIndex:indexPath.row];
+    
+    //[house removePersonaje:character];
+    [house removePersonajeAtIndex:indexPath.row];
+
+}
 @end
