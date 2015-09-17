@@ -9,7 +9,7 @@
 #import "TableViewController.h"
 
 #import "GotModel.h"
-
+#import "Casa.h"
 #import "Personaje.h"
 
 @interface TableViewController ()
@@ -41,17 +41,30 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 1;
+    return [self.model.casas count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.model.personajes count];
+    
+    Casa *house = [self.model.casas objectAtIndex:section];
+    return [house.personajes count];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    
+    Casa *house = [self.model.casas objectAtIndex:section];
+    
+    return house.nombre;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    Personaje *character = [self.model.personajes objectAtIndex:indexPath.row];
+   
+    Casa *house = [self.model.casas objectAtIndex:indexPath.section];
+    
+    Personaje *character = [house.personajes objectAtIndex:indexPath.row];
     
     cell.imageView.image = [UIImage imageNamed:character.imagen];
     cell.textLabel.text = character.nombre;
