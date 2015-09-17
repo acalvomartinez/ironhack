@@ -26,19 +26,20 @@
     [super viewDidLoad];
     
     [self loadModel];
-    //self.navigationController.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self setupNavbar];
+}
+
+- (void)setupNavbar {
     self.navigationItem.rightBarButtonItem=self.editButtonItem;
     
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+    
+    self.title = @"Game of Thrones";
 }
 
 - (void)loadModel {
     self.model = [[GotModel alloc] init];
     [self.model cargaModelo];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -64,20 +65,28 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
    
     Casa *house = [self.model.casas objectAtIndex:indexPath.section];
     
     Personaje *character = [house.personajes objectAtIndex:indexPath.row];
-    UIImage *image =[UIImage imageNamed:character.imagen];
-
-    cell.imageCharacterView.image = image;
-    cell.backgroundImageView.image = image;
-    cell.nameLabel.text = character.nombre;
-    cell.backgroundImageView.clipsToBounds = YES;
-    cell.contentView.clipsToBounds = YES;
     
-    return cell;
+    return [self drawCellForCell:cell withPersonaje:character];
+}
+
+- (UITableViewCell *)drawCellForCell:(UITableViewCell *)cell withPersonaje:(Personaje *)character {
+    CustomTableViewCell *customCell = (CustomTableViewCell *)cell;
+    
+    UIImage *image =[UIImage imageNamed:character.imagen];
+    
+    customCell.imageCharacterView.image = image;
+    customCell.backgroundImageView.image = image;
+    customCell.nameLabel.text = character.nombre;
+    customCell.backgroundImageView.clipsToBounds = YES;
+    customCell.contentView.clipsToBounds = YES;
+    
+    return customCell;
+    
 }
 
 - (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -113,6 +122,12 @@
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
+}
+
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    [self.model moveCharacterAtIndexPath:sourceIndexPath toIndexPath:destinationIndexPath];
+    [self.tableView reloadData];
 }
 
 

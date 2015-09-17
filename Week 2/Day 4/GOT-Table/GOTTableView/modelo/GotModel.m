@@ -98,4 +98,53 @@
     
 }
 
+- (void)moveCharacterAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+    Casa *sourceHouse = [self.casas objectAtIndex:fromIndexPath.section];
+    Personaje *sourceCharacter = [sourceHouse.personajes objectAtIndex:fromIndexPath.row];
+    
+    Casa *destinationHouse = [self.casas objectAtIndex:toIndexPath.section];
+    
+    if (fromIndexPath.section == toIndexPath.section) {
+        Personaje *sourceCopy = [self copyCharacter:sourceCharacter];
+        
+        NSUInteger destinationIndex;
+        if (fromIndexPath.row < toIndexPath.row) {
+            destinationIndex = toIndexPath.row + 1;
+        } else {
+            destinationIndex = toIndexPath.row;
+        }
+        
+        [self insertCharacter:sourceCopy inHouse:destinationHouse atIndex:destinationIndex];
+    } else {
+        [self insertCharacter:sourceCharacter inHouse:destinationHouse atIndex:toIndexPath.row];
+        
+    }
+    
+    [sourceHouse removePersonaje:sourceCharacter];
+}
+
+- (Personaje *)copyCharacter:(Personaje *)character {
+    Personaje *copyCharacter = [[Personaje alloc] init];
+    
+    copyCharacter.nombre = character.nombre;
+    copyCharacter.imagen = character.imagen;
+    copyCharacter.descripcion = character.descripcion;
+    
+    return copyCharacter;
+    
+}
+
+- (void)replaceCharacterAtIndex:(NSUInteger)index withPersonaje:(Personaje *)personaje atHouse:(Casa *)house {
+    NSMutableArray *characters = [house.personajes mutableCopy];
+    [characters replaceObjectAtIndex:index withObject:personaje];
+    house.personajes = [characters mutableCopy];
+}
+
+- (void)insertCharacter:(Personaje *)character inHouse:(Casa *)house atIndex:(NSUInteger)index {
+    NSMutableArray *characters = [house.personajes mutableCopy];
+    [characters insertObject:character atIndex:index];
+    house.personajes = [characters mutableCopy];
+}
+
+
 @end

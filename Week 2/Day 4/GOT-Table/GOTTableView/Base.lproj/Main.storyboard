@@ -37,8 +37,9 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="backgroundImageView" destination="f0y-9R-sbo" id="LJu-pY-PXC"/>
                                     <outlet property="imageCharacterView" destination="MEd-tz-Wu1" id="OXq-94-Szk"/>

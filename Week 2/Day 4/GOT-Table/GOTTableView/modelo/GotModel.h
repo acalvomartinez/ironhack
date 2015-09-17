@@ -16,4 +16,5 @@
 - (void) cargaModelo;
 - (void)removeCharacterAtIndexPath:(NSIndexPath *)indexPath;
 - (void)removeCharacter:(Personaje *)character;
+- (void)moveCharacterAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath;
 @end
