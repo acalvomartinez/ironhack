@@ -10,6 +10,8 @@
 
 #import "GotModel.h"
 
+#import "Personaje.h"
+
 @interface TableViewController ()
 
 @property (nonatomic, strong) GotModel *model;
@@ -46,15 +48,15 @@
     return [self.model.personajes count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: forIndexPath:indexPath];
-    
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    Personaje *character = [self.model.personajes objectAtIndex:indexPath.row];
+    cell.textLabel.text = character.nombre;
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
