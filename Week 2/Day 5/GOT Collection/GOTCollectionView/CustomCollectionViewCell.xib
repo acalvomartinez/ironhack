@@ -7,13 +7,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CustomCollectionViewCell">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="gTV-IL-0wX" customClass="CustomCollectionViewCell">
             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rn1-9Y-NRV">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="viserys.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rn1-9Y-NRV">
                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                     </imageView>
                 </subviews>
@@ -31,4 +31,7 @@
             <point key="canvasLocation" x="398" y="317"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="viserys.jpg" width="1024" height="576"/>
+    </resources>
 </document>
