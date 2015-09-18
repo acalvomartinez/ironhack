@@ -12,6 +12,9 @@
 
 #import "HeaderCollectionView.h"
 
+#import "ZoomInLayout.h"
+#import "CoverFlowLayout.h"
+
 #import "GotModel.h"
 #import "House.h"
 #import "Character.h"
@@ -19,8 +22,13 @@
 @interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
 @property (strong, nonatomic) UICollectionViewFlowLayout *verticalLayout;
 @property (strong, nonatomic) UICollectionViewFlowLayout *horizontalLayout;
+@property (strong, nonatomic) UICollectionViewLayout *customLayout;
+@property (strong, nonatomic) ZoomInLayout *zoomLayout;
+@property (strong, nonatomic) CoverFlowLayout *coverFlowLayout;
+
 @property (strong, nonatomic) IBOutlet GotModel *model;
 @property (strong, nonatomic) NSMutableSet *selectedItems;
 
@@ -42,6 +50,10 @@
     self.selectedItems = [NSMutableSet new];
     self.collectionView.collectionViewLayout = self.verticalLayout;
     self.collectionView.allowsMultipleSelection = YES;
+    
+    self.zoomLayout = [[ZoomInLayout alloc] init];
+    self.coverFlowLayout = [[CoverFlowLayout alloc] init];
+    
 }
 
 - (void)loadModel {
@@ -63,10 +75,16 @@
     
     switch (segmentedControl.selectedSegmentIndex) {
         case 0:
-            [self.collectionView setCollectionViewLayout:self.verticalLayout animated:YES];
+            [self.collectionView setCollectionViewLayout:self.verticalLayout animated:NO];
             break;
         case 1:
-            [self.collectionView setCollectionViewLayout:self.horizontalLayout animated:YES];
+            [self.collectionView setCollectionViewLayout:self.horizontalLayout animated:NO];
+            break;
+        case 2:
+            [self.collectionView setCollectionViewLayout:self.zoomLayout animated:NO];
+            break;
+        case 3:
+            [self.collectionView setCollectionViewLayout:self.coverFlowLayout animated:NO];
             break;
         default:
             break;
@@ -138,9 +156,9 @@
 - (UICollectionViewFlowLayout *)horizontalLayout {
     if (!_horizontalLayout) {
         _horizontalLayout = [UICollectionViewFlowLayout new];
-        _horizontalLayout.itemSize = CGSizeMake(150, 300);
+        _horizontalLayout.itemSize = CGSizeMake(150, 250);
         _horizontalLayout.sectionInset = UIEdgeInsetsMake(30, 30, 30, 30);
-        _horizontalLayout.headerReferenceSize = CGSizeMake(200, 100);
+        _horizontalLayout.headerReferenceSize = CGSizeMake(300, 100);
         _horizontalLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     }
     return _horizontalLayout;

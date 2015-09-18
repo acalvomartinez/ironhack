@@ -63,6 +63,9 @@
 		E2F8E6251BAC026D00B48014 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2F8E6231BAC026D00B48014 /* CustomCollectionViewCell.xib */; };
 		E2F8E62A1BAC18D300B48014 /* HeaderCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F8E6281BAC18D300B48014 /* HeaderCollectionView.m */; };
 		E2F8E62B1BAC18D300B48014 /* HeaderCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2F8E6291BAC18D300B48014 /* HeaderCollectionView.xib */; };
+		E2F8E62F1BAC46FE00B48014 /* ZoomInLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F8E62E1BAC46FE00B48014 /* ZoomInLayout.m */; };
+		E2F8E6321BAC504C00B48014 /* CoverFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F8E6311BAC504C00B48014 /* CoverFlowLayout.m */; };
+		E2F8E6351BAC538000B48014 /* CustomLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F8E6341BAC538000B48014 /* CustomLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +145,12 @@
 		E2F8E6271BAC18D300B48014 /* HeaderCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderCollectionView.h; sourceTree = "<group>"; };
 		E2F8E6281BAC18D300B48014 /* HeaderCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderCollectionView.m; sourceTree = "<group>"; };
 		E2F8E6291BAC18D300B48014 /* HeaderCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderCollectionView.xib; sourceTree = "<group>"; };
+		E2F8E62D1BAC46FE00B48014 /* ZoomInLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomInLayout.h; sourceTree = "<group>"; };
+		E2F8E62E1BAC46FE00B48014 /* ZoomInLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomInLayout.m; sourceTree = "<group>"; };
+		E2F8E6301BAC504C00B48014 /* CoverFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverFlowLayout.h; sourceTree = "<group>"; };
+		E2F8E6311BAC504C00B48014 /* CoverFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverFlowLayout.m; sourceTree = "<group>"; };
+		E2F8E6331BAC538000B48014 /* CustomLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLayout.h; sourceTree = "<group>"; };
+		E2F8E6341BAC538000B48014 /* CustomLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +210,7 @@
 		8CC95687194A3F3900BDD121 /* GOTCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				E2F8E62C1BAC46E700B48014 /* layouts */,
 				E2F8E6261BAC02D600B48014 /* controllers */,
 				E2F8E6201BAC024900B48014 /* views */,
 				8CC956B6194A3F9500BDD121 /* assets */,
@@ -327,6 +337,19 @@
 				8CC95697194A3F3900BDD121 /* ViewController.m */,
 			);
 			name = controllers;
+			sourceTree = "<group>";
+		};
+		E2F8E62C1BAC46E700B48014 /* layouts */ = {
+			isa = PBXGroup;
+			children = (
+				E2F8E62D1BAC46FE00B48014 /* ZoomInLayout.h */,
+				E2F8E62E1BAC46FE00B48014 /* ZoomInLayout.m */,
+				E2F8E6301BAC504C00B48014 /* CoverFlowLayout.h */,
+				E2F8E6311BAC504C00B48014 /* CoverFlowLayout.m */,
+				E2F8E6331BAC538000B48014 /* CustomLayout.h */,
+				E2F8E6341BAC538000B48014 /* CustomLayout.m */,
+			);
+			name = layouts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -463,11 +486,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2F8E62F1BAC46FE00B48014 /* ZoomInLayout.m in Sources */,
+				E2F8E6321BAC504C00B48014 /* CoverFlowLayout.m in Sources */,
 				8CC95698194A3F3900BDD121 /* ViewController.m in Sources */,
 				E2F8E62A1BAC18D300B48014 /* HeaderCollectionView.m in Sources */,
 				8CC95706194A3F9600BDD121 /* GotModel.m in Sources */,
 				8CC95705194A3F9600BDD121 /* House.m in Sources */,
 				8CC95692194A3F3900BDD121 /* AppDelegate.m in Sources */,
+				E2F8E6351BAC538000B48014 /* CustomLayout.m in Sources */,
 				E2F8E6241BAC026D00B48014 /* CustomCollectionViewCell.m in Sources */,
 				8CC9568E194A3F3900BDD121 /* main.m in Sources */,
 				8CC95707194A3F9600BDD121 /* Character.m in Sources */,
