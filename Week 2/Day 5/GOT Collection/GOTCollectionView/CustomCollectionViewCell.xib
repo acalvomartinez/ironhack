@@ -16,19 +16,41 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="viserys.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rn1-9Y-NRV">
                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdB-D0-d6J">
+                        <rect key="frame" x="8" y="116" width="134" height="18"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="VdB-D0-d6J" secondAttribute="bottom" constant="27" id="I71-Bq-JrC"/>
+                <constraint firstAttribute="trailing" secondItem="VdB-D0-d6J" secondAttribute="trailing" constant="8" id="MjX-AD-OZo"/>
+                <constraint firstAttribute="trailing" secondItem="VdB-D0-d6J" secondAttribute="trailing" constant="8" id="QmS-d1-MPo"/>
+                <constraint firstAttribute="bottom" secondItem="VdB-D0-d6J" secondAttribute="bottom" constant="16" id="XO6-80-fxS"/>
+                <constraint firstItem="VdB-D0-d6J" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="aur-kc-61R"/>
+                <constraint firstItem="VdB-D0-d6J" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="102" id="kXO-7n-IFO"/>
+                <constraint firstItem="VdB-D0-d6J" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="mBU-1Z-EWB"/>
                 <constraint firstItem="rn1-9Y-NRV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mRg-rF-Cdj"/>
                 <constraint firstAttribute="trailing" secondItem="rn1-9Y-NRV" secondAttribute="trailing" id="q4p-Cj-BfI"/>
                 <constraint firstAttribute="bottom" secondItem="rn1-9Y-NRV" secondAttribute="bottom" id="uOj-9G-YOY"/>
                 <constraint firstItem="rn1-9Y-NRV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wJf-t6-h4T"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="I71-Bq-JrC"/>
+                    <exclude reference="MjX-AD-OZo"/>
+                    <exclude reference="kXO-7n-IFO"/>
+                    <exclude reference="mBU-1Z-EWB"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="imageView" destination="rn1-9Y-NRV" id="CnE-vZ-0HK"/>
+                <outlet property="nameCharacter" destination="VdB-D0-d6J" id="UBK-sA-afV"/>
             </connections>
-            <point key="canvasLocation" x="398" y="317"/>
+            <point key="canvasLocation" x="188" y="410"/>
         </collectionViewCell>
     </objects>
     <resources>

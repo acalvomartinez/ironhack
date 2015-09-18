@@ -19,16 +19,16 @@
     self.imageView.layer.borderColor = [[UIColor whiteColor] CGColor];
     self.imageView.layer.borderWidth = 10.0;
     self.imageView.clipsToBounds = YES;
+    self.nameCharacter.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.nameCharacter.layer.shadowOffset = CGSizeMake(0.0f, 1.0f);
+    self.nameCharacter.layer.shadowOpacity = 1.0f;
+    self.nameCharacter.layer.shadowRadius = 0.0f;
+    
     self.layer.masksToBounds = NO;
     self.layer.shadowColor = [UIColor blackColor].CGColor;
     self.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
     self.layer.shadowOpacity = 0.5f;
     self.layer.shadowRadius = 3.0f;
-
-    //UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:self.bounds];
-    //self.layer.shadowPath = shadowPath.CGPath;
-    //self.imageView.layer.cornerRadius = 15.0;
-    //self.imageView.layer.masksToBounds = YES;
 }
 
 - (void)setSelected:(BOOL)selected {

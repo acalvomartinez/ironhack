@@ -14,6 +14,7 @@
 
 #import "ZoomInLayout.h"
 #import "CoverFlowLayout.h"
+#import "CustomLayout.h"
 
 #import "GotModel.h"
 #import "House.h"
@@ -25,9 +26,9 @@
 
 @property (strong, nonatomic) UICollectionViewFlowLayout *verticalLayout;
 @property (strong, nonatomic) UICollectionViewFlowLayout *horizontalLayout;
-@property (strong, nonatomic) UICollectionViewLayout *customLayout;
 @property (strong, nonatomic) ZoomInLayout *zoomLayout;
 @property (strong, nonatomic) CoverFlowLayout *coverFlowLayout;
+@property (strong, nonatomic) CustomLayout *customLayout;
 
 @property (strong, nonatomic) IBOutlet GotModel *model;
 @property (strong, nonatomic) NSMutableSet *selectedItems;
@@ -50,10 +51,6 @@
     self.selectedItems = [NSMutableSet new];
     self.collectionView.collectionViewLayout = self.verticalLayout;
     self.collectionView.allowsMultipleSelection = YES;
-    
-    self.zoomLayout = [[ZoomInLayout alloc] init];
-    self.coverFlowLayout = [[CoverFlowLayout alloc] init];
-    
 }
 
 - (void)loadModel {
@@ -85,6 +82,9 @@
             break;
         case 3:
             [self.collectionView setCollectionViewLayout:self.coverFlowLayout animated:NO];
+            break;
+        case 4:
+            [self.collectionView setCollectionViewLayout:self.customLayout animated:NO];
             break;
         default:
             break;
@@ -126,6 +126,7 @@
     CustomCollectionViewCell *customCell = (CustomCollectionViewCell *)cell;
     NSString *imageName = [NSString stringWithFormat:@"%@.jpg", character.image];
     customCell.imageView.image = [UIImage imageNamed:imageName];
+    customCell.nameCharacter.text = character.name;
     
     return customCell;
 }
@@ -175,5 +176,25 @@
     return _verticalLayout;
 }
 
+- (ZoomInLayout *)zoomLayout {
+    if (!_zoomLayout) {
+        _zoomLayout = [[ZoomInLayout alloc] init];
+    }
+    return _zoomLayout;
+}
+
+- (CustomLayout *)customLayout {
+    if (!_customLayout) {
+        _customLayout = [[CustomLayout alloc] init];
+    }
+    return _customLayout;
+}
+
+- (CoverFlowLayout *)coverFlowLayout {
+    if (!_coverFlowLayout) {
+        _coverFlowLayout = [[CoverFlowLayout alloc] init];
+    }
+    return _coverFlowLayout;
+}
 
 @end

@@ -44,13 +44,14 @@
                     <navigationItem key="navigationItem" id="YgS-FX-J1z">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Ni7-vd-PIO">
-                            <rect key="frame" x="225" y="7" width="319" height="30"/>
+                            <rect key="frame" x="185" y="7" width="399" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Vertical"/>
                                 <segment title="Horizontal"/>
                                 <segment title="Zoom"/>
                                 <segment title="CoverFlow"/>
+                                <segment title="Custom"/>
                             </segments>
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
