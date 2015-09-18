@@ -61,6 +61,8 @@
 		E2F8E61F1BABF5BC00B48014 /* margaery.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E2F8E61E1BABF5BC00B48014 /* margaery.jpg */; };
 		E2F8E6241BAC026D00B48014 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F8E6221BAC026D00B48014 /* CustomCollectionViewCell.m */; };
 		E2F8E6251BAC026D00B48014 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2F8E6231BAC026D00B48014 /* CustomCollectionViewCell.xib */; };
+		E2F8E62A1BAC18D300B48014 /* HeaderCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F8E6281BAC18D300B48014 /* HeaderCollectionView.m */; };
+		E2F8E62B1BAC18D300B48014 /* HeaderCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2F8E6291BAC18D300B48014 /* HeaderCollectionView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +139,9 @@
 		E2F8E6211BAC026D00B48014 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
 		E2F8E6221BAC026D00B48014 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
 		E2F8E6231BAC026D00B48014 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		E2F8E6271BAC18D300B48014 /* HeaderCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderCollectionView.h; sourceTree = "<group>"; };
+		E2F8E6281BAC18D300B48014 /* HeaderCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderCollectionView.m; sourceTree = "<group>"; };
+		E2F8E6291BAC18D300B48014 /* HeaderCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderCollectionView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +313,9 @@
 				E2F8E6211BAC026D00B48014 /* CustomCollectionViewCell.h */,
 				E2F8E6221BAC026D00B48014 /* CustomCollectionViewCell.m */,
 				E2F8E6231BAC026D00B48014 /* CustomCollectionViewCell.xib */,
+				E2F8E6271BAC18D300B48014 /* HeaderCollectionView.h */,
+				E2F8E6281BAC18D300B48014 /* HeaderCollectionView.m */,
+				E2F8E6291BAC18D300B48014 /* HeaderCollectionView.xib */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -430,6 +438,7 @@
 				8CC956F4194A3F9600BDD121 /* lysa.jpg in Resources */,
 				8CC956F6194A3F9600BDD121 /* myrcella.jpg in Resources */,
 				8CC956FB194A3F9600BDD121 /* robert.jpg in Resources */,
+				E2F8E62B1BAC18D300B48014 /* HeaderCollectionView.xib in Resources */,
 				8CC956FA194A3F9600BDD121 /* robb.jpg in Resources */,
 				8CC956FC194A3F9600BDD121 /* sansa.jpg in Resources */,
 				8CC956EE194A3F9600BDD121 /* jaime.jpg in Resources */,
@@ -455,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CC95698194A3F3900BDD121 /* ViewController.m in Sources */,
+				E2F8E62A1BAC18D300B48014 /* HeaderCollectionView.m in Sources */,
 				8CC95706194A3F9600BDD121 /* GotModel.m in Sources */,
 				8CC95705194A3F9600BDD121 /* House.m in Sources */,
 				8CC95692194A3F3900BDD121 /* AppDelegate.m in Sources */,

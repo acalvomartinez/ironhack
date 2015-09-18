@@ -10,6 +10,8 @@
 
 #import "CustomCollectionViewCell.h"
 
+#import "HeaderCollectionView.h"
+
 #import "GotModel.h"
 #import "House.h"
 #import "Character.h"
@@ -44,6 +46,10 @@
 - (void)registerNibs {
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([CustomCollectionViewCell class]) bundle:[NSBundle mainBundle]]
           forCellWithReuseIdentifier:@"collectionCell"];
+    
+    [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([HeaderCollectionView class]) bundle:[NSBundle mainBundle]]
+          forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+                 withReuseIdentifier:@"headerCell"];
 }
 
 #pragma mark - CollectionView Datasource
@@ -73,6 +79,17 @@
     customCell.imageView.image = [UIImage imageNamed:imageName];
     
     return customCell;
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    
+    HeaderCollectionView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headerCell" forIndexPath:indexPath];
+    
+    House *house = [self.model.houses objectAtIndex:indexPath.section];
+    
+    headerView.nameLabel.text = [house.name uppercaseString];
+    
+    return headerView;
 }
 
 
