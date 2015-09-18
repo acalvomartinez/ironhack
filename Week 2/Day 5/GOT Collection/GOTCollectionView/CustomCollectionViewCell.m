@@ -31,4 +31,13 @@
     //self.imageView.layer.masksToBounds = YES;
 }
 
+- (void)setSelected:(BOOL)selected {
+    [super setSelected:selected];
+    if (selected) {
+        self.imageView.layer.borderColor = [[UIColor redColor] CGColor];
+    } else {
+        self.imageView.layer.borderColor = [[UIColor whiteColor] CGColor];
+    }
+}
+
 @end

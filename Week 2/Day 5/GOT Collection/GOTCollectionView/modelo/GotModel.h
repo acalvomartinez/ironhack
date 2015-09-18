@@ -14,5 +14,6 @@
 @property (nonatomic, strong) NSArray *characters;
 
 - (void)loadModel;
+- (void)removeCharacters:(NSSet *)objects;
 
 @end

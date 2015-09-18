@@ -75,4 +75,21 @@
     self.houses = results.copy;
 }
 
+- (void)removeCharacters:(NSSet *)objects {
+    for (int houseIndex = 0; houseIndex < [self.houses count]; houseIndex++) {
+        NSMutableIndexSet *indexSet = [NSMutableIndexSet new];
+        
+        for (NSIndexPath *indexPath in objects) {
+            if (indexPath.section == houseIndex) {
+                [indexSet addIndex:indexPath.row];
+            }
+        }
+        
+        House *house = self.houses[houseIndex];
+        NSMutableArray *characters = [house.characters mutableCopy];
+        [characters removeObjectsAtIndexes:indexSet];
+        house.characters = [characters copy];
+    }
+}
+
 @end
