@@ -1,13 +1,12 @@
 //
 //  AppDelegate.m
-//  MainWindowPractice
+//  TransformsPractice
 //
 //  Created by Toni on 21/09/15.
 //  Copyright (c) 2015 Toni. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "FirstViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,13 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    
-//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//    
-//    FirstViewController *vc = [[FirstViewController alloc] init];
-//    self.window.rootViewController = vc;
-//    [self.window makeKeyAndVisible];
-    
+    // Override point for customization after application launch.
     return YES;
 }
 

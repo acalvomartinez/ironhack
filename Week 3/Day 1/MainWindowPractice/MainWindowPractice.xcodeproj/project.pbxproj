@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E20402AF1BB00A9200A93A26 /* ConversionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20402AE1BB00A9200A93A26 /* ConversionViewController.m */; };
 		E20CC1DC1BAFF28C00CAF551 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20CC1DB1BAFF28C00CAF551 /* FirstViewController.m */; };
 		E276B3AD1BAFE62800DD6D06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E276B3AC1BAFE62800DD6D06 /* main.m */; };
 		E276B3B01BAFE62800DD6D06 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E276B3AF1BAFE62800DD6D06 /* AppDelegate.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E20402AD1BB00A9200A93A26 /* ConversionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversionViewController.h; sourceTree = "<group>"; };
+		E20402AE1BB00A9200A93A26 /* ConversionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversionViewController.m; sourceTree = "<group>"; };
 		E20CC1DA1BAFF28C00CAF551 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		E20CC1DB1BAFF28C00CAF551 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		E276B3A71BAFE62800DD6D06 /* MainWindowPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainWindowPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +97,8 @@
 				E276B3AA1BAFE62800DD6D06 /* Supporting Files */,
 				E20CC1DA1BAFF28C00CAF551 /* FirstViewController.h */,
 				E20CC1DB1BAFF28C00CAF551 /* FirstViewController.m */,
+				E20402AD1BB00A9200A93A26 /* ConversionViewController.h */,
+				E20402AE1BB00A9200A93A26 /* ConversionViewController.m */,
 			);
 			path = MainWindowPractice;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 			files = (
 				E276B3B31BAFE62800DD6D06 /* ViewController.m in Sources */,
 				E276B3B01BAFE62800DD6D06 /* AppDelegate.m in Sources */,
+				E20402AF1BB00A9200A93A26 /* ConversionViewController.m in Sources */,
 				E276B3AD1BAFE62800DD6D06 /* main.m in Sources */,
 				E20CC1DC1BAFF28C00CAF551 /* FirstViewController.m in Sources */,
 			);
