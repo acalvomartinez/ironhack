@@ -10,8 +10,6 @@
 
 @interface DragView ()
 
-@property (nonatomic, strong) NSMutableArray *draggingViews;
-
 @end
 
 @implementation DragView
@@ -51,12 +49,5 @@
     view.center = location;
 }
 
-- (NSMutableArray *)draggingViews {
-    if (!_draggingViews) {
-        _draggingViews = [[NSMutableArray alloc] init];
-        
-    }
-    return _draggingViews;
-}
 
 @end
