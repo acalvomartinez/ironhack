@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nsG-l8-L9G">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8q-9O-KIf">
+                                <rect key="frame" x="20" y="28" width="560" height="82"/>
+                                <color key="backgroundColor" red="1" green="0.40000000596046448" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sagittis lorem ante, sit amet convallis libero pharetra nec. Mauris sed sem purus. Nullam dictum, diam at convallis placerat, diam quam aliquam odio, ut fringilla lacus nunc eu velit. Proin dapibus auctor nibh at sagittis.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eSo-Xa-B0n">
+                                <rect key="frame" x="180" y="175" width="240" height="250"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VUO-U9-8w1">
+                                        <rect key="frame" x="50" y="29" width="141" height="192"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="192" id="FPc-Zf-Ljx"/>
+                                            <constraint firstAttribute="width" constant="141" id="Zqw-D8-NBl"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.50196081399917603" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="VUO-U9-8w1" firstAttribute="centerX" secondItem="eSo-Xa-B0n" secondAttribute="centerX" id="EPx-kQ-ewY"/>
+                                    <constraint firstAttribute="height" constant="250" id="faH-KP-FHN"/>
+                                    <constraint firstItem="VUO-U9-8w1" firstAttribute="centerY" secondItem="eSo-Xa-B0n" secondAttribute="centerY" id="faV-ji-wcO"/>
+                                    <constraint firstAttribute="width" constant="240" id="tXf-mY-y4J"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfA-I9-Isk">
+                                <rect key="frame" x="230" y="135" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eSo-Xa-B0n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DbN-In-TA2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="eSo-Xa-B0n" secondAttribute="bottom" constant="50" id="FN1-6j-sNb"/>
+                            <constraint firstItem="eSo-Xa-B0n" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" priority="250" id="SQa-wF-3S9"/>
+                            <constraint firstItem="h8q-9O-KIf" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Z6X-O7-1Dl"/>
+                            <constraint firstItem="h8q-9O-KIf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="gnc-fV-T7O"/>
+                            <constraint firstItem="hfA-I9-Isk" firstAttribute="top" relation="greaterThanOrEqual" secondItem="h8q-9O-KIf" secondAttribute="bottom" constant="20" id="hBy-5I-yun"/>
+                            <constraint firstItem="h8q-9O-KIf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jmM-dX-OzB"/>
+                            <constraint firstItem="VUO-U9-8w1" firstAttribute="leading" secondItem="hfA-I9-Isk" secondAttribute="leading" id="k7B-QN-awa"/>
+                            <constraint firstItem="eSo-Xa-B0n" firstAttribute="top" secondItem="hfA-I9-Isk" secondAttribute="bottom" constant="10" id="x1O-J1-aqb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-240" y="394"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bfC-IJ-VHk">
+            <objects>
+                <viewController id="nsG-l8-L9G" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gRC-Jl-hix"/>
+                        <viewControllerLayoutGuide type="bottom" id="P7e-yL-vlT"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="sBz-gv-ref">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="akira" translatesAutoresizingMaskIntoConstraints="NO" id="f8E-gr-At3">
+                                <rect key="frame" x="28" y="20" width="544" height="180"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="180" id="YBD-ny-fNy"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bh2-4A-d2F">
+                                <rect key="frame" x="28" y="208" width="544" height="84"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sagittis lorem ante, sit amet convallis libero pharetra nec. Mauris sed sem purus. Nullam dictum, diam at convallis placerat, diam quam aliquam odio, ut fringilla lacus nunc eu velit. Proin dapibus auctor nibh at sagittis.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="bh2-4A-d2F" secondAttribute="trailing" constant="8" id="9FU-KM-WUp"/>
+                            <constraint firstItem="f8E-gr-At3" firstAttribute="leading" secondItem="sBz-gv-ref" secondAttribute="leadingMargin" constant="8" id="Ek3-07-oHf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f8E-gr-At3" secondAttribute="trailing" constant="8" id="P7J-dv-qa8"/>
+                            <constraint firstItem="P7e-yL-vlT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bh2-4A-d2F" secondAttribute="bottom" constant="8" id="QCs-Dp-m9N"/>
+                            <constraint firstItem="f8E-gr-At3" firstAttribute="centerX" secondItem="sBz-gv-ref" secondAttribute="centerX" id="WiV-s2-OwM"/>
+                            <constraint firstItem="f8E-gr-At3" firstAttribute="top" secondItem="gRC-Jl-hix" secondAttribute="bottom" id="Wzg-0p-1lW"/>
+                            <constraint firstItem="bh2-4A-d2F" firstAttribute="top" secondItem="f8E-gr-At3" secondAttribute="bottom" constant="8" id="Yxz-oo-0eE"/>
+                            <constraint firstItem="bh2-4A-d2F" firstAttribute="leading" secondItem="sBz-gv-ref" secondAttribute="leadingMargin" constant="8" id="ZoE-w6-Idv"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="300"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y9A-eC-NIo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="453" y="394"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="akira" width="512" height="384"/>
+    </resources>
+</document>
