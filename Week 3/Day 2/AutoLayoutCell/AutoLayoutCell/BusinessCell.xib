@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,58 +12,60 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="146"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hnp-0k-yVW" id="Owy-dt-BOb">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="145.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="145"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gpC-O0-282">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gpC-O0-282">
                         <rect key="frame" x="8" y="8" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="543-kG-pSE"/>
+                            <constraint firstAttribute="width" constant="70" id="BIc-QD-Owr"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" fixedFrame="YES" text="1. Grand Pu Bah" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxj-5M-mQp">
-                        <rect key="frame" x="86" y="8" width="183" height="15"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="1. Grand Pu Bah" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxj-5M-mQp">
+                        <rect key="frame" x="86" y="8" width="182" height="15"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" fixedFrame="YES" text="0.07 mi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXI-89-i8d">
-                        <rect key="frame" x="277" y="10" width="35" height="12"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="0.07 mi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXI-89-i8d">
+                        <rect key="frame" x="276" y="8" width="36" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btu-s5-pAQ">
-                        <rect key="frame" x="300" y="26" width="12" height="12"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="469 Reviews" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyX-Mu-Bhq">
+                        <rect key="frame" x="175" y="29" width="62" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="469 Reviews" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyX-Mu-Bhq">
-                        <rect key="frame" x="175" y="29" width="60" height="12"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thai, Seafood, Salad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSe-YP-Ned">
+                        <rect key="frame" x="86" y="63" width="226" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thai, Seafood, Salad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSe-YP-Ned">
-                        <rect key="frame" x="86" y="63" width="98" height="12"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Md1-a4-f6w">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Md1-a4-f6w">
                         <rect key="frame" x="86" y="26" width="84" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="84" id="Cnu-Qm-7hS"/>
+                            <constraint firstAttribute="height" constant="17" id="VlH-Ei-8Sk"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="88 Division St, Mission Bay" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CO6-IW-2ci">
-                        <rect key="frame" x="86" y="49" width="128" height="12"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88 Division St, Mission Bay" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CO6-IW-2ci">
+                        <rect key="frame" x="86" y="49" width="226" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wyx-SU-Pmo">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wyx-SU-Pmo">
                         <rect key="frame" x="8" y="86" width="304" height="43"/>
                         <attributedString key="attributedText">
                             <fragment>
                                 <string key="content">These guys went above and beyond when it really counted. When I sat down, I have to admit I was a little underwhelmed by the service. They did not seem to...</string>
                                 <attributes>
-                                    <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <font key="NSFont" size="12" name="HelveticaNeue-Italic"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                 </attributes>
@@ -70,7 +73,46 @@
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="$$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btu-s5-pAQ">
+                        <rect key="frame" x="298" y="29" width="14" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="gpC-O0-282" firstAttribute="leading" secondItem="Owy-dt-BOb" secondAttribute="leadingMargin" id="327-rJ-Xp0"/>
+                    <constraint firstItem="Wyx-SU-Pmo" firstAttribute="trailing" secondItem="Owy-dt-BOb" secondAttribute="trailingMargin" id="6UE-O3-DIY"/>
+                    <constraint firstItem="Mxj-5M-mQp" firstAttribute="leading" secondItem="gpC-O0-282" secondAttribute="trailing" constant="8" id="AHq-Gt-etI"/>
+                    <constraint firstItem="eyX-Mu-Bhq" firstAttribute="leading" secondItem="Md1-a4-f6w" secondAttribute="trailing" constant="5" id="B2Q-Ev-czl"/>
+                    <constraint firstItem="Mxj-5M-mQp" firstAttribute="top" secondItem="gpC-O0-282" secondAttribute="top" id="FTT-Ew-BnG"/>
+                    <constraint firstItem="gpC-O0-282" firstAttribute="top" secondItem="Owy-dt-BOb" secondAttribute="topMargin" id="FsJ-2H-b3p"/>
+                    <constraint firstItem="eyX-Mu-Bhq" firstAttribute="centerY" secondItem="Md1-a4-f6w" secondAttribute="centerY" id="IX1-JK-yW4"/>
+                    <constraint firstItem="btu-s5-pAQ" firstAttribute="leading" secondItem="eyX-Mu-Bhq" secondAttribute="trailing" constant="56" id="KSt-4y-SwQ"/>
+                    <constraint firstItem="CO6-IW-2ci" firstAttribute="top" secondItem="Md1-a4-f6w" secondAttribute="bottom" constant="6" id="Pcr-Fh-oZn"/>
+                    <constraint firstItem="Wyx-SU-Pmo" firstAttribute="top" secondItem="gpC-O0-282" secondAttribute="bottom" constant="8" id="Qcw-pE-Csf"/>
+                    <constraint firstItem="uSe-YP-Ned" firstAttribute="trailing" secondItem="Owy-dt-BOb" secondAttribute="trailingMargin" id="SNr-Ic-0m2"/>
+                    <constraint firstItem="CO6-IW-2ci" firstAttribute="trailing" secondItem="Owy-dt-BOb" secondAttribute="trailingMargin" id="XKO-Ai-B8w"/>
+                    <constraint firstItem="btu-s5-pAQ" firstAttribute="trailing" secondItem="Owy-dt-BOb" secondAttribute="trailingMargin" id="a8u-XJ-Sel"/>
+                    <constraint firstItem="btu-s5-pAQ" firstAttribute="trailing" secondItem="Owy-dt-BOb" secondAttribute="trailingMargin" id="cGX-Rx-kZp"/>
+                    <constraint firstItem="uSe-YP-Ned" firstAttribute="top" secondItem="CO6-IW-2ci" secondAttribute="bottom" constant="2" id="eL4-G7-8zN"/>
+                    <constraint firstItem="Md1-a4-f6w" firstAttribute="leading" secondItem="gpC-O0-282" secondAttribute="trailing" constant="8" id="exC-KV-6ha"/>
+                    <constraint firstItem="hXI-89-i8d" firstAttribute="trailing" secondItem="Owy-dt-BOb" secondAttribute="trailingMargin" id="fI5-au-Z9X"/>
+                    <constraint firstItem="hXI-89-i8d" firstAttribute="leading" secondItem="Mxj-5M-mQp" secondAttribute="trailing" constant="8" id="h25-Zn-GnO"/>
+                    <constraint firstItem="btu-s5-pAQ" firstAttribute="centerY" secondItem="eyX-Mu-Bhq" secondAttribute="centerY" id="s2m-33-PJS"/>
+                    <constraint firstItem="CO6-IW-2ci" firstAttribute="leading" secondItem="gpC-O0-282" secondAttribute="trailing" constant="8" id="sil-ca-6Q7"/>
+                    <constraint firstItem="Wyx-SU-Pmo" firstAttribute="leading" secondItem="Owy-dt-BOb" secondAttribute="leadingMargin" id="uYH-3f-1pp"/>
+                    <constraint firstItem="Md1-a4-f6w" firstAttribute="top" secondItem="Mxj-5M-mQp" secondAttribute="bottom" constant="3" id="vxH-cf-ev4"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Wyx-SU-Pmo" secondAttribute="bottom" constant="8" id="wBB-qp-xhO"/>
+                    <constraint firstItem="uSe-YP-Ned" firstAttribute="leading" secondItem="gpC-O0-282" secondAttribute="trailing" constant="8" id="xGj-yx-dL8"/>
+                    <constraint firstItem="hXI-89-i8d" firstAttribute="top" secondItem="Mxj-5M-mQp" secondAttribute="top" id="ziI-wL-8EK"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="KSt-4y-SwQ"/>
+                        <exclude reference="a8u-XJ-Sel"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="addressLabel" destination="CO6-IW-2ci" id="mV9-ce-3lD"/>
