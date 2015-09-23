@@ -79,13 +79,9 @@
     NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[grayView]-topSpace-[blueView(==viewHeigth)]" options:0 metrics:metrics views:@{@"blueView":self.blueView, @"grayView":self.grayView}];
     [self.view addConstraints:verticalConstraints];
     
-    NSLayoutConstraint *verticalGreaterThanOrEqualBottom = [NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationGreaterThanOrEqual toItem:self.blueView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:5];
-    verticalGreaterThanOrEqualBottom.priority = 999;
-    [self.view addConstraint:verticalGreaterThanOrEqualBottom];
-    
-    NSLayoutConstraint *verticalEqualBottom = [NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.blueView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:185];
-    verticalEqualBottom.priority = 751;
-    [self.view addConstraint:verticalEqualBottom];
+    NSArray *verticalGreaterThanOrEqualBottomConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[blueView]-(==185@751,>=5@999)-|" options:0 metrics:metrics views:@{@"blueView":self.blueView}];
+    [self.view addConstraints:verticalGreaterThanOrEqualBottomConstraints];
+
 }
 
 - (void)setupTextView {
