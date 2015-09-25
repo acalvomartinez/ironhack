@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A44-JO-P9N">
+                                <rect key="frame" x="0.0" y="554" width="600" height="46"/>
+                                <subviews>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bca-ti-SBU">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="46"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qI5-cO-NSs">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="46"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                        <blurEffect style="light"/>
+                                    </visualEffectView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BSa-hn-ek7">
+                                        <rect key="frame" x="8" y="8" width="533" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ne1-Td-YMN">
+                                        <rect key="frame" x="556" y="8" width="36" height="30"/>
+                                        <state key="normal" title="Send"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Bca-ti-SBU" firstAttribute="leading" secondItem="A44-JO-P9N" secondAttribute="leading" id="1sY-Z7-7w4"/>
+                                    <constraint firstAttribute="bottom" secondItem="BSa-hn-ek7" secondAttribute="bottom" constant="8" id="2ku-8J-BWZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="ne1-Td-YMN" secondAttribute="bottom" constant="8" id="3CI-Va-4io"/>
+                                    <constraint firstItem="ne1-Td-YMN" firstAttribute="leading" secondItem="BSa-hn-ek7" secondAttribute="trailing" constant="15" id="5ZQ-dK-hyz"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bca-ti-SBU" secondAttribute="trailing" id="GsO-L1-G58"/>
+                                    <constraint firstAttribute="trailing" secondItem="ne1-Td-YMN" secondAttribute="trailing" constant="8" id="NT5-ya-vty"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bca-ti-SBU" secondAttribute="bottom" id="VLt-9n-4DA"/>
+                                    <constraint firstItem="Bca-ti-SBU" firstAttribute="top" secondItem="A44-JO-P9N" secondAttribute="top" id="bJF-3V-Mv8"/>
+                                    <constraint firstItem="BSa-hn-ek7" firstAttribute="leading" secondItem="A44-JO-P9N" secondAttribute="leading" constant="8" id="sNa-kc-7wk"/>
+                                    <constraint firstItem="ne1-Td-YMN" firstAttribute="top" secondItem="A44-JO-P9N" secondAttribute="top" constant="8" id="xGq-Ad-Myj"/>
+                                    <constraint firstItem="BSa-hn-ek7" firstAttribute="top" secondItem="A44-JO-P9N" secondAttribute="top" constant="8" id="zs1-K5-MTP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="A44-JO-P9N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DKe-T3-PKC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="A44-JO-P9N" secondAttribute="bottom" id="iBs-T9-xJI"/>
+                            <constraint firstAttribute="trailing" secondItem="A44-JO-P9N" secondAttribute="trailing" id="pPO-aM-Gda"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="246" y="389"/>
+        </scene>
+    </scenes>
+</document>
