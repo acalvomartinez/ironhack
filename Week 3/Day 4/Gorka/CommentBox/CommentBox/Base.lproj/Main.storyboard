@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="win_1" translatesAutoresizingMaskIntoConstraints="NO" id="6UH-p1-BJq">
+                                <rect key="frame" x="257" y="341" width="86" height="193"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wde-a5-D8R" userLabel="Comment box view">
+                                <rect key="frame" x="0.0" y="554" width="600" height="46"/>
+                                <subviews>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJa-Oa-ZUF">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="46"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="JSf-aK-cUo">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="46"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                        <blurEffect style="extraLight"/>
+                                    </visualEffectView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lPu-HL-Jcq">
+                                        <rect key="frame" x="8" y="8" width="527" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvG-Aj-811">
+                                        <rect key="frame" x="550" y="8" width="36" height="30"/>
+                                        <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="sendButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PiQ-mR-9lU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="dJa-Oa-ZUF" secondAttribute="bottom" id="6oY-cM-gmN"/>
+                                    <constraint firstItem="TvG-Aj-811" firstAttribute="top" secondItem="wde-a5-D8R" secondAttribute="top" constant="8" id="HJ8-Vg-3qS"/>
+                                    <constraint firstItem="lPu-HL-Jcq" firstAttribute="leading" secondItem="wde-a5-D8R" secondAttribute="leading" constant="8" id="VMi-fg-kNa"/>
+                                    <constraint firstItem="TvG-Aj-811" firstAttribute="leading" secondItem="lPu-HL-Jcq" secondAttribute="trailing" constant="15" id="dmg-Jo-Uxp"/>
+                                    <constraint firstAttribute="trailing" secondItem="TvG-Aj-811" secondAttribute="trailing" constant="14" id="hjN-6e-fRx"/>
+                                    <constraint firstAttribute="trailing" secondItem="dJa-Oa-ZUF" secondAttribute="trailing" id="oVh-26-AI9"/>
+                                    <constraint firstItem="lPu-HL-Jcq" firstAttribute="top" secondItem="wde-a5-D8R" secondAttribute="top" constant="8" id="qf3-wh-SAB"/>
+                                    <constraint firstItem="dJa-Oa-ZUF" firstAttribute="leading" secondItem="wde-a5-D8R" secondAttribute="leading" id="s9p-tu-uq7"/>
+                                    <constraint firstItem="dJa-Oa-ZUF" firstAttribute="top" secondItem="wde-a5-D8R" secondAttribute="top" id="u0G-hE-3Ma"/>
+                                    <constraint firstAttribute="bottom" secondItem="TvG-Aj-811" secondAttribute="bottom" constant="8" id="vyQ-nN-NTO"/>
+                                    <constraint firstAttribute="bottom" secondItem="lPu-HL-Jcq" secondAttribute="bottom" constant="8" id="zEg-RG-9rL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wde-a5-D8R" firstAttribute="top" secondItem="6UH-p1-BJq" secondAttribute="bottom" constant="20" id="6Ud-nH-py5"/>
+                            <constraint firstItem="6UH-p1-BJq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CGl-qH-YR4"/>
+                            <constraint firstAttribute="trailing" secondItem="wde-a5-D8R" secondAttribute="trailing" id="CSx-S3-cES"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wde-a5-D8R" secondAttribute="bottom" id="nY9-JU-FhE"/>
+                            <constraint firstItem="wde-a5-D8R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xrf-fm-eRK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomCommentBoxConstraint" destination="nY9-JU-FhE" id="XJD-cw-NaL"/>
+                        <outlet property="commentBoxView" destination="wde-a5-D8R" id="SmD-4W-mlD"/>
+                        <outlet property="gangnamStyleImageView" destination="6UH-p1-BJq" id="PIu-Ue-z1u"/>
+                        <outlet property="textField" destination="lPu-HL-Jcq" id="5sZ-7c-0D5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="330" y="350"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="win_1" width="86" height="193"/>
+    </resources>
+</document>
