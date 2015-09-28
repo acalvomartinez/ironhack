@@ -10,7 +10,28 @@
 
 @implementation TVShow
 
-- (id)copyWithZone:(NSZone *)zone {
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super init];
+    if (self) {
+        self.tvShowId = [coder decodeObjectForKey:@"tvShowId"];
+        self.title = [coder decodeObjectForKey:@"title"];
+        self.tvShowDescription = [coder decodeObjectForKey:@"tvShowDescription"];
+        self.rating = [coder decodeFloatForKey:@"rating"];
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder
+{
+    [coder encodeObject:self.tvShowId forKey:@"tvShowId"];
+    [coder encodeObject:self.title forKey:@"title"];
+    [coder encodeObject:self.tvShowDescription forKey:@"tvShowDescription"];
+    [coder encodeFloat:self.rating forKey:@"rating"];
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
     TVShow *tvShowCopy = [[[self class] alloc] init];
     
     if (tvShowCopy) {

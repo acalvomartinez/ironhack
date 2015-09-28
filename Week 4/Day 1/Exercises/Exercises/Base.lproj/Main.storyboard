@@ -45,7 +45,18 @@
                             <outlet property="delegate" destination="eUw-Va-W8c" id="EiQ-mR-8ud"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="PnZ-ID-aZD"/>
+                    <navigationItem key="navigationItem" id="PnZ-ID-aZD">
+                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="zev-1Z-RMb">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="eUw-Va-W8c" id="bcV-2e-rT6"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="eRY-B2-jeQ">
+                            <connections>
+                                <action selector="duplicateButtonPressed:" destination="eUw-Va-W8c" id="yT4-wg-Zjg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSz-nE-Ucy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -74,7 +85,18 @@
                             <outlet property="delegate" destination="zwN-ZY-klj" id="vsy-PR-QzQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="DnZ-H4-s0T"/>
+                    <navigationItem key="navigationItem" id="DnZ-H4-s0T">
+                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="9dN-LG-J94">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="zwN-ZY-klj" id="Dob-5Y-cnb"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Hgb-Z8-mbs">
+                            <connections>
+                                <action selector="duplicateButtonPressed:" destination="zwN-ZY-klj" id="tm3-Qr-AUx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M8a-lf-VSm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

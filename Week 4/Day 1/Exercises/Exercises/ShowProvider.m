@@ -12,11 +12,14 @@
 #import "TVShow.h"
 
 #import "NSString+Random.h"
+#import "NSArray+RandomItem.h"
 
 @interface ShowProvider ()
 
 @property (nonatomic, strong) NSMutableArray *movieList;
 @property (nonatomic, strong) NSMutableArray *tvShowList;
+@property (nonatomic, copy) NSString *moviesFilePath;
+@property (nonatomic, copy) NSString *tvShowsFilePath;
 
 @end
 
@@ -24,9 +27,8 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        _movieList = [NSMutableArray new];
-        _tvShowList = [NSMutableArray new];
-
+        _moviesFilePath = [self moviesDataFilePath];
+        _tvShowsFilePath = [self tvShowsDataFilePath];
     }
     return  self;
 }
@@ -39,37 +41,98 @@
     return [self.tvShowList copy];
 }
 
-- (void)generateRandomMovies:(NSUInteger)total {
-    for (NSUInteger i = 0; i < total; i++) {
-        [self addRandomMovie];
-    }
-}
-
-- (void)generateRandomTVShows:(NSUInteger)total {
-    for (NSUInteger i = 0; i < total; i++) {
-        [self addRandomTVShow];
-    }
-
-}
-
-- (void)addRandomMovie {
-    Movie *randomMovie = [[Movie alloc]init];
-    randomMovie.movieId = [NSString mm_randomString];
-    randomMovie.movieDescription = [NSString mm_randomString];
-    randomMovie.title = [NSString mm_randomString];
-    randomMovie.rating = 0;
+- (NSString *)moviesDataFilePath {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     
-    [self.movieList addObject:randomMovie];
+    return [[paths objectAtIndex:0] stringByAppendingPathComponent:@"movies.dat"];
 }
 
-- (void)addRandomTVShow {
-    TVShow *randomTVShow = [[TVShow alloc]init];
-    randomTVShow.tvShowId = [NSString mm_randomString];
-    randomTVShow.tvShowDescription = [NSString mm_randomString];
-    randomTVShow.title = [NSString mm_randomString];
-    randomTVShow.rating = 0;
+- (NSString *)tvShowsDataFilePath {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     
-    [self.tvShowList addObject:randomTVShow];
+    return [[paths objectAtIndex:0] stringByAppendingPathComponent:@"tvshows.dat"];
+}
+
+
+- (NSMutableArray *)generateRandomMovies:(NSUInteger)total {
+    
+    NSMutableArray *movies = [NSMutableArray arrayWithCapacity:total];
+    
+    for (NSUInteger i = 0; i < total; i++) {
+        Movie *randomMovie = [[Movie alloc]init];
+        randomMovie.movieId = [NSString mm_randomString];
+        randomMovie.movieDescription = [NSString mm_randomString];
+        randomMovie.title = [NSString mm_randomString];
+        randomMovie.rating = 0;
+        
+        [movies addObject:randomMovie];
+    }
+    
+    return movies;
+}
+
+- (NSMutableArray *)generateRandomTVShows:(NSUInteger)total {
+    
+    NSMutableArray *tvShows = [NSMutableArray arrayWithCapacity:total];
+    
+    for (NSUInteger i = 0; i < total; i++) {
+        TVShow *randomTVShow = [[TVShow alloc]init];
+        randomTVShow.tvShowId = [NSString mm_randomString];
+        randomTVShow.tvShowDescription = [NSString mm_randomString];
+        randomTVShow.title = [NSString mm_randomString];
+        randomTVShow.rating = 0;
+        
+        [tvShows addObject:randomTVShow];
+        
+    }
+    
+    return tvShows;
+
+}
+
+- (void)duplicateRandomMovie {
+    Movie *movie = [self.movieList randomItem];
+    
+    [self.movieList addObject:[movie copy]];
+}
+
+- (void)duplicateRandomTVShow {
+    TVShow *tvShow = [self.tvShowList randomItem];
+    
+    [self.tvShowList addObject:[tvShow copy]];
+}
+
+- (void)saveTVShows {
+    [NSKeyedArchiver archiveRootObject:self.tvShowList toFile:self.tvShowsFilePath];
+}
+
+- (void)saveMovies {
+    [NSKeyedArchiver archiveRootObject:self.movieList toFile:self.moviesFilePath];
+}
+
+- (NSMutableArray *)movieList {
+    if (!_movieList) {
+         _movieList = [NSKeyedUnarchiver unarchiveObjectWithFile:self.moviesFilePath];
+        
+        if (!_movieList)
+        {
+            _movieList = [self generateRandomMovies:5];
+        }
+        
+    }
+    return _movieList;
+}
+
+- (NSMutableArray *)tvShowList {
+    if (!_tvShowList) {
+        _tvShowList = [NSKeyedUnarchiver unarchiveObjectWithFile:self.tvShowsFilePath];
+        
+        if (!_tvShowList) {
+           _tvShowList = [self generateRandomTVShows:5];
+        }
+        
+    }
+    return _tvShowList;
 }
 
 @end

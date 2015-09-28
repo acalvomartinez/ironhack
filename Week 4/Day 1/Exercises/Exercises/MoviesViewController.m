@@ -25,7 +25,6 @@
     self.title = @"Movies";
     
     self.model = [[ShowProvider alloc]init];
-    [self.model generateRandomMovies:5];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -99,5 +98,15 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - Actions
+
+- (IBAction)duplicateButtonPressed:(id)sender {
+    [self.model duplicateRandomMovie];
+    [self.tableView reloadData];
+}
+- (IBAction)saveButtonPressed:(id)sender {
+    [self.model saveMovies];
+}
 
 @end

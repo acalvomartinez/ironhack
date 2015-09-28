@@ -13,7 +13,10 @@
 - (NSArray *)movies;
 - (NSArray *)tvShows;
 
-- (void)generateRandomMovies:(NSUInteger)total;
-- (void)generateRandomTVShows:(NSUInteger)total;
+- (void)duplicateRandomMovie;
+- (void)duplicateRandomTVShow;
+
+- (void)saveMovies;
+- (void)saveTVShows;
 
 @end

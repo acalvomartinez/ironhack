@@ -10,4 +10,6 @@
 
 @interface NSArray (RandomItem)
 
+- (id)randomItem;
+
 @end

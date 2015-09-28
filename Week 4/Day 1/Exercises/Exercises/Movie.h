@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 @import CoreGraphics;
 
-@interface Movie : NSObject <NSCopying>
+@interface Movie : NSObject <NSCopying, NSCoding>
 
 @property (nonatomic, copy) NSString *movieId;
 @property (nonatomic, copy) NSString *title;

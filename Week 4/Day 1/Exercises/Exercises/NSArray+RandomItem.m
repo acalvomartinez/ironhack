@@ -10,4 +10,10 @@
 
 @implementation NSArray (RandomItem)
 
+- (id)randomItem {
+    NSUInteger randomIndex = arc4random_uniform(self.count);
+    
+    return [self objectAtIndex:randomIndex];
+}
+
 @end

@@ -10,7 +10,7 @@
 
 @import CoreGraphics;
 
-@interface TVShow : NSObject <NSCopying>
+@interface TVShow : NSObject <NSCoding,NSCopying>
 
 @property (nonatomic, copy) NSString *tvShowId;
 @property (nonatomic, copy) NSString *title;
