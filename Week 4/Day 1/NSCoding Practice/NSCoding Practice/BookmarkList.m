@@ -11,7 +11,7 @@
 
 @interface BookmarkList ()
 
-@property (nonatomic, strong) NSMutableArray *list;
+@property (nonatomic, strong) NSMutableSet *list;
 @property (nonatomic, copy) NSString *path;
 @end
 
@@ -26,16 +26,20 @@
 }
 
 - (NSArray *)bookmarks {
-    return [self.list copy];
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"url" ascending:YES];
+    
+    return [self.list sortedArrayUsingDescriptors:@[sortDescriptor]];
 }
 
-- (void)addBookmarkWithName:(NSString *)name url:(NSString *)url {
+- (BOOL)addBookmarkWithName:(NSString *)name url:(NSString *)url {
     Bookmark *bookmark = [[Bookmark alloc]init];
     bookmark.url = url;
     bookmark.name = name;
     
     [self.list addObject:bookmark];
     [self saveBookmarksToDisk];
+    
+    return YES;
 }
 
 #pragma mark - File Data Management
@@ -47,19 +51,19 @@
 }
 
 
-- (NSMutableArray *)loadBookmarks {
+- (NSMutableSet *)loadBookmarks {
     
-    NSArray *bookmarks = (NSArray *)[NSKeyedUnarchiver unarchiveObjectWithFile:self.path];
+    NSMutableSet *bookmarks = [NSMutableSet setWithArray:[NSKeyedUnarchiver unarchiveObjectWithFile:self.path]];
     
     if (!bookmarks) {
-        bookmarks = [NSArray new];
+        bookmarks = [NSMutableSet new];
     }
     
-    return [bookmarks mutableCopy];
+    return bookmarks;
 }
 
 - (void)saveBookmarksToDisk {
-    [NSKeyedArchiver archiveRootObject:self.bookmarks toFile:self.path];
+    [NSKeyedArchiver archiveRootObject:self.list toFile:self.path];
 }
 
 @end

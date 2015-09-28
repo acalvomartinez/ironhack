@@ -66,11 +66,18 @@
 - (void)addBookmarkViewController:(id)viewController
            didSaveBookmarkWithURL:(NSString *)url
                              name:(NSString *)name {
-     
-    [self.model addBookmarkWithName:name url:url];
-    [self.tableView reloadData];
+
     
-    [viewController dismissViewControllerAnimated:YES completion:nil];
+    if ([self.model addBookmarkWithName:name url:url]) {
+        [self.tableView reloadData];
+        [viewController dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        NSLog(@"ERROR");
+    }
+
+    
+    
+    
 }
 
 

@@ -12,6 +12,6 @@
 
 @property (nonatomic, strong, readonly) NSArray *bookmarks;
 
-- (void)addBookmarkWithName:(NSString *)name url:(NSString *)url;
+- (BOOL)addBookmarkWithName:(NSString *)name url:(NSString *)url;
 
 @end
