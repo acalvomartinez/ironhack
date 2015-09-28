@@ -42,4 +42,27 @@
     return movieCopy;
 }
 
+#pragma mark - Equality
+
+- (BOOL)isEqualToMovie:(Movie *)other {
+    return [self.movieId isEqualToString:other.movieId] && [self.title isEqualToString:other.title];
+}
+
+- (BOOL)isEqual:(id)other
+{
+    if (other == self) {
+        return YES;
+    }
+    if (![other isKindOfClass:[self class]]) {
+        return NO;
+    }
+    
+    return [self isEqualToMovie:other];
+}
+
+- (NSUInteger)hash
+{
+    return [_movieId hash];
+}
+
 @end

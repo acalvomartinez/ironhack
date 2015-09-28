@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="285-do-9uj">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -51,11 +52,18 @@
                                 <action selector="saveButtonPressed:" destination="eUw-Va-W8c" id="bcV-2e-rT6"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="eRY-B2-jeQ">
-                            <connections>
-                                <action selector="duplicateButtonPressed:" destination="eUw-Va-W8c" id="yT4-wg-Zjg"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Duplicate" id="eRY-B2-jeQ">
+                                <connections>
+                                    <action selector="duplicateButtonPressed:" destination="eUw-Va-W8c" id="yT4-wg-Zjg"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="cqN-rc-Vrs">
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="eUw-Va-W8c" id="DYw-4g-Xej"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSz-nE-Ucy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -91,11 +99,18 @@
                                 <action selector="saveButtonPressed:" destination="zwN-ZY-klj" id="Dob-5Y-cnb"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Hgb-Z8-mbs">
-                            <connections>
-                                <action selector="duplicateButtonPressed:" destination="zwN-ZY-klj" id="tm3-Qr-AUx"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Duplicate" id="Hgb-Z8-mbs">
+                                <connections>
+                                    <action selector="duplicateButtonPressed:" destination="zwN-ZY-klj" id="tm3-Qr-AUx"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="ugy-f0-Wsi">
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="zwN-ZY-klj" id="679-8K-VSQ"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M8a-lf-VSm" userLabel="First Responder" sceneMemberID="firstResponder"/>

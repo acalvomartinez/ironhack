@@ -102,6 +102,39 @@
     [self.tvShowList addObject:[tvShow copy]];
 }
 
+- (void)addTVShow {
+    TVShow *tvShow = [[TVShow alloc]init];
+    tvShow.tvShowId = [NSString mm_randomString];
+    tvShow.tvShowDescription = [NSString mm_randomString];
+    tvShow.title = [NSString mm_randomString];
+    tvShow.rating = 0;
+    
+    [self.tvShowList addObject:tvShow];
+}
+
+- (void)addMovie {
+    Movie *movie = [[Movie alloc]init];
+    movie.movieId = [NSString mm_randomString];
+    movie.movieDescription = [NSString mm_randomString];
+    movie.title = [NSString mm_randomString];
+    movie.rating = 0;
+    
+    [self.movieList addObject:movie];
+}
+
+- (NSUInteger)countMovieOccurrences:(Movie *)movie {
+    NSCountedSet *countedSet = [[NSCountedSet alloc] initWithArray:self.movies];
+    
+    return [countedSet countForObject:movie];
+    
+}
+
+- (NSUInteger)countTVShowOccurrences:(TVShow *)tvShow {
+    NSCountedSet *countedSet = [[NSCountedSet alloc] initWithArray:self.tvShows];
+    
+    return [countedSet countForObject:tvShow];
+}
+
 - (void)saveTVShows {
     [NSKeyedArchiver archiveRootObject:self.tvShowList toFile:self.tvShowsFilePath];
 }

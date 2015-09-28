@@ -16,5 +16,7 @@
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *tvShowDescription;
 @property (nonatomic, assign) CGFloat rating;
+
+- (BOOL)isEqualToTVShow:(TVShow *)other;
            
 @end

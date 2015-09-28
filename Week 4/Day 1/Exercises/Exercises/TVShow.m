@@ -44,4 +44,27 @@
     return tvShowCopy;
 }
 
+#pragma mark - Equality
+
+- (BOOL)isEqualToTVShow:(TVShow *)other {
+    return [self.tvShowId isEqualToString:other.tvShowId] && [self.title isEqualToString:other.title];
+}
+
+- (BOOL)isEqual:(id)other
+{
+    if (other == self) {
+        return YES;
+    }
+    if (![other isKindOfClass:[self class]]) {
+        return NO;
+    }
+    
+    return [self isEqualToTVShow:other];
+}
+
+- (NSUInteger)hash
+{
+    return [_tvShowId hash];
+}
+
 @end

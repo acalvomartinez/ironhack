@@ -16,4 +16,6 @@
 @property (nonatomic, copy) NSString *movieDescription;
 @property (nonatomic, assign) CGFloat rating;
 
+- (BOOL)isEqualToMovie:(Movie *)other;
+
 @end

@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+@class TVShow;
+@class Movie;
+
 @interface ShowProvider : NSObject
 
 - (NSArray *)movies;
@@ -16,7 +19,14 @@
 - (void)duplicateRandomMovie;
 - (void)duplicateRandomTVShow;
 
+- (void)addMovie;
+- (void)addTVShow;
+
 - (void)saveMovies;
 - (void)saveTVShows;
+
+- (NSUInteger)countMovieOccurrences:(Movie *)movie;
+- (NSUInteger)countTVShowOccurrences:(TVShow *)tvShow;
+
 
 @end

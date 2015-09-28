@@ -48,6 +48,41 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    TVShow *tvShow = [self.model.tvShows objectAtIndex:indexPath.row];
+    
+    if ([self compareWithFirstElement:tvShow]) {
+        [self showAlertWithMessage:@"It is equal to first element"];
+    } else {
+        [self countOccurrences:tvShow];
+    }
+}
+
+#pragma mark - Private Methods
+
+- (BOOL)compareWithFirstElement:(TVShow *)show {
+    TVShow *firstShow = [self.model.tvShows objectAtIndex:0];
+    
+    return [show isEqualToTVShow:firstShow];
+}
+
+- (void)countOccurrences:(TVShow *)tvShow {
+    NSUInteger count = [self.model countTVShowOccurrences:tvShow];
+
+    NSString *message = [NSString stringWithFormat:@"You have %d equals TVShow: %@", count, tvShow.title];
+    [self showAlertWithMessage:message];
+}
+
+- (void)showAlertWithMessage:(NSString *)message {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:self.title message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:ok];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
 
 #pragma mark - Actions
 
@@ -59,4 +94,10 @@
 - (IBAction)saveButtonPressed:(id)sender {
     [self.model saveTVShows];
 }
+
+- (IBAction)addButtonPressed:(id)sender {
+    [self.model addTVShow];
+    [self.tableView reloadData];
+}
+
 @end
