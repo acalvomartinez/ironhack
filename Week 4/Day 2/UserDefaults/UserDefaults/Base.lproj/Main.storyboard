@@ -40,7 +40,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wyD-XN-Fqw">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wyD-XN-Fqw">
                                 <rect key="frame" x="132" y="55" width="51" height="31"/>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rti-EX-LA5">
@@ -55,9 +55,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHd-8h-qWK">
+                                <rect key="frame" x="141" y="319" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jxy-9N-AFa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXE-bm-1sb">
+                                <rect key="frame" x="145" y="357" width="30" height="30"/>
+                                <state key="normal" title="Log"/>
+                                <connections>
+                                    <action selector="logButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="05m-Bb-45T"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="OXE-bm-1sb" firstAttribute="top" secondItem="dHd-8h-qWK" secondAttribute="bottom" constant="8" id="4O4-wo-5lh"/>
                             <constraint firstItem="Rti-EX-LA5" firstAttribute="top" secondItem="0ri-2k-hAH" secondAttribute="bottom" constant="47" id="Cr1-G7-pXb"/>
                             <constraint firstItem="ZOV-ei-emn" firstAttribute="centerY" secondItem="Rq7-NN-NGh" secondAttribute="centerY" id="D1i-RJ-99D"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZOV-ei-emn" secondAttribute="trailing" id="DdS-b0-4nx"/>
@@ -69,6 +84,9 @@
                             <constraint firstItem="wyD-XN-Fqw" firstAttribute="centerY" secondItem="Qmh-1k-cYa" secondAttribute="centerY" id="KdA-yn-qOr"/>
                             <constraint firstItem="Rti-EX-LA5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OPL-S9-iRH"/>
                             <constraint firstItem="0ri-2k-hAH" firstAttribute="leading" secondItem="CyR-L0-hy7" secondAttribute="trailing" constant="43" id="Szg-WX-cTE"/>
+                            <constraint firstItem="dHd-8h-qWK" firstAttribute="top" secondItem="Rti-EX-LA5" secondAttribute="bottom" constant="20" id="WEB-kf-5cl"/>
+                            <constraint firstItem="OXE-bm-1sb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZyA-Ka-ipy"/>
+                            <constraint firstItem="dHd-8h-qWK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bE3-oH-Szf"/>
                             <constraint firstItem="wyD-XN-Fqw" firstAttribute="leading" secondItem="Qmh-1k-cYa" secondAttribute="trailing" constant="19" id="dfK-Jc-QyN"/>
                             <constraint firstItem="0ri-2k-hAH" firstAttribute="centerY" secondItem="CyR-L0-hy7" secondAttribute="centerY" id="fLW-QJ-edl"/>
                             <constraint firstAttribute="leadingMargin" secondItem="CyR-L0-hy7" secondAttribute="leading" id="gN1-hG-pkv"/>

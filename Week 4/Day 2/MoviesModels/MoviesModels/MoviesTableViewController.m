@@ -22,6 +22,8 @@ static NSString *const savedMoviesFileName = @"movies";
 
 @property (strong, nonatomic) UserEntity *user;
 
+@property (strong, nonatomic) NSMutableArray *likes;
+
 @end
 
 @implementation MoviesTableViewController
@@ -35,6 +37,17 @@ static NSString *const savedMoviesFileName = @"movies";
         self.movies = [NSMutableArray array];
     }
     return self;
+}
+
+- (NSMutableArray *)likes {
+    if (!_likes) {
+        _likes = [self loadSavedMovieLikes];
+    }
+    return _likes;
+}
+
+- (NSMutableArray *)loadSavedMovieLikes {
+    return [NSMutableArray new];
 }
 
 - (void)viewDidLoad
@@ -126,6 +139,14 @@ static NSString *const savedMoviesFileName = @"movies";
     Movie *movie=[self.movies objectAtIndex:indexPath.item];
     cell.textLabel.text=movie.movieTitle;
     cell.detailTextLabel.text=movie.movieDescription;
+    
+    if ([self.likes containsObject:movie.movieId]) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+
+    
     return cell;
 }
 
@@ -133,17 +154,29 @@ static NSString *const savedMoviesFileName = @"movies";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+//    Movie *movie = [self.movies objectAtIndex:indexPath.item];
+//    
+//    if (indexPath.row>=0 && indexPath.row<=1)
+//    {
+//        [self compareWithFirstMovie:movie];
+//    }
+//    else
+//    {
+//        [self findMovie:movie];
+//    }
+    
     Movie *movie = [self.movies objectAtIndex:indexPath.item];
     
-    if (indexPath.row>=0 && indexPath.row<=1)
-    {
-        [self compareWithFirstMovie:movie];
+    if ([self.likes containsObject:movie.movieId]) {
+        [self.likes removeObject:movie.movieId];
+    } else {
+        [self.likes addObject:movie.movieId];
     }
-    else
-    {
-        [self findMovie:movie];
-    }
+    
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:NO];
+    
 }
+
 
 - (void)compareWithFirstMovie:(Movie *)movie
 {

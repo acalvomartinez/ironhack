@@ -27,6 +27,7 @@
 		E27A01961BBA84F300B487D0 /* UserLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27A01951BBA84F300B487D0 /* UserLoginViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E27A019B1BBA8B5000B487D0 /* UserEntity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E27A01981BBA8B5000B487D0 /* UserEntity+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
 		E27A019C1BBA8B5000B487D0 /* UserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = E27A019A1BBA8B5000B487D0 /* UserEntity.m */; settings = {ASSET_TAGS = (); }; };
+		E2CDD5711BBADB6C00964062 /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CDD5701BBADB6C00964062 /* UserProfileViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		E27A01981BBA8B5000B487D0 /* UserEntity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserEntity+CoreDataProperties.m"; sourceTree = "<group>"; };
 		E27A01991BBA8B5000B487D0 /* UserEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEntity.h; sourceTree = "<group>"; };
 		E27A019A1BBA8B5000B487D0 /* UserEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEntity.m; sourceTree = "<group>"; };
+		E2CDD56F1BBADB6C00964062 /* UserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileViewController.h; sourceTree = "<group>"; };
+		E2CDD5701BBADB6C00964062 /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,8 @@
 				8C0709CA1BB85CD40000F8CC /* ShowsProvider.m */,
 				8C07098D1BB8408F0000F8CC /* ShowsTableViewController.h */,
 				8C07098E1BB8408F0000F8CC /* ShowsTableViewController.m */,
+				E2CDD56F1BBADB6C00964062 /* UserProfileViewController.h */,
+				E2CDD5701BBADB6C00964062 /* UserProfileViewController.m */,
 				8C0709871BB8408F0000F8CC /* Supporting Files */,
 				E27A01941BBA84F300B487D0 /* UserLoginViewController.h */,
 				E27A01951BBA84F300B487D0 /* UserLoginViewController.m */,
@@ -390,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2CDD5711BBADB6C00964062 /* UserProfileViewController.m in Sources */,
 				8C0709CB1BB85CD40000F8CC /* ShowsProvider.m in Sources */,
 				8C0709C51BB842770000F8CC /* NSString+Random.m in Sources */,
 				8C0709C21BB841940000F8CC /* Movie.m in Sources */,

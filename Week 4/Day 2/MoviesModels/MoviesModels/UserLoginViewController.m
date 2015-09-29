@@ -47,6 +47,9 @@
     }
     
     if (loggedUser) {
+        
+        [self saveLastLoginDate];
+        
         [[NSNotificationCenter defaultCenter] postNotificationName:@"userLoggedNotification" object:self userInfo:@{@"userLogged":loggedUser}];
         
         [self dismissViewControllerAnimated:YES completion:nil];
@@ -63,6 +66,10 @@
     NSArray *fetchResult = [self.managedContext executeFetchRequest:fetchRequest error:&error];
     
     return fetchResult.count?[fetchResult firstObject]:nil;
+}
+
+- (void)saveLastLoginDate {
+    [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:@"lastLoginDate"];
 }
 
 - (UserEntity *)addUserWithName:(NSString *)name password:(NSString *)password {

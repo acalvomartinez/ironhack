@@ -17,6 +17,7 @@
                     <connections>
                         <segue destination="wpd-Cu-BTC" kind="relationship" relationship="viewControllers" id="b2u-PW-ctH"/>
                         <segue destination="FIM-0k-bZ0" kind="relationship" relationship="viewControllers" id="fBq-AI-iCg"/>
+                        <segue destination="zk6-3u-dHs" kind="relationship" relationship="viewControllers" id="b0C-CM-98V"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -184,5 +185,52 @@
             </objects>
             <point key="canvasLocation" x="734" y="486"/>
         </scene>
+        <!--Profile-->
+        <scene sceneID="Ad1-j5-f5Z">
+            <objects>
+                <viewController id="zk6-3u-dHs" customClass="UserProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fgO-mZ-pmX"/>
+                        <viewControllerLayoutGuide type="bottom" id="XlQ-Zx-9TC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="30x-OZ-b9n">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YT0-B7-YpJ">
+                                <rect key="frame" x="276" y="167" width="48" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="LogoutButtonPressed:" destination="zk6-3u-dHs" eventType="touchUpInside" id="4DH-8H-CeJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5S-iW-vNw">
+                                <rect key="frame" x="261" y="114" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YT0-B7-YpJ" firstAttribute="top" secondItem="F5S-iW-vNw" secondAttribute="bottom" constant="32" id="1Cf-aW-fJH"/>
+                            <constraint firstItem="F5S-iW-vNw" firstAttribute="centerX" secondItem="30x-OZ-b9n" secondAttribute="centerX" id="Azg-GC-zMo"/>
+                            <constraint firstItem="YT0-B7-YpJ" firstAttribute="centerX" secondItem="30x-OZ-b9n" secondAttribute="centerX" id="Vdg-Wx-8qI"/>
+                            <constraint firstItem="F5S-iW-vNw" firstAttribute="top" secondItem="fgO-mZ-pmX" secondAttribute="bottom" constant="94" id="WQq-xa-vff"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" id="p0x-k5-GVr"/>
+                    <connections>
+                        <outlet property="usernameLabel" destination="F5S-iW-vNw" id="890-I9-VLr"/>
+                        <segue destination="FXV-3R-hgf" kind="presentation" identifier="userLogin" id="Oqa-vm-AUF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D5z-lu-3On" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="738" y="1194"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Oqa-vm-AUF"/>
+    </inferredMetricsTieBreakers>
 </document>

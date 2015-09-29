@@ -25,9 +25,24 @@ static NSString * const savedShowsFileName = @"shows";
 @property (strong,nonatomic) ShowsProvider *showsProvider;
 @property (strong, nonatomic) UserEntity *user;
 
+@property (strong, nonatomic) NSMutableArray *likes;
+@property (strong, nonatomic) NSString *likesFilePath;
+
 @end
 
 @implementation ShowsTableViewController
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleUserLoggedNotification:) name:@"userLoggedNotification" object:nil];
+        
+        self.shows = [NSMutableArray array];
+    }
+    return self;
+}
+
 
 - (void)viewDidLoad
 {
@@ -41,21 +56,54 @@ static NSString * const savedShowsFileName = @"shows";
     UIBarButtonItem *addMovieButton = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(addShow:)];
     self.navigationItem.rightBarButtonItems = @[duplicateMovieButton, addMovieButton];
     
+    
+    
+    
     self.showsProvider = [[ShowsProvider alloc] init];
     self.shows = [[self.showsProvider showsFromRemote] mutableCopy];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleUserLoggedNotification:) name:@"userLoggedNotification" object:nil];
+
 }
-
-
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
     if (![self isUserLogged]) {
         [self performSegueWithIdentifier:@"showsLogin" sender:self];
+    } else {
+        self.user = [self loggedUser];
+        [self setupLikesFilePath];
+        
+        self.likes = [NSMutableArray arrayWithContentsOfFile:self.likesFilePath];
+        
+        if (!self.likes) {
+            self.likes = [NSMutableArray new];
+        }
     }
+    
+    [self.tableView reloadData];
 }
+
+- (void)setupLikesFilePath {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *path = [paths firstObject];
+    
+    self.likesFilePath = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@_saves.plist", self.user.name]];
+}
+
+- (UserEntity *)loggedUser {
+    NSFetchRequest *fetchRequest = [NSFetchRequest  fetchRequestWithEntityName:NSStringFromClass([UserEntity class])];
+    
+    NSError *error;
+    NSArray *fetchResult = [self.managedContext executeFetchRequest:fetchRequest error:&error];
+    
+    if ([fetchResult count] == 0)
+    {
+        return nil;
+    }
+    
+    return [fetchResult firstObject];
+}
+
 
 - (BOOL)isUserLogged {
     
@@ -78,7 +126,6 @@ static NSString * const savedShowsFileName = @"shows";
 - (void)handleUserLoggedNotification:(NSNotification *)notification {
     self.user = [notification.userInfo objectForKey:@"userLogged"];
     self.navigationItem.title = self.user.name;
-    
 }
 
 - (void)addDuplicatedShow:(id)sender
@@ -119,6 +166,11 @@ static NSString * const savedShowsFileName = @"shows";
     {
         [NSKeyedArchiver archiveRootObject:self.shows toFile:[self archivePath]];
     }
+    
+    if (self.likes.count)
+    {
+        [self.likes writeToFile:self.likesFilePath atomically:YES];
+    }
 }
 
 - (void)loadShows
@@ -145,6 +197,12 @@ static NSString * const savedShowsFileName = @"shows";
     cell.textLabel.text = show.showTitle;
     cell.detailTextLabel.text = show.showDescription;
     
+    if ([self.likes containsObject:show.showId]) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
     return cell;
 }
 
@@ -152,16 +210,25 @@ static NSString * const savedShowsFileName = @"shows";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    Show *show=[self.shows objectAtIndex:indexPath.item];
+//    Show *show=[self.shows objectAtIndex:indexPath.item];
+//    
+//    if (indexPath.row>=0 && indexPath.row<=1)
+//    {
+//        [self compareWithFirstShow:show];
+//    }
+//    else
+//    {
+//        [self findShow:show];
+//    }
+    Show *show = [self.shows objectAtIndex:indexPath.item];
     
-    if (indexPath.row>=0 && indexPath.row<=1)
-    {
-        [self compareWithFirstShow:show];
+    if ([self.likes containsObject:show.showId]) {
+        [self.likes removeObject:show.showId];
+    } else {
+        [self.likes addObject:show.showId];
     }
-    else
-    {
-        [self findShow:show];
-    }
+    
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:NO];
 }
 
 - (void)compareWithFirstShow:(Show *)show
@@ -213,6 +280,9 @@ static NSString * const savedShowsFileName = @"shows";
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     UserLoginViewController *viewController = segue.destinationViewController;
     viewController.managedContext = self.managedContext;
+    
+    self.likesFilePath = nil;
+    self.likes = nil;
 }
 
 @end
