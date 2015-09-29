@@ -1,0 +1,3 @@
+platform :ios, '9.0'
+
+pod 'Mantle', '~> 2.0.5'
