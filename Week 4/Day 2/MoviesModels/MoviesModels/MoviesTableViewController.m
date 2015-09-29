@@ -31,6 +31,8 @@ static NSString *const savedMoviesFileName = @"movies";
     self = [super initWithCoder:coder];
     if (self) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleUserLoggedNotification:) name:@"userLoggedNotification" object:nil];
+        
+        self.movies = [NSMutableArray array];
     }
     return self;
 }
@@ -38,8 +40,6 @@ static NSString *const savedMoviesFileName = @"movies";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.movies = [NSMutableArray array];
     
     UIBarButtonItem *saveMoviesButton=[[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveMovies:)];
     self.navigationItem.leftBarButtonItem = saveMoviesButton;
