@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="285-do-9uj">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5Hi-D2-H6v">
+            <objects>
+                <tabBarController id="285-do-9uj" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="cRF-1d-s7M">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Snu-lk-8MX" kind="relationship" relationship="viewControllers" id="Igg-e2-OXc"/>
+                        <segue destination="Yok-kU-Qbt" kind="relationship" relationship="viewControllers" id="o4A-pp-BMf"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BE4-bQ-Gtd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="521"/>
+        </scene>
+        <!--Movies View Controller-->
+        <scene sceneID="eHg-wQ-4Ka">
+            <objects>
+                <tableViewController id="eUw-Va-W8c" customClass="MoviesViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ljX-Pv-Sfp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" id="4em-Vw-TU5">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4em-Vw-TU5" id="IUn-ek-M5C">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eUw-Va-W8c" id="AgI-3R-qSa"/>
+                            <outlet property="delegate" destination="eUw-Va-W8c" id="EiQ-mR-8ud"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="PnZ-ID-aZD">
+                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="zev-1Z-RMb">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="eUw-Va-W8c" id="bcV-2e-rT6"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Duplicate" id="eRY-B2-jeQ">
+                                <connections>
+                                    <action selector="duplicateButtonPressed:" destination="eUw-Va-W8c" id="yT4-wg-Zjg"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="cqN-rc-Vrs">
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="eUw-Va-W8c" id="DYw-4g-Xej"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fSz-nE-Ucy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1692" y="262"/>
+        </scene>
+        <!--Shows View Controller-->
+        <scene sceneID="6gE-UO-kiG">
+            <objects>
+                <tableViewController id="zwN-ZY-klj" customClass="TVShowsViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wdA-k0-nor">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tvShowCell" id="7k2-Bu-SGY">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7k2-Bu-SGY" id="hnn-9u-oa5">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zwN-ZY-klj" id="Z5j-8Y-7YC"/>
+                            <outlet property="delegate" destination="zwN-ZY-klj" id="vsy-PR-QzQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="DnZ-H4-s0T">
+                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="9dN-LG-J94">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="zwN-ZY-klj" id="Dob-5Y-cnb"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Duplicate" id="Hgb-Z8-mbs">
+                                <connections>
+                                    <action selector="duplicateButtonPressed:" destination="zwN-ZY-klj" id="tm3-Qr-AUx"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="ugy-f0-Wsi">
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="zwN-ZY-klj" id="679-8K-VSQ"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M8a-lf-VSm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1692" y="968"/>
+        </scene>
+        <!--Movies-->
+        <scene sceneID="1NY-Pa-x0w">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Snu-lk-8MX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Movies" id="BGa-Lb-30J"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5vE-5r-kaa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eUw-Va-W8c" kind="relationship" relationship="rootViewController" id="hV9-sd-Ho1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fLi-xU-Lql" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="880" y="262"/>
+        </scene>
+        <!--TV Shows-->
+        <scene sceneID="OtQ-pU-D6u">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yok-kU-Qbt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="TV Shows" id="AnJ-xk-phV"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yUQ-NS-VwU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zwN-ZY-klj" kind="relationship" relationship="rootViewController" id="iMB-2P-LgR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gbu-JY-sRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="880" y="968"/>
+        </scene>
+    </scenes>
+</document>
