@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OYM-3X-7ws">
+                                <rect key="frame" x="160" y="240" width="160" height="240"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VcQ-aN-AZg">
+                                <rect key="frame" x="0.0" y="240" width="160" height="240"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ed2-Nm-YtJ">
+                                <rect key="frame" x="160" y="0.0" width="160" height="240"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tou-LW-O42">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="240"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OYM-3X-7ws" secondAttribute="trailing" id="27A-Vt-xHV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VcQ-aN-AZg" secondAttribute="bottom" id="CXf-Lm-CxB"/>
+                            <constraint firstItem="VcQ-aN-AZg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GSP-IB-dKu"/>
+                            <constraint firstItem="Tou-LW-O42" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GTn-T4-bRf"/>
+                            <constraint firstItem="ed2-Nm-YtJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Gg1-8N-OdD"/>
+                            <constraint firstItem="VcQ-aN-AZg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:2" id="HH7-rP-HVr"/>
+                            <constraint firstItem="VcQ-aN-AZg" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:2" id="O9J-gu-Rbr"/>
+                            <constraint firstItem="ed2-Nm-YtJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:2" id="VMB-ob-DKQ"/>
+                            <constraint firstItem="Tou-LW-O42" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:2" id="fFF-hJ-STo"/>
+                            <constraint firstItem="Tou-LW-O42" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ghs-rT-ASl"/>
+                            <constraint firstAttribute="trailing" secondItem="ed2-Nm-YtJ" secondAttribute="trailing" id="iLj-jq-bCW"/>
+                            <constraint firstItem="Tou-LW-O42" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:2" id="jDh-MA-F5w"/>
+                            <constraint firstItem="OYM-3X-7ws" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:2" id="lMi-RF-aNr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OYM-3X-7ws" secondAttribute="bottom" id="qKW-iN-HaH"/>
+                            <constraint firstItem="ed2-Nm-YtJ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:2" id="qlo-V0-gwg"/>
+                            <constraint firstItem="OYM-3X-7ws" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:2" id="ri6-mC-WeC"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="imageView1" destination="Tou-LW-O42" id="AGq-EH-nkZ"/>
+                        <outlet property="imageView2" destination="ed2-Nm-YtJ" id="2Kf-nN-hp4"/>
+                        <outlet property="imageView3" destination="VcQ-aN-AZg" id="qGw-TP-rVY"/>
+                        <outlet property="imageView4" destination="OYM-3X-7ws" id="9W0-8s-1hO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="246" y="389"/>
+        </scene>
+    </scenes>
+</document>
