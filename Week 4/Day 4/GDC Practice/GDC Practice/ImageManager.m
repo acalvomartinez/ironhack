@@ -6,21 +6,21 @@
 //  Copyright © 2015 Toni. All rights reserved.
 //
 
-#import "DownloadManager.h"
+#import "ImageManager.h"
 
-@interface DownloadManager ()
+@interface ImageManager ()
 
 @property (strong, nonatomic) dispatch_queue_t download_q;
 
 @end
 
-@implementation DownloadManager
+@implementation ImageManager
 
 + (instancetype)sharedInstance {
     static dispatch_once_t onceToken;
-    static DownloadManager *instance;
+    static ImageManager *instance;
     dispatch_once(&onceToken, ^{
-        instance = [[DownloadManager alloc]init];
+        instance = [[ImageManager alloc]init];
     });
     return instance;
 }

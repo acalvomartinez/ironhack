@@ -14,7 +14,7 @@
 		E261ABE11BBD220000C5171A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E261ABE01BBD220000C5171A /* Assets.xcassets */; };
 		E261ABE41BBD220000C5171A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E261ABE21BBD220000C5171A /* LaunchScreen.storyboard */; };
 		E261ABEF1BBD220000C5171A /* GDC_PracticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E261ABEE1BBD220000C5171A /* GDC_PracticeTests.m */; };
-		E261ABFB1BBD2B8800C5171A /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E261ABFA1BBD2B8800C5171A /* DownloadManager.m */; settings = {ASSET_TAGS = (); }; };
+		E261ABFB1BBD2B8800C5171A /* ImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E261ABFA1BBD2B8800C5171A /* ImageManager.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +41,8 @@
 		E261ABEA1BBD220000C5171A /* GDC PracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GDC PracticeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E261ABEE1BBD220000C5171A /* GDC_PracticeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDC_PracticeTests.m; sourceTree = "<group>"; };
 		E261ABF01BBD220000C5171A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E261ABF91BBD2B8800C5171A /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
-		E261ABFA1BBD2B8800C5171A /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
+		E261ABF91BBD2B8800C5171A /* ImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageManager.h; sourceTree = "<group>"; };
+		E261ABFA1BBD2B8800C5171A /* ImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +88,8 @@
 				E261ABD81BBD220000C5171A /* AppDelegate.m */,
 				E261ABDA1BBD220000C5171A /* ViewController.h */,
 				E261ABDB1BBD220000C5171A /* ViewController.m */,
-				E261ABF91BBD2B8800C5171A /* DownloadManager.h */,
-				E261ABFA1BBD2B8800C5171A /* DownloadManager.m */,
+				E261ABF91BBD2B8800C5171A /* ImageManager.h */,
+				E261ABFA1BBD2B8800C5171A /* ImageManager.m */,
 				E261ABDD1BBD220000C5171A /* Main.storyboard */,
 				E261ABE01BBD220000C5171A /* Assets.xcassets */,
 				E261ABE21BBD220000C5171A /* LaunchScreen.storyboard */,
@@ -219,7 +219,7 @@
 				E261ABDC1BBD220000C5171A /* ViewController.m in Sources */,
 				E261ABD91BBD220000C5171A /* AppDelegate.m in Sources */,
 				E261ABD61BBD220000C5171A /* main.m in Sources */,
-				E261ABFB1BBD2B8800C5171A /* DownloadManager.m in Sources */,
+				E261ABFB1BBD2B8800C5171A /* ImageManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

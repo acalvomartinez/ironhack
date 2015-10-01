@@ -12,7 +12,7 @@
 
 typedef void(^DownloadImageCompletionBlock)(UIImage *);
 
-@interface DownloadManager : NSObject
+@interface ImageManager : NSObject
 
 + (instancetype)sharedInstance;
 
