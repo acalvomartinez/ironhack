@@ -34,7 +34,11 @@
     }
     
     NSData *imageData = [NSData dataWithContentsOfURL:self.url];
-    self.completion([UIImage imageWithData:imageData]);
+    
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.completion([UIImage imageWithData:imageData]);
+    });
     
 }
 

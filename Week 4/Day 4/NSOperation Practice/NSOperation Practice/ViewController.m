@@ -31,10 +31,8 @@
 
 - (IBAction)cancelButtonPressed:(id)sender {
     [self.operationQueue cancelAllOperations];
-    self.goButton.enabled = YES;
-    self.cancelButton.enabled = NO;
-
 }
+
 - (IBAction)goButtonPressed:(id)sender {
     
     self.goButton.enabled = NO;
@@ -45,8 +43,11 @@
     }];
     
     DownloadImageOperation *downloadImageOperation = [[DownloadImageOperation alloc]initWithURLString:@"http://thestarwarstrilogy.com/StarWars/wallpaper/Original-Trilogy-Darth-Vader/Original%20Trilogy%20-%20Darth%20Vader%2005.jpg" completion:^(UIImage *image) {
+        self.imageView.image = image;
+    }];
+    
+    [downloadImageOperation setCompletionBlock:^{
         dispatch_async(dispatch_get_main_queue(), ^{
-            self.imageView.image = image;
             self.goButton.enabled = YES;
             self.cancelButton.enabled = NO;
         });
