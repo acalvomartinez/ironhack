@@ -136,8 +136,10 @@ static NSString * const savedShowsFileName = @"shows";
     cell.textLabel.text=show.showTitle;
     cell.detailTextLabel.text=show.showDescription;
     cell.accessoryType = [self.likes containsObject:show.showId] ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
+    
+    
     @weakify(cell);
-    [cell.imageView setImageFromURL:show.posterURL completion:^(BOOL success) {
+    [cell.imageView setImageFromURL:[show.posterURL absoluteString] completion:^(BOOL success) {
         @strongify(cell);
         [cell layoutSubviews];
     }];

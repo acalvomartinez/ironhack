@@ -30,6 +30,7 @@
 		8C070AF11BB9F03D0000F8CC /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C070AF01BB9F03D0000F8CC /* ProfileViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E20DF6781BBC378D00588D78 /* UIAlertView+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = E20DF6771BBC378D00588D78 /* UIAlertView+Block.m */; settings = {ASSET_TAGS = (); }; };
 		E24994C91BBD6E73009F4001 /* UIImageView+Shows.m in Sources */ = {isa = PBXBuildFile; fileRef = E24994C81BBD6E73009F4001 /* UIImageView+Shows.m */; settings = {ASSET_TAGS = (); }; };
+		E24994CD1BBD7DD2009F4001 /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = E24994CC1BBD7DD2009F4001 /* ImageDownloader.m */; settings = {ASSET_TAGS = (); }; };
 		E262D0581BBC207400D75A99 /* CustomBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E262D0571BBC207400D75A99 /* CustomBarButtonItem.m */; settings = {ASSET_TAGS = (); }; };
 		E262D05B1BBC2E3600D75A99 /* UIAlertView+BlockBasedAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E262D05A1BBC2E3600D75A99 /* UIAlertView+BlockBasedAPI.m */; settings = {ASSET_TAGS = (); }; };
 		E2B81A9B1BBC6ED700B5BB40 /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B81A9A1BBC6ED700B5BB40 /* RequestManager.m */; settings = {ASSET_TAGS = (); }; };
@@ -100,6 +101,8 @@
 		E20DF6771BBC378D00588D78 /* UIAlertView+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Block.m"; sourceTree = "<group>"; };
 		E24994C71BBD6E73009F4001 /* UIImageView+Shows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Shows.h"; sourceTree = "<group>"; };
 		E24994C81BBD6E73009F4001 /* UIImageView+Shows.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Shows.m"; sourceTree = "<group>"; };
+		E24994CB1BBD7DD2009F4001 /* ImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
+		E24994CC1BBD7DD2009F4001 /* ImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
 		E262D0561BBC207400D75A99 /* CustomBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBarButtonItem.h; sourceTree = "<group>"; };
 		E262D0571BBC207400D75A99 /* CustomBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBarButtonItem.m; sourceTree = "<group>"; };
 		E262D0591BBC2E3600D75A99 /* UIAlertView+BlockBasedAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+BlockBasedAPI.h"; sourceTree = "<group>"; };
@@ -192,10 +195,10 @@
 				E2C933CA1BBC16C4002AA703 /* ShowDetailViewController.m */,
 				E262D0561BBC207400D75A99 /* CustomBarButtonItem.h */,
 				E262D0571BBC207400D75A99 /* CustomBarButtonItem.m */,
-				E262D0591BBC2E3600D75A99 /* UIAlertView+BlockBasedAPI.h */,
-				E262D05A1BBC2E3600D75A99 /* UIAlertView+BlockBasedAPI.m */,
 				E2B81A991BBC6ED700B5BB40 /* RequestManager.h */,
 				E2B81A9A1BBC6ED700B5BB40 /* RequestManager.m */,
+				E24994CB1BBD7DD2009F4001 /* ImageDownloader.h */,
+				E24994CC1BBD7DD2009F4001 /* ImageDownloader.m */,
 			);
 			path = MoviesModels;
 			sourceTree = "<group>";
@@ -256,6 +259,8 @@
 				E24994C81BBD6E73009F4001 /* UIImageView+Shows.m */,
 				8C070AE91BB9E61B0000F8CC /* UserEntity+CoreDataProperties.h */,
 				8C070AEA1BB9E61B0000F8CC /* UserEntity+CoreDataProperties.m */,
+				E262D0591BBC2E3600D75A99 /* UIAlertView+BlockBasedAPI.h */,
+				E262D05A1BBC2E3600D75A99 /* UIAlertView+BlockBasedAPI.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -437,6 +442,7 @@
 				E2C933CB1BBC16C4002AA703 /* ShowDetailViewController.m in Sources */,
 				E262D05B1BBC2E3600D75A99 /* UIAlertView+BlockBasedAPI.m in Sources */,
 				8C070AEE1BB9E61B0000F8CC /* UserEntity.m in Sources */,
+				E24994CD1BBD7DD2009F4001 /* ImageDownloader.m in Sources */,
 				8C070ADC1BB9E2F90000F8CC /* CoreDataStack.m in Sources */,
 				8C07098C1BB8408F0000F8CC /* AppDelegate.m in Sources */,
 				8C070AE21BB9E4A60000F8CC /* LoginViewController.m in Sources */,

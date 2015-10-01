@@ -12,6 +12,6 @@ typedef void(^ImageCompletionBlock)(BOOL);
 
 @interface UIImageView (Shows)
 
-- (void)setImageFromURL:(NSURL *)url completion:(ImageCompletionBlock)completion;
+- (void)setImageFromURL:(NSString *)url completion:(ImageCompletionBlock)completion;
 
 @end

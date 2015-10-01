@@ -27,7 +27,7 @@
     
     
     self.detailTextView.text = self.show.showDescription;
-    [self.detailImageView setImageFromURL:self.show.posterURL completion:nil];
+    [self.detailImageView setImageFromURL:[self.show.posterURL absoluteString]  completion:nil];
     
     self.likeBarButton = [[CustomBarButtonItem alloc]initWithTitle:@"Like" style:UIBarButtonItemStylePlain actionBlock:^{
         
