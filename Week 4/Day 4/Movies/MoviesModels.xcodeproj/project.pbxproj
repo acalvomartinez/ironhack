@@ -188,8 +188,6 @@
 				8C0709871BB8408F0000F8CC /* Supporting Files */,
 				8C070AEB1BB9E61B0000F8CC /* UserEntity.h */,
 				8C070AEC1BB9E61B0000F8CC /* UserEntity.m */,
-				8C070AE91BB9E61B0000F8CC /* UserEntity+CoreDataProperties.h */,
-				8C070AEA1BB9E61B0000F8CC /* UserEntity+CoreDataProperties.m */,
 				E2C933C91BBC16C4002AA703 /* ShowDetailViewController.h */,
 				E2C933CA1BBC16C4002AA703 /* ShowDetailViewController.m */,
 				E262D0561BBC207400D75A99 /* CustomBarButtonItem.h */,
@@ -256,6 +254,8 @@
 				E20DF6771BBC378D00588D78 /* UIAlertView+Block.m */,
 				E24994C71BBD6E73009F4001 /* UIImageView+Shows.h */,
 				E24994C81BBD6E73009F4001 /* UIImageView+Shows.m */,
+				8C070AE91BB9E61B0000F8CC /* UserEntity+CoreDataProperties.h */,
+				8C070AEA1BB9E61B0000F8CC /* UserEntity+CoreDataProperties.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";

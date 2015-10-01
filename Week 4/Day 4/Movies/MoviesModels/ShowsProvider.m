@@ -47,17 +47,38 @@
     
     [manager getJSONWithURL:urlString success:^(id responseObject) {
         
-        NSDictionary *JSONDictionary = responseObject;
-        
-        NSError *parseError;
-        NSArray *result = [MTLJSONAdapter modelsOfClass:[Show class] fromJSONArray:[JSONDictionary valueForKey:@"shows"] error:&parseError];
-        
-        if (!parseError) {
-            success(result);
-        } else {
-            failure(parseError);
-        }
-        
+        dispatch_queue_t json_queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
+        dispatch_async(json_queue, ^{
+            NSDictionary *JSONDictionary = responseObject;
+            
+            NSMutableArray *results = [NSMutableArray arrayWithCapacity:[[JSONDictionary objectForKey:@"shows"] count]];
+            
+            for (NSDictionary *showDictionary in [JSONDictionary objectForKey:@"shows"]) {
+                Show *show = [[Show alloc]init];
+                show.showId = [showDictionary objectForKey:@"id"];
+                show.showTitle = [showDictionary objectForKey:@"title"];
+                show.showDescription = [showDictionary objectForKey:@"description"];
+                show.posterURL = [NSURL URLWithString:[showDictionary objectForKey:@"posterURL"]];
+                
+                [results addObject:show];
+            }
+            
+            NSError *parseError;
+            
+            if ([results count] != [[JSONDictionary objectForKey:@"shows"]count]) {
+                parseError = [NSError errorWithDomain:@"com.ironhack.movies"
+                                                 code:200
+                                             userInfo:nil];
+            }
+            
+            if (!parseError) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    success([results copy]);
+                });
+            } else {
+                failure(parseError);
+            }
+        });
         
     } failure:^(NSError *error) {
         failure(error);

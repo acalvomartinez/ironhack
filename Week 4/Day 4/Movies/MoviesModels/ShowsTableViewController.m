@@ -219,6 +219,7 @@ static NSString * const savedShowsFileName = @"shows";
     [self.showsProvider loadShowsDataFromRemoteOnSucces:^(NSArray *results) {
         @strongify(self);
         self.shows = [results mutableCopy];
+        
         [self.tableView reloadData];
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
