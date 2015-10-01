@@ -24,29 +24,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.cancelButton.enabled = NO;
 }
 
 
 - (IBAction)cancelButtonPressed:(id)sender {
     [self.operationQueue cancelAllOperations];
     self.goButton.enabled = YES;
+    self.cancelButton.enabled = NO;
 
 }
 - (IBAction)goButtonPressed:(id)sender {
     
     self.goButton.enabled = NO;
+    self.cancelButton.enabled = YES;
     
     FileAttributesOperation *fileAttributesOperation = [[FileAttributesOperation alloc] initWithPath:@"/" completion:^(NSDictionary *attributes) {
         NSLog(@"%@",attributes);
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.goButton.enabled = YES;
-        });
     }];
     
     DownloadImageOperation *downloadImageOperation = [[DownloadImageOperation alloc]initWithURLString:@"http://thestarwarstrilogy.com/StarWars/wallpaper/Original-Trilogy-Darth-Vader/Original%20Trilogy%20-%20Darth%20Vader%2005.jpg" completion:^(UIImage *image) {
         dispatch_async(dispatch_get_main_queue(), ^{
             self.imageView.image = image;
+            self.goButton.enabled = YES;
+            self.cancelButton.enabled = NO;
         });
     }];
     
