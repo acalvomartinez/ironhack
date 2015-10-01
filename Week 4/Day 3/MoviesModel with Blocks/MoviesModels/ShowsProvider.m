@@ -8,6 +8,10 @@
 
 #import "ShowsProvider.h"
 
+#import "RequestManager.h"
+
+#import <libextobjc/EXTScope.h>
+
 #import "Show.h"
 
 @implementation ShowsProvider
@@ -19,20 +23,10 @@
 
 - (NSArray *)loadShowsFromRemote
 {
-    NSMutableArray *shows = [NSMutableArray array];
     NSDictionary *JSONDictionary = [self showsJSONDictionaryFromRemote];
     
-    for (NSDictionary *tvshowDictionary in [JSONDictionary valueForKey:@"shows"])
-    {
-        NSError *parseError;
-        Show *showItem = [MTLJSONAdapter modelOfClass:[Show class] fromJSONDictionary:tvshowDictionary error:&parseError];
-        if (parseError) {
-            NSLog(@"%@",parseError);
-        }
-        [shows addObject:showItem];
-    }
-    
-    return [shows copy];
+    NSError *parseError;
+    return [MTLJSONAdapter modelsOfClass:[Show class] fromJSONArray:[JSONDictionary valueForKey:@"shows"] error:&parseError];
 }
 
 - (NSDictionary *)showsJSONDictionaryFromRemote
@@ -43,6 +37,32 @@
     NSDictionary *JSONDictionary = [NSJSONSerialization JSONObjectWithData:seriesData options:NSJSONReadingMutableContainers error:&error];
     
     return JSONDictionary;
+}
+
+- (void)loadShowsDataFromRemoteOnSucces:(SuccessCompletionBlock)success failure:(FailureBlock)failure {
+
+    RequestManager *manager = [[RequestManager alloc]init];
+    
+    NSString *urlString = @"https://ironhack4thweek.s3.amazonaws.com/shows.json";
+    
+    [manager getJSONWithURL:urlString success:^(id responseObject) {
+        
+        NSDictionary *JSONDictionary = responseObject;
+        
+        NSError *parseError;
+        NSArray *result = [MTLJSONAdapter modelsOfClass:[Show class] fromJSONArray:[JSONDictionary valueForKey:@"shows"] error:&parseError];
+        
+        if (!parseError) {
+            success(result);
+        } else {
+            failure(parseError);
+        }
+        
+        
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
+    
 }
 
 @end

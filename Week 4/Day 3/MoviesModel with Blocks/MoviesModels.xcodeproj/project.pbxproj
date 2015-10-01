@@ -28,6 +28,11 @@
 		8C070AED1BB9E61B0000F8CC /* UserEntity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C070AEA1BB9E61B0000F8CC /* UserEntity+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
 		8C070AEE1BB9E61B0000F8CC /* UserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C070AEC1BB9E61B0000F8CC /* UserEntity.m */; settings = {ASSET_TAGS = (); }; };
 		8C070AF11BB9F03D0000F8CC /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C070AF01BB9F03D0000F8CC /* ProfileViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E20DF6781BBC378D00588D78 /* UIAlertView+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = E20DF6771BBC378D00588D78 /* UIAlertView+Block.m */; settings = {ASSET_TAGS = (); }; };
+		E262D0581BBC207400D75A99 /* CustomBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E262D0571BBC207400D75A99 /* CustomBarButtonItem.m */; settings = {ASSET_TAGS = (); }; };
+		E262D05B1BBC2E3600D75A99 /* UIAlertView+BlockBasedAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E262D05A1BBC2E3600D75A99 /* UIAlertView+BlockBasedAPI.m */; settings = {ASSET_TAGS = (); }; };
+		E2B81A9B1BBC6ED700B5BB40 /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B81A9A1BBC6ED700B5BB40 /* RequestManager.m */; settings = {ASSET_TAGS = (); }; };
+		E2C933CB1BBC16C4002AA703 /* ShowDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C933CA1BBC16C4002AA703 /* ShowDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +95,16 @@
 		8C070AEF1BB9F03D0000F8CC /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		8C070AF01BB9F03D0000F8CC /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		A2DB692DC4B737C0D6205A1D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E20DF6761BBC378D00588D78 /* UIAlertView+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Block.h"; sourceTree = "<group>"; };
+		E20DF6771BBC378D00588D78 /* UIAlertView+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Block.m"; sourceTree = "<group>"; };
+		E262D0561BBC207400D75A99 /* CustomBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBarButtonItem.h; sourceTree = "<group>"; };
+		E262D0571BBC207400D75A99 /* CustomBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBarButtonItem.m; sourceTree = "<group>"; };
+		E262D0591BBC2E3600D75A99 /* UIAlertView+BlockBasedAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+BlockBasedAPI.h"; sourceTree = "<group>"; };
+		E262D05A1BBC2E3600D75A99 /* UIAlertView+BlockBasedAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+BlockBasedAPI.m"; sourceTree = "<group>"; };
+		E2B81A991BBC6ED700B5BB40 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestManager.h; sourceTree = "<group>"; };
+		E2B81A9A1BBC6ED700B5BB40 /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestManager.m; sourceTree = "<group>"; };
+		E2C933C91BBC16C4002AA703 /* ShowDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowDetailViewController.h; sourceTree = "<group>"; };
+		E2C933CA1BBC16C4002AA703 /* ShowDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +190,16 @@
 				8C070AEC1BB9E61B0000F8CC /* UserEntity.m */,
 				8C070AE91BB9E61B0000F8CC /* UserEntity+CoreDataProperties.h */,
 				8C070AEA1BB9E61B0000F8CC /* UserEntity+CoreDataProperties.m */,
+				E2C933C91BBC16C4002AA703 /* ShowDetailViewController.h */,
+				E2C933CA1BBC16C4002AA703 /* ShowDetailViewController.m */,
+				E262D0561BBC207400D75A99 /* CustomBarButtonItem.h */,
+				E262D0571BBC207400D75A99 /* CustomBarButtonItem.m */,
+				E262D0591BBC2E3600D75A99 /* UIAlertView+BlockBasedAPI.h */,
+				E262D05A1BBC2E3600D75A99 /* UIAlertView+BlockBasedAPI.m */,
+				E20DF6761BBC378D00588D78 /* UIAlertView+Block.h */,
+				E20DF6771BBC378D00588D78 /* UIAlertView+Block.m */,
+				E2B81A991BBC6ED700B5BB40 /* RequestManager.h */,
+				E2B81A9A1BBC6ED700B5BB40 /* RequestManager.m */,
 			);
 			path = MoviesModels;
 			sourceTree = "<group>";
@@ -395,13 +420,18 @@
 				8C070ADF1BB9E40D0000F8CC /* MoviesModels.xcdatamodeld in Sources */,
 				8C070AED1BB9E61B0000F8CC /* UserEntity+CoreDataProperties.m in Sources */,
 				8C0709921BB8408F0000F8CC /* MoviesTableViewController.m in Sources */,
+				E262D0581BBC207400D75A99 /* CustomBarButtonItem.m in Sources */,
+				E2C933CB1BBC16C4002AA703 /* ShowDetailViewController.m in Sources */,
+				E262D05B1BBC2E3600D75A99 /* UIAlertView+BlockBasedAPI.m in Sources */,
 				8C070AEE1BB9E61B0000F8CC /* UserEntity.m in Sources */,
 				8C070ADC1BB9E2F90000F8CC /* CoreDataStack.m in Sources */,
 				8C07098C1BB8408F0000F8CC /* AppDelegate.m in Sources */,
 				8C070AE21BB9E4A60000F8CC /* LoginViewController.m in Sources */,
+				E2B81A9B1BBC6ED700B5BB40 /* RequestManager.m in Sources */,
 				8C07098F1BB8408F0000F8CC /* ShowsTableViewController.m in Sources */,
 				8C0709891BB8408F0000F8CC /* main.m in Sources */,
 				8C0709C81BB84B530000F8CC /* NSArray+Random.m in Sources */,
+				E20DF6781BBC378D00588D78 /* UIAlertView+Block.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +571,7 @@
 			baseConfigurationReference = A2DB692DC4B737C0D6205A1D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				INFOPLIST_FILE = MoviesModels/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ih.MoviesModels;
@@ -553,6 +584,7 @@
 			baseConfigurationReference = 324A13DB270DCF56B97A9B41 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				INFOPLIST_FILE = MoviesModels/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ih.MoviesModels;

@@ -8,8 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^SuccessCompletionBlock)(NSArray *);
+typedef void(^FailureBlock)(NSError *);
+
 @interface ShowsProvider : NSObject
 
 - (NSArray *)showsFromRemote;
+
+- (void)loadShowsDataFromRemoteOnSucces:(SuccessCompletionBlock)success failure:(FailureBlock)failure;
 
 @end

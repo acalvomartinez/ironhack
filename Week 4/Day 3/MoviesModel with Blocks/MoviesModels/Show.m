@@ -7,6 +7,7 @@
 //
 
 #import "Show.h"
+#import <Mantle/NSValueTransformer+MTLPredefinedTransformerAdditions.h>
 
 @implementation Show
 
@@ -15,8 +16,14 @@
     return @{
              @"showDescription": @"description",
              @"showTitle": @"title",
-             @"showId": @"id"
+             @"showId": @"id",
+             @"posterURL" : @"posterURL"
              };
+}
+
+
++ (NSValueTransformer*)posterURLJSONTransformer {
+    return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
 }
 
 @end

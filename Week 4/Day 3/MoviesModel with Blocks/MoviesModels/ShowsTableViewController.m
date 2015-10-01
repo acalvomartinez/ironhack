@@ -17,6 +17,11 @@
 #import "ProfileViewController.h"
 #import "UserEntity+CoreDataProperties.h"
 
+#import "ShowDetailViewController.h"
+#import "CustomBarButtonItem.h"
+
+#import <libextobjc/EXTScope.h>
+
 static NSString * const savedShowsFileName = @"shows";
 
 @interface ShowsTableViewController () <UITabBarControllerDelegate>
@@ -45,10 +50,21 @@ static NSString * const savedShowsFileName = @"shows";
 {
     [super viewDidLoad];
 
-    UIBarButtonItem *saveShowsButton = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveShows:)];
+    @weakify(self);
+    
+    CustomBarButtonItem *saveShowsButton = [[CustomBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain actionBlock:^{
+        @strongify(self);
+        [self saveShows:saveShowsButton];
+    }];
     self.navigationItem.leftBarButtonItem = saveShowsButton;
-    UIBarButtonItem *duplicateMovieButton = [[UIBarButtonItem alloc] initWithTitle:@"Duplicate" style:UIBarButtonItemStylePlain target:self action:@selector(addDuplicatedShow:)];
-    UIBarButtonItem *addMovieButton = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(addShow:)];
+    CustomBarButtonItem *duplicateMovieButton = [[CustomBarButtonItem alloc] initWithTitle:@"Duplicate" style:UIBarButtonItemStylePlain actionBlock:^{
+        @strongify(self);
+        [self addDuplicatedShow:saveShowsButton];
+    }];
+    CustomBarButtonItem *addMovieButton = [[CustomBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain actionBlock:^{
+        @strongify(self);
+        [self addShow:saveShowsButton];
+    }];
     self.navigationItem.rightBarButtonItems = @[duplicateMovieButton, addMovieButton];
     
     [self loadData];
@@ -73,8 +89,18 @@ static NSString * const savedShowsFileName = @"shows";
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    LoginViewController *loginViewController = segue.destinationViewController;
-    loginViewController.managedObjectContext = self.managedObjectContext;
+    if ([segue.identifier isEqualToString:@"presentLogin"]) {
+        LoginViewController *loginViewController = segue.destinationViewController;
+        loginViewController.managedObjectContext = self.managedObjectContext;
+    }
+    
+    if ([segue.identifier isEqualToString:@"showDetailSegue"]) {
+        ShowDetailViewController *detailViewController = segue.destinationViewController;
+        
+        Show *show = [self.shows objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+        detailViewController.show = show;
+    }
+    
 }
 
 - (UserEntity *)loggedUser
@@ -121,17 +147,7 @@ static NSString * const savedShowsFileName = @"shows";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    Show *show = self.shows[indexPath.item];
-    if (![self.likes containsObject:show.showId]) {
-        [self.likes addObject:[show.showId copy]];
-    }else{
-        for (NSString *showId in [self.likes copy]) {
-            if ([showId isEqualToString:show.showId]) {
-                [self.likes removeObject:showId];
-            }
-        }
-    }
-    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    
 }
 
 #pragma mark - Notifications
@@ -178,7 +194,7 @@ static NSString * const savedShowsFileName = @"shows";
 - (void)loadData
 {
     [self loadLikes];
-    [self loadShows];
+    [self loadShowsFromRemote];
 }
 
 - (void)loadShows
@@ -191,6 +207,20 @@ static NSString * const savedShowsFileName = @"shows";
     {
         self.shows =  [shows mutableCopy];
     }
+}
+
+- (void)loadShowsFromRemote
+{
+    self.showsProvider = [[ShowsProvider alloc] init];
+    
+    @weakify(self);
+    [self.showsProvider loadShowsDataFromRemoteOnSucces:^(NSArray *results) {
+        @strongify(self);
+        self.shows = [results mutableCopy];
+        [self.tableView reloadData];
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 - (void)loadLikes

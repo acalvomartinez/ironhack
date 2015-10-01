@@ -1,3 +1,4 @@
+
 //
 //  Show.h
 //  MoviesModels
@@ -16,6 +17,7 @@
 @property (copy,nonatomic) NSString *showId;
 @property (copy,nonatomic) NSString *showDescription;
 @property (copy,nonatomic) NSString *showTitle;
+@property (strong,nonatomic) NSURL *posterURL;
 @property (nonatomic) CGFloat showRating;
 
 @end

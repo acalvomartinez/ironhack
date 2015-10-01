@@ -40,6 +40,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="hCo-DM-dTl" kind="show" identifier="showDetailSegue" id="D7f-FK-wBH"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -55,6 +58,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ft-h2-rW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1550" y="-203"/>
+        </scene>
+        <!--Show Detail View Controller-->
+        <scene sceneID="Sey-0E-snh">
+            <objects>
+                <viewController id="hCo-DM-dTl" customClass="ShowDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vgK-r5-v1l"/>
+                        <viewControllerLayoutGuide type="bottom" id="tAx-FB-gYh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mui-Wm-wai">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cpE-7o-rMM">
+                                <rect key="frame" x="0.0" y="20" width="600" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="O0Q-a6-0jG"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wqp-sU-Zyo">
+                                <rect key="frame" x="0.0" y="258" width="600" height="342"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cpE-7o-rMM" firstAttribute="top" secondItem="vgK-r5-v1l" secondAttribute="bottom" id="4c9-dY-yRg"/>
+                            <constraint firstAttribute="trailing" secondItem="cpE-7o-rMM" secondAttribute="trailing" id="7t1-Q6-gTL"/>
+                            <constraint firstAttribute="trailing" secondItem="wqp-sU-Zyo" secondAttribute="trailing" id="DrZ-z9-sXq"/>
+                            <constraint firstItem="tAx-FB-gYh" firstAttribute="top" secondItem="wqp-sU-Zyo" secondAttribute="bottom" id="Q7D-15-bsE"/>
+                            <constraint firstItem="wqp-sU-Zyo" firstAttribute="leading" secondItem="mui-Wm-wai" secondAttribute="leading" id="lvx-Eg-wQv"/>
+                            <constraint firstItem="wqp-sU-Zyo" firstAttribute="top" secondItem="cpE-7o-rMM" secondAttribute="bottom" constant="8" id="syH-iw-H7N"/>
+                            <constraint firstItem="cpE-7o-rMM" firstAttribute="leading" secondItem="mui-Wm-wai" secondAttribute="leading" id="w0J-q6-xcb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailImageView" destination="cpE-7o-rMM" id="lf9-Sk-mtv"/>
+                        <outlet property="detailTextView" destination="wqp-sU-Zyo" id="al3-wW-9fI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vK8-N4-fcT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2285" y="-208"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="8Qx-eL-rSa">
