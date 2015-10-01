@@ -36,7 +36,7 @@
 
 - (dispatch_queue_t)download_q {
     if(!_download_q) {
-        _download_q = dispatch_queue_create(@"com.ironhack.process.donwload", DISPATCH_QUEUE_SERIAL);
+        _download_q = dispatch_queue_create("com.ironhack.process.donwload", DISPATCH_QUEUE_SERIAL);
     }
     return _download_q;
 }
