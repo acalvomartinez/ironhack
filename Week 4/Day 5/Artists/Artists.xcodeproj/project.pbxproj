@@ -16,6 +16,8 @@
 		E27826EA1BBE738800838EF5 /* ArtistsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E27826E91BBE738800838EF5 /* ArtistsTests.m */; };
 		E27826F71BBE74D000838EF5 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = E27826F61BBE74D000838EF5 /* Artist.m */; settings = {ASSET_TAGS = (); }; };
 		E27826FB1BBE76FB00838EF5 /* NSString+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = E27826FA1BBE76FB00838EF5 /* NSString+Random.m */; settings = {ASSET_TAGS = (); }; };
+		E27826FF1BBE7ACD00838EF5 /* ArtistService.m in Sources */ = {isa = PBXBuildFile; fileRef = E27826FE1BBE7ACD00838EF5 /* ArtistService.m */; settings = {ASSET_TAGS = (); }; };
+		E27827021BBE853100838EF5 /* NSDate+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = E27827011BBE853100838EF5 /* NSDate+Formatter.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,10 @@
 		E27826F61BBE74D000838EF5 /* Artist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Artist.m; sourceTree = "<group>"; };
 		E27826F91BBE76FB00838EF5 /* NSString+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Random.h"; sourceTree = "<group>"; };
 		E27826FA1BBE76FB00838EF5 /* NSString+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Random.m"; sourceTree = "<group>"; };
+		E27826FD1BBE7ACD00838EF5 /* ArtistService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistService.h; sourceTree = "<group>"; };
+		E27826FE1BBE7ACD00838EF5 /* ArtistService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistService.m; sourceTree = "<group>"; };
+		E27827001BBE853100838EF5 /* NSDate+Formatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Formatter.h"; sourceTree = "<group>"; };
+		E27827011BBE853100838EF5 /* NSDate+Formatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatter.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,7 @@
 		E27826CE1BBE738800838EF5 /* Artists */ = {
 			isa = PBXGroup;
 			children = (
+				E27826FC1BBE7AB900838EF5 /* Networking */,
 				E27826F81BBE76E300838EF5 /* Categories */,
 				E27826F41BBE743700838EF5 /* Model */,
 				E27826D21BBE738800838EF5 /* AppDelegate.h */,
@@ -133,8 +140,19 @@
 			children = (
 				E27826F91BBE76FB00838EF5 /* NSString+Random.h */,
 				E27826FA1BBE76FB00838EF5 /* NSString+Random.m */,
+				E27827001BBE853100838EF5 /* NSDate+Formatter.h */,
+				E27827011BBE853100838EF5 /* NSDate+Formatter.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		E27826FC1BBE7AB900838EF5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E27826FD1BBE7ACD00838EF5 /* ArtistService.h */,
+				E27826FE1BBE7ACD00838EF5 /* ArtistService.m */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,8 +257,10 @@
 			files = (
 				E27826D71BBE738800838EF5 /* ViewController.m in Sources */,
 				E27826D41BBE738800838EF5 /* AppDelegate.m in Sources */,
+				E27827021BBE853100838EF5 /* NSDate+Formatter.m in Sources */,
 				E27826F71BBE74D000838EF5 /* Artist.m in Sources */,
 				E27826FB1BBE76FB00838EF5 /* NSString+Random.m in Sources */,
+				E27826FF1BBE7ACD00838EF5 /* ArtistService.m in Sources */,
 				E27826D11BBE738800838EF5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

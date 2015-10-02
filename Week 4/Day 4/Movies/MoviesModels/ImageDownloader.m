@@ -134,8 +134,7 @@ static NSString * const kCacheFolder = @"cacheFolder";
     
     NSString *cacheKeysPath = [self.cacheFolderPath stringByAppendingPathComponent:kCacheKeysFileName];
     
-    BOOL isDirectory;
-    if (![[NSFileManager defaultManager] fileExistsAtPath:cacheKeysPath isDirectory:&isDirectory]) {
+    if (![[NSFileManager defaultManager] fileExistsAtPath:cacheKeysPath]) {
        
         return [NSMutableDictionary new];
     }
@@ -150,9 +149,7 @@ static NSString * const kCacheFolder = @"cacheFolder";
     
     NSString *cacheFolderPath = [[paths firstObject] stringByAppendingPathComponent:kCacheFolder];
     
-    BOOL isDirectory;
-    
-    if (![[NSFileManager defaultManager] fileExistsAtPath:cacheFolderPath isDirectory:&isDirectory]) {
+    if (![[NSFileManager defaultManager] fileExistsAtPath:cacheFolderPath]) {
         NSError *error;
         
         [[NSFileManager defaultManager] createDirectoryAtPath:cacheFolderPath

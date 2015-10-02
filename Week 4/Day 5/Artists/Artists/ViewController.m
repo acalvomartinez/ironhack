@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 #import "Artist.h"
+#import "ArtistService.h"
 
 @interface ViewController ()
 
@@ -23,6 +24,13 @@
     Artist *artistCopy  = [artistRandom copy];
     
     NSLog(@"artistRandom: %@ artistCopy %@", artistRandom, artistCopy);
+    
+    
+    ArtistService *artistService = [[ArtistService alloc]init];
+    
+    [artistService artistsWithCompletion:^(NSArray *artists) {
+        NSLog(@"%@",artists);
+    }];
     
 }
 
