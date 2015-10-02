@@ -10,6 +10,8 @@
 #import "ArtistService.h"
 #import "Artist.h"
 
+#import "ArtistDetailViewController.h"
+
 @interface ArtistsViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -56,6 +58,23 @@
     cell.textLabel.text = artist.name;
     
     return cell;
+}
+
+#pragma mark - TableView Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+#pragma mark - Navegation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"ArtistSegue"]) {
+        ArtistDetailViewController *vc = (ArtistDetailViewController *)segue.destinationViewController;
+        
+        Artist *artist = [self.artists objectAtIndex:[self.tableView indexPathForSelectedRow].item];
+        vc.artist = artist;
+    }
 }
 
 @end

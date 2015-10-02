@@ -127,8 +127,8 @@ static NSString * const kFileNameArtistData = @"artist.dat";
         NSUInteger artistId = [dictionary[@"id"] integerValue];
         
         Artist *artist = [Artist artistWithName:dictionary[@"name"]
-                                longDescription:dictionary[@"name"]
-                                          stage:dictionary[@"name"]
+                                longDescription:dictionary[@"description"]
+                                          stage:dictionary[@"stage"]
                                        imageURL:imageURL
                                       startDate:startDate
                                        artistId:artistId];
