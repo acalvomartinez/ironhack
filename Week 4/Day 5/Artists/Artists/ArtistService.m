@@ -52,7 +52,7 @@ static NSString * const kFileNameArtistData = @"artist.dat";
 
 - (dispatch_queue_t)service_q {
     if (!_service_q) {
-        _service_q = dispatch_queue_create("com.ironhack.artists.service", DISPATCH_QUEUE_SERIAL);
+        _service_q = dispatch_queue_create("com.ironhack.service.artists", DISPATCH_QUEUE_SERIAL);
     }
     return _service_q;
 }
@@ -102,11 +102,9 @@ static NSString * const kFileNameArtistData = @"artist.dat";
                                                
                                                NSArray *artists = [self artistsFromJSONArray:JSONArray];
                                                
-                                               dispatch_async(dispatch_get_main_queue(), ^{
-                                                   if (completion) {
-                                                       completion(artists);
-                                                   }
-                                               });
+                                               if (completion) {
+                                                    completion(artists);
+                                               }
                                            }];
     
     [task resume];

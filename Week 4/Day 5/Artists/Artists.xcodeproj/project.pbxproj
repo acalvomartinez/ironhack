@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E26A4C901BBED1E9002FCFBE /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E26A4C8F1BBED1E9002FCFBE /* ArtistDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E26A4C931BBEDAEF002FCFBE /* ImageService.m in Sources */ = {isa = PBXBuildFile; fileRef = E26A4C921BBEDAEF002FCFBE /* ImageService.m */; settings = {ASSET_TAGS = (); }; };
 		E27826D11BBE738800838EF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E27826D01BBE738800838EF5 /* main.m */; };
 		E27826D41BBE738800838EF5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E27826D31BBE738800838EF5 /* AppDelegate.m */; };
 		E27826DA1BBE738800838EF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E27826D81BBE738800838EF5 /* Main.storyboard */; };
@@ -34,6 +35,8 @@
 /* Begin PBXFileReference section */
 		E26A4C8E1BBED1E9002FCFBE /* ArtistDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistDetailViewController.h; sourceTree = "<group>"; };
 		E26A4C8F1BBED1E9002FCFBE /* ArtistDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
+		E26A4C911BBEDAEF002FCFBE /* ImageService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageService.h; sourceTree = "<group>"; };
+		E26A4C921BBEDAEF002FCFBE /* ImageService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageService.m; sourceTree = "<group>"; };
 		E27826CC1BBE738800838EF5 /* Artists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E27826D01BBE738800838EF5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E27826D21BBE738800838EF5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -153,6 +156,8 @@
 			children = (
 				E27826FD1BBE7ACD00838EF5 /* ArtistService.h */,
 				E27826FE1BBE7ACD00838EF5 /* ArtistService.m */,
+				E26A4C911BBEDAEF002FCFBE /* ImageService.h */,
+				E26A4C921BBEDAEF002FCFBE /* ImageService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 				E27826D41BBE738800838EF5 /* AppDelegate.m in Sources */,
 				E27827021BBE853100838EF5 /* NSDate+Formatter.m in Sources */,
 				E27827061BBE8B4900838EF5 /* ArtistsViewController.m in Sources */,
+				E26A4C931BBEDAEF002FCFBE /* ImageService.m in Sources */,
 				E27826F71BBE74D000838EF5 /* Artist.m in Sources */,
 				E27826FB1BBE76FB00838EF5 /* NSString+Random.m in Sources */,
 				E27826FF1BBE7ACD00838EF5 /* ArtistService.m in Sources */,

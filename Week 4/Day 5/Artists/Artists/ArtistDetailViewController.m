@@ -10,6 +10,8 @@
 
 #import "Artist.h"
 
+#import "ImageService.h"
+
 @interface ArtistDetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -38,7 +40,16 @@
     self.nameLabel.text = self.artist.name;
     self.stageLabel.text = self.artist.stage;
     self.descriptionTextView.text = self.artist.longDescription;
-    self.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:self.artist.imageURL]];
+    
+    [self loadImageFromRemote];
+}
+
+- (void)loadImageFromRemote {
+    ImageService *service = [[ImageService alloc]init];
+    [service imageWithURL:self.artist.imageURL completion:^(UIImage *image) {
+        self.imageView.image = image;
+    }];
+
 }
 
 - (IBAction)backButtonPressed:(id)sender {
