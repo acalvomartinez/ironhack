@@ -9,6 +9,8 @@
 #import "ImageDownloader.h"
 
 static NSString * const kCacheKeysFileName = @"keys.plist";
+static NSString * const kCacheFolder = @"cacheFolder";
+
 
 @import UIKit;
 
@@ -73,7 +75,6 @@ static NSString * const kCacheKeysFileName = @"keys.plist";
             });
         }
     });
-    
 }
 
 - (UIImage *)donwloadImage:(NSString *)urlString {
@@ -147,7 +148,7 @@ static NSString * const kCacheKeysFileName = @"keys.plist";
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
     
-    NSString *cacheFolderPath = [[paths firstObject] stringByAppendingPathComponent:@"cacheFolder"];
+    NSString *cacheFolderPath = [[paths firstObject] stringByAppendingPathComponent:kCacheFolder];
     
     BOOL isDirectory;
     
@@ -163,7 +164,7 @@ static NSString * const kCacheKeysFileName = @"keys.plist";
         }
 
     }
-    
+
     return cacheFolderPath;
 }
 
