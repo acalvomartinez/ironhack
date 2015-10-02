@@ -12,4 +12,6 @@
 
 + (instancetype)dateWithString:(NSString *)stringDate;
 
+- (NSString *)stringFromDate;
+
 @end

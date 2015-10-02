@@ -94,7 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				E27827031BBE8AEB00838EF5 /* Controllers */,
-				E27826FC1BBE7AB900838EF5 /* Networking */,
+				E27826FC1BBE7AB900838EF5 /* Services */,
 				E27826F81BBE76E300838EF5 /* Categories */,
 				E27826F41BBE743700838EF5 /* Model */,
 				E27826D21BBE738800838EF5 /* AppDelegate.h */,
@@ -145,13 +145,13 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
-		E27826FC1BBE7AB900838EF5 /* Networking */ = {
+		E27826FC1BBE7AB900838EF5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				E27826FD1BBE7ACD00838EF5 /* ArtistService.h */,
 				E27826FE1BBE7ACD00838EF5 /* ArtistService.m */,
 			);
-			name = Networking;
+			name = Services;
 			sourceTree = "<group>";
 		};
 		E27827031BBE8AEB00838EF5 /* Controllers */ = {
@@ -456,6 +456,7 @@
 				E27826F01BBE738800838EF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E27826F11BBE738800838EF5 /* Build configuration list for PBXNativeTarget "ArtistsTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +465,7 @@
 				E27826F31BBE738800838EF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

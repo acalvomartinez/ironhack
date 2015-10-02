@@ -35,9 +35,7 @@
     ArtistService *service = [[ArtistService alloc]init];
     [service artistsWithCompletion:^(NSArray *artists) {
         self.artists = artists;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.tableView reloadData];
-        });
+        [self.tableView reloadData];
     }];
 }
 

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Artist : NSObject <NSCopying>
+@interface Artist : NSObject <NSCopying, NSCoding>
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *longDescription;

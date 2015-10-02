@@ -9,6 +9,7 @@
 #import "Artist.h"
 
 #import "NSString+Random.h"
+#import "NSDate+Formatter.h"
 
 @implementation Artist
 
@@ -27,6 +28,29 @@
     }
     return self;
 }
+
+#pragma mark - NSCoding protocol
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super init]) {
+        self.name = [aDecoder decodeObjectForKey:@"name"];
+        self.longDescription = [aDecoder decodeObjectForKey:@"longDescription"];
+        self.stage = [aDecoder decodeObjectForKey:@"stage"];
+        self.imageURL = [aDecoder decodeObjectForKey:@"imageURL"];
+        self.startDate = [aDecoder decodeObjectForKey:@"startDate"];
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:self.name forKey:@"name"];
+    [aCoder encodeObject:self.longDescription forKey:@"longDescription"];
+    [aCoder encodeObject:self.stage forKey:@"stage"];
+    [aCoder encodeObject:self.imageURL forKey:@"imageURL"];
+    [aCoder encodeObject:self.startDate forKey:@"startDate"];
+}
+
+#pragma mark - NSCopying protocol
 
 - (id)copyWithZone:(NSZone *)zone {
     Artist *artistCopy = [[Artist alloc]init];

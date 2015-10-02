@@ -20,4 +20,13 @@
     return dateFromString;
 }
 
+- (NSString *)stringFromDate {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"]; // 2015-06-12T22:45:00
+    
+    NSString *stringfromDate = [dateFormatter stringFromDate:self];
+    
+    return stringfromDate;
+}
+
 @end
