@@ -12,7 +12,7 @@
 
 + (instancetype)dateWithString:(NSString *)dateString {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-ddTHH:mm:ss"]; // 2015-06-12T22:45:00
+    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"]; // 2015-06-12T22:45:00
     NSDate *dateFromString = [[NSDate alloc] init];
 
     dateFromString = [dateFormatter dateFromString:dateString];

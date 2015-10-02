@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ArtistsViewController.h
 //  Artists
 //
 //  Created by Toni on 02/10/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ArtistsViewController : UIViewController
 
 @end
-

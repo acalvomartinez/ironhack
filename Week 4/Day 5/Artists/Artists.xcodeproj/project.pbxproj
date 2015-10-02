@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		E27826D11BBE738800838EF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E27826D01BBE738800838EF5 /* main.m */; };
 		E27826D41BBE738800838EF5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E27826D31BBE738800838EF5 /* AppDelegate.m */; };
-		E27826D71BBE738800838EF5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27826D61BBE738800838EF5 /* ViewController.m */; };
 		E27826DA1BBE738800838EF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E27826D81BBE738800838EF5 /* Main.storyboard */; };
 		E27826DC1BBE738800838EF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E27826DB1BBE738800838EF5 /* Assets.xcassets */; };
 		E27826DF1BBE738800838EF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E27826DD1BBE738800838EF5 /* LaunchScreen.storyboard */; };
@@ -18,6 +17,7 @@
 		E27826FB1BBE76FB00838EF5 /* NSString+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = E27826FA1BBE76FB00838EF5 /* NSString+Random.m */; settings = {ASSET_TAGS = (); }; };
 		E27826FF1BBE7ACD00838EF5 /* ArtistService.m in Sources */ = {isa = PBXBuildFile; fileRef = E27826FE1BBE7ACD00838EF5 /* ArtistService.m */; settings = {ASSET_TAGS = (); }; };
 		E27827021BBE853100838EF5 /* NSDate+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = E27827011BBE853100838EF5 /* NSDate+Formatter.m */; settings = {ASSET_TAGS = (); }; };
+		E27827061BBE8B4900838EF5 /* ArtistsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27827051BBE8B4900838EF5 /* ArtistsViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +35,6 @@
 		E27826D01BBE738800838EF5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E27826D21BBE738800838EF5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E27826D31BBE738800838EF5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E27826D51BBE738800838EF5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E27826D61BBE738800838EF5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E27826D91BBE738800838EF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E27826DB1BBE738800838EF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E27826DE1BBE738800838EF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +50,8 @@
 		E27826FE1BBE7ACD00838EF5 /* ArtistService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistService.m; sourceTree = "<group>"; };
 		E27827001BBE853100838EF5 /* NSDate+Formatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Formatter.h"; sourceTree = "<group>"; };
 		E27827011BBE853100838EF5 /* NSDate+Formatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatter.m"; sourceTree = "<group>"; };
+		E27827041BBE8B4900838EF5 /* ArtistsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistsViewController.h; sourceTree = "<group>"; };
+		E27827051BBE8B4900838EF5 /* ArtistsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,13 +93,12 @@
 		E27826CE1BBE738800838EF5 /* Artists */ = {
 			isa = PBXGroup;
 			children = (
+				E27827031BBE8AEB00838EF5 /* Controllers */,
 				E27826FC1BBE7AB900838EF5 /* Networking */,
 				E27826F81BBE76E300838EF5 /* Categories */,
 				E27826F41BBE743700838EF5 /* Model */,
 				E27826D21BBE738800838EF5 /* AppDelegate.h */,
 				E27826D31BBE738800838EF5 /* AppDelegate.m */,
-				E27826D51BBE738800838EF5 /* ViewController.h */,
-				E27826D61BBE738800838EF5 /* ViewController.m */,
 				E27826D81BBE738800838EF5 /* Main.storyboard */,
 				E27826DB1BBE738800838EF5 /* Assets.xcassets */,
 				E27826DD1BBE738800838EF5 /* LaunchScreen.storyboard */,
@@ -153,6 +152,15 @@
 				E27826FE1BBE7ACD00838EF5 /* ArtistService.m */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		E27827031BBE8AEB00838EF5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E27827041BBE8B4900838EF5 /* ArtistsViewController.h */,
+				E27827051BBE8B4900838EF5 /* ArtistsViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,9 +263,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E27826D71BBE738800838EF5 /* ViewController.m in Sources */,
 				E27826D41BBE738800838EF5 /* AppDelegate.m in Sources */,
 				E27827021BBE853100838EF5 /* NSDate+Formatter.m in Sources */,
+				E27827061BBE8B4900838EF5 /* ArtistsViewController.m in Sources */,
 				E27826F71BBE74D000838EF5 /* Artist.m in Sources */,
 				E27826FB1BBE76FB00838EF5 /* NSString+Random.m in Sources */,
 				E27826FF1BBE7ACD00838EF5 /* ArtistService.m in Sources */,
