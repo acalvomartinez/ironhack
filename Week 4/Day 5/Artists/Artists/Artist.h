@@ -10,6 +10,7 @@
 
 @interface Artist : NSObject <NSCopying, NSCoding>
 
+@property (nonatomic, assign) NSUInteger artistId;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *longDescription;
 @property (nonatomic, copy) NSString *stage;
@@ -18,8 +19,8 @@
 
 + (instancetype)randomArtist;
 
-+ (instancetype)artistWithName:(NSString *)name longDescription:(NSString *)longDescription stage:(NSString *)stage imageURL:(NSURL *)imageURL startDate:(NSDate *)startDate;
++ (instancetype)artistWithName:(NSString *)name longDescription:(NSString *)longDescription stage:(NSString *)stage imageURL:(NSURL *)imageURL startDate:(NSDate *)startDate artistId:(NSUInteger)artistId;
 
-- (instancetype)initWithName:(NSString *)name longDescription:(NSString *)longDescription stage:(NSString *)stage imageURL:(NSURL *)imageURL startDate:(NSDate *)startDate;
+- (instancetype)initWithName:(NSString *)name longDescription:(NSString *)longDescription stage:(NSString *)stage imageURL:(NSURL *)imageURL startDate:(NSDate *)startDate artistId:(NSUInteger)artistId;
 
 @end

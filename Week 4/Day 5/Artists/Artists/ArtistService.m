@@ -118,22 +118,24 @@ static NSString * const kFileNameArtistData = @"artist.dat";
 
 - (NSArray *)artistsFromJSONArray:(NSArray *)JSONArray {
     
-    NSMutableArray *artists = [NSMutableArray arrayWithCapacity:JSONArray.count];
+    NSMutableSet *artists = [NSMutableSet new];
     
     for (NSDictionary *dictionary in JSONArray) {
         
         NSURL *imageURL = [NSURL URLWithString:dictionary[@"image_url"]];
         NSDate *startDate = [NSDate dateWithString:dictionary[@"start_day"]];
+        NSUInteger artistId = [dictionary[@"id"] integerValue];
         
         Artist *artist = [Artist artistWithName:dictionary[@"name"]
                                 longDescription:dictionary[@"name"]
                                           stage:dictionary[@"name"]
                                        imageURL:imageURL
-                                      startDate:startDate];
+                                      startDate:startDate
+                                       artistId:artistId];
         [artists addObject:artist];
     }
     
-    return [artists copy];
+    return [artists allObjects];
     
 }
 
