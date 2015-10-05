@@ -50,6 +50,24 @@ static NSString * const kFileNameArtistData = @"artist.dat";
     });
 }
 
+- (void)toggleFavoriteForArtistWithId:(NSInteger)artistId completion:(void (^)(void))completion {
+    dispatch_async(self.service_q, ^{
+        [self fetchArtistFromDiskOnCompletion:^(NSArray *artists) {
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"artistId==%@",artistId];
+            Artist *artist = [[artists filteredArrayUsingPredicate:predicate] firstObject];
+            artist.favorited = !artist.favorited;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (completion) {
+                    completion();
+                }
+            });
+            [self saveArtistsToDisk:artists];
+        }];
+        
+        
+    });
+}
+
 - (dispatch_queue_t)service_q {
     if (!_service_q) {
         _service_q = dispatch_queue_create("com.ironhack.service.artists", DISPATCH_QUEUE_SERIAL);
@@ -64,6 +82,8 @@ static NSString * const kFileNameArtistData = @"artist.dat";
     }
     return _artistsPath;
 }
+
+
 
 #pragma mark - Persistence
 

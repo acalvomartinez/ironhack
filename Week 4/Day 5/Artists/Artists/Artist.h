@@ -16,6 +16,7 @@
 @property (nonatomic, copy) NSString *stage;
 @property (nonatomic, strong) NSURL *imageURL;
 @property (nonatomic, strong) NSDate *startDate;
+@property (nonatomic, assign, getter=isFavorited) BOOL favorited;
 
 + (instancetype)randomArtist;
 

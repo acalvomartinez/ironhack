@@ -11,5 +11,6 @@
 @interface ArtistService : NSObject
 
 - (void)artistsWithCompletion:(void (^)(NSArray *))completion;
+- (void)toggleFavoriteForArtistWithId:(NSInteger)artistId completion:(void (^)(void))completion;
 
 @end

@@ -11,6 +11,7 @@
 #import "Artist.h"
 
 #import "ImageService.h"
+#import "ArtistService.h"
 
 @interface ArtistDetailViewController ()
 
@@ -32,6 +33,8 @@
 
 
 - (void)setupDetail {
+    self.title = self.artist.name;
+    
     self.descriptionTextView.textColor = [UIColor whiteColor];
     self.nameLabel.textColor = [UIColor whiteColor];
     self.stageLabel.textColor = [UIColor whiteColor];
@@ -54,6 +57,13 @@
 
 - (IBAction)backButtonPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)favoriteButtonPressed:(id)sender {
+    ArtistService *service = [[ArtistService alloc]init];
+    [service toggleFavoriteForArtistWithId:self.artist.artistId completion:^{
+        NSLog(@"Artist: %@ favorite", @(self.artist.artistId));
+    }];
 }
 
 @end

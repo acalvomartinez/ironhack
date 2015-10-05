@@ -26,6 +26,7 @@
         _stage = stage;
         _imageURL = imageURL;
         _startDate = startDate;
+        _favorited = NO;
     }
     return self;
 }
@@ -40,6 +41,7 @@
         self.stage = [aDecoder decodeObjectForKey:@"stage"];
         self.imageURL = [aDecoder decodeObjectForKey:@"imageURL"];
         self.startDate = [aDecoder decodeObjectForKey:@"startDate"];
+        self.favorited = [aDecoder decodeBoolForKey:@"favorited"];
     }
     return self;
 }
@@ -51,6 +53,7 @@
     [aCoder encodeObject:self.stage forKey:@"stage"];
     [aCoder encodeObject:self.imageURL forKey:@"imageURL"];
     [aCoder encodeObject:self.startDate forKey:@"startDate"];
+    [aCoder encodeBool:self.favorited forKey:@"favorited"];
 }
 
 #pragma mark - NSCopying protocol
@@ -65,6 +68,7 @@
         artistCopy.stage = [self.stage copyWithZone:zone];
         artistCopy.imageURL = [self.imageURL copyWithZone:zone];
         artistCopy.startDate = [self.startDate copyWithZone:zone];
+        artistCopy.favorited = self.favorited;
     }
     return artistCopy;
 }
