@@ -87,4 +87,25 @@
     XCTAssertNotNil(error);
 }
 
+- (void)testAfterInsertingAPersonThereSomeoneInTheDatabase {
+    [NSEntityDescription insertNewObjectForEntityForName:[Person description]
+                                  inManagedObjectContext:self.context];
+    NSError *error;
+    [self.context save:&error];
+    XCTAssertNil(error);
+
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:[Person description]];
+    
+    NSSortDescriptor *sortByName = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    
+    [fetchRequest setSortDescriptors:@[sortByName]];
+    
+    error = nil;
+    NSArray<Person *> *results = [self.context executeFetchRequest:fetchRequest error:&error];
+    XCTAssertNil(error);
+    
+    XCTAssertNotNil(results);
+    XCTAssertTrue(results.count > 0);
+}
+
 @end

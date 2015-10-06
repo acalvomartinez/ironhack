@@ -30,7 +30,7 @@
     UINavigationController *masterNavigationController = splitViewController.viewControllers[0];
     MasterViewController *controller = (MasterViewController *)masterNavigationController.topViewController;
     
-    self.coreDataStack = [[CoreDataStack alloc] init];
+    self.coreDataStack = [[CoreDataStack alloc] initWithDatabaseFilename:@"helloworld.sqlite" andPersistenceType:NSSQLiteStoreType];
     controller.managedObjectContext = self.coreDataStack.managedObjectContext;
     
     return YES;

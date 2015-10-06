@@ -23,6 +23,7 @@
 		E290C8D01BC2BC4800F8A778 /* Person+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E290C8CD1BC2BC4800F8A778 /* Person+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
 		E290C8D11BC2BC4800F8A778 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E290C8CF1BC2BC4800F8A778 /* Person.m */; settings = {ASSET_TAGS = (); }; };
 		E290C8D41BC2C78D00F8A778 /* PersonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E290C8D31BC2C78D00F8A778 /* PersonTests.m */; settings = {ASSET_TAGS = (); }; };
+		E2A5DD631BC3B2300059CCC7 /* SharedCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A5DD621BC3B2300059CCC7 /* SharedCoreDataStack.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		E290C8CE1BC2BC4800F8A778 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		E290C8CF1BC2BC4800F8A778 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		E290C8D31BC2C78D00F8A778 /* PersonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonTests.m; sourceTree = "<group>"; };
+		E2A5DD611BC3B2300059CCC7 /* SharedCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedCoreDataStack.h; sourceTree = "<group>"; };
+		E2A5DD621BC3B2300059CCC7 /* SharedCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedCoreDataStack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +195,8 @@
 			children = (
 				E2393AD01BC26C830021FC4E /* CoreDataStack.h */,
 				E2393AD11BC26C830021FC4E /* CoreDataStack.m */,
+				E2A5DD611BC3B2300059CCC7 /* SharedCoreDataStack.h */,
+				E2A5DD621BC3B2300059CCC7 /* SharedCoreDataStack.m */,
 				E290C8CC1BC2BC4800F8A778 /* Person+CoreDataProperties.h */,
 				E290C8CD1BC2BC4800F8A778 /* Person+CoreDataProperties.m */,
 				E290C8CE1BC2BC4800F8A778 /* Person.h */,
@@ -333,6 +338,7 @@
 				E2393AA31BC2662B0021FC4E /* DetailViewController.m in Sources */,
 				E2393AA01BC2662B0021FC4E /* MasterViewController.m in Sources */,
 				E290C8D11BC2BC4800F8A778 /* Person.m in Sources */,
+				E2A5DD631BC3B2300059CCC7 /* SharedCoreDataStack.m in Sources */,
 				E2393AD51BC272410021FC4E /* FileUtils.m in Sources */,
 				E2393ADA1BC2ADF70021FC4E /* FizzBuzz.m in Sources */,
 				E2393A9A1BC2662B0021FC4E /* AppDelegate.m in Sources */,

@@ -29,6 +29,10 @@
     return self;
 }
 
+- (instancetype)init {
+    return [self initWithDatabaseFilename:@"database.sqlite" andPersistenceType:NSInMemoryStoreType];
+}
+
 - (NSManagedObjectContext *)managedObjectContext {
     if (_managedObjectContext != nil) {
         return _managedObjectContext;
@@ -45,14 +49,14 @@
 
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
     
-    NSPersistentStoreCoordinator *_persistentStoreCoordinator;
+    NSPersistentStoreCoordinator *persistentStoreCoordinator;
    
-    _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+    persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     
     NSURL *storeURL = [[FileUtils applicationDocumentsDirectory] URLByAppendingPathComponent:self.filename];
     
     NSError *error = nil;
-    if (![_persistentStoreCoordinator addPersistentStoreWithType:self.persistenceType configuration:nil URL:storeURL options:nil error:&error]) {
+    if (![persistentStoreCoordinator addPersistentStoreWithType:self.persistenceType configuration:nil URL:storeURL options:nil error:&error]) {
         // Report any error we got.
         NSMutableDictionary *dict = [NSMutableDictionary dictionary];
         dict[NSLocalizedDescriptionKey] = @"Failed to initialize the application's saved data";
@@ -65,14 +69,14 @@
         abort();
     }
     
-    return _persistentStoreCoordinator;
+    return persistentStoreCoordinator;
 }
 
 - (NSManagedObjectModel *)managedObjectModel {
     NSManagedObjectModel *_managedObjectModel;
     
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"CoreDataHelloWorld" withExtension:@"momd"];
-    _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    NSBundle *bundle = [NSBundle mainBundle];
+    _managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:@[bundle]];
     return _managedObjectModel;
 }
 
