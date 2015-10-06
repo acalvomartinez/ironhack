@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RadarViewCell.h
 //  Radars
 //
 //  Created by Toni on 06/10/15.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@class Radar;
 
+@interface RadarViewCell : UITableViewCell
+
+@property (nonatomic, strong) Radar *radar;
 
 @end
-

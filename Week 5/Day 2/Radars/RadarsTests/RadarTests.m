@@ -11,6 +11,8 @@
 #import "CoreDataStack.h"
 #import "Radar.h"
 
+#import "NSManagedObjectContext+ACMInsertManagedObject.h"
+
 @interface RadarTests : XCTestCase
 @property (nonatomic, strong) CoreDataStack *cds;
 @property (nonatomic, strong) NSManagedObjectContext *context;
@@ -33,11 +35,9 @@
 }
 
 - (void)testCanInsertARadarWithValidData {
+    Radar *sut = [self insertExampleRadarWithTitle:@"Title test" user:@"toniconmac@gmail.com"];
     
-    Radar *sut = [NSEntityDescription insertNewObjectForEntityForName:[Radar description] inManagedObjectContext:self.context];
-    
-    sut.title = @"Title test";
-    sut.user = @"toniconmac@gmail.com";
+    XCTAssertNotNil(sut);
     
     NSError *error;
     [self.context save:&error];
@@ -47,10 +47,9 @@
 
 - (void)testCannotInsertARadarWithInvalidEmail {
     
-    Radar *sut = [NSEntityDescription insertNewObjectForEntityForName:[Radar description] inManagedObjectContext:self.context];
-    
-    sut.title = @"Title test";
-    sut.user = @"toniconmac";
+    Radar *sut = [self insertExampleRadarWithTitle:@"Title test" user:@"toniconmac"];
+
+    XCTAssertNotNil(sut);
     
     NSError *error;
     [self.context save:&error];
@@ -60,10 +59,9 @@
 
 - (void)testCannotInsertARadarWithInvalidTitle {
     
-    Radar *sut = [NSEntityDescription insertNewObjectForEntityForName:[Radar description] inManagedObjectContext:self.context];
-    
-    sut.title = nil;
-    sut.user = @"toniconmac@gmail.com";
+    Radar *sut = [self insertExampleRadarWithTitle:nil user:@"toniconmac@gmail.com"];
+
+    XCTAssertNotNil(sut);
     
     NSError *error;
     [self.context save:&error];
@@ -73,10 +71,9 @@
 
 - (void)testCanRemoveARadar {
     
-    Radar *sut = [NSEntityDescription insertNewObjectForEntityForName:[Radar description] inManagedObjectContext:self.context];
-    
-    sut.title = @"Title test";
-    sut.user = @"toniconmac@gmail.com";
+    Radar *sut = [self insertExampleRadarWithTitle:@"Title test" user:@"toniconmac@gmail.com"];
+ 
+    XCTAssertNotNil(sut);
     
     NSError *error;
     [self.context save:&error];
@@ -90,31 +87,54 @@
     
     XCTAssertNil(error);
     
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:[Radar description]];
     
     error = nil;
-    NSArray<Radar *> *results = [self.context executeFetchRequest:fetchRequest error:&error];
+    NSUInteger countAllRadars = [self countAllRadars:&error];
+    XCTAssertNil(error);
     
-    XCTAssertTrue(results.count == 0);
+    XCTAssertTrue(countAllRadars == 0);
 }
 
 - (void)testCanFetchARadar {
-    Radar *sut = [NSEntityDescription insertNewObjectForEntityForName:[Radar description] inManagedObjectContext:self.context];
+    Radar *sut = [self insertExampleRadarWithTitle:@"Title test" user:@"toniconmac@gmail.com"];
     
-    sut.title = @"Title test";
-    sut.user = @"toniconmac@gmail.com";
+    XCTAssertNotNil(sut);
     
     NSError *error;
     [self.context save:&error];
     
     XCTAssertNil(error);
     
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:[Radar description]];
-    
     error = nil;
-    NSArray<Radar *> *results = [self.context executeFetchRequest:fetchRequest error:&error];
+    NSUInteger countAllRadars = [self countAllRadars:&error];
+    XCTAssertNil(error);
     
-    XCTAssertTrue(results.count == 1);
+    XCTAssertTrue(countAllRadars == 1);
+}
+
+- (Radar *)insertExampleRadarWithTitle:(NSString *)title user:(NSString *)user {
+    Radar *sut = (Radar *)[self.context insertNewObjectForEntityForName:[Radar description]];
+    sut.title = title;
+    sut.user = user;
+    return sut;
+}
+
+- (NSUInteger)countAllRadars:(NSError **)radarError {
+    NSUInteger radarCount;
+    
+    NSFetchRequest *fetchRequest = [self fetchRequestAllRadars];
+    
+    NSError *error;
+    radarCount = [[self.context executeFetchRequest:fetchRequest error:&error] count];
+    
+    *radarError = error;
+    
+    return radarCount;
+}
+
+- (NSFetchRequest *)fetchRequestAllRadars {
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:[Radar description]];
+    return fetchRequest;
 }
 
 @end
