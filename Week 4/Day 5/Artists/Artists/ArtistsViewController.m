@@ -26,6 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Artists!";
+    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
@@ -61,19 +62,12 @@
     return cell;
 }
 
-#pragma mark - TableView Delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-}
 
 #pragma mark - Navegation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"ArtistSegue"]) {
-        UINavigationController *nc = segue.destinationViewController;
-        
-        ArtistDetailViewController *vc = (ArtistDetailViewController *)nc.topViewController;
+        ArtistDetailViewController *vc = segue.destinationViewController;
         
         Artist *artist = [self.artists objectAtIndex:[self.tableView indexPathForSelectedRow].item];
         vc.artist = artist;

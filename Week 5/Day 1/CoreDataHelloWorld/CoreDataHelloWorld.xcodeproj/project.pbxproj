@@ -15,10 +15,14 @@
 		E2393AA61BC2662B0021FC4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2393AA41BC2662B0021FC4E /* Main.storyboard */; };
 		E2393AA81BC2662B0021FC4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2393AA71BC2662B0021FC4E /* Assets.xcassets */; };
 		E2393AAB1BC2662B0021FC4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2393AA91BC2662B0021FC4E /* LaunchScreen.storyboard */; };
-		E2393AB61BC2662B0021FC4E /* CoreDataHelloWorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2393AB51BC2662B0021FC4E /* CoreDataHelloWorldTests.m */; };
 		E2393AC11BC2662B0021FC4E /* CoreDataHelloWorldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2393AC01BC2662B0021FC4E /* CoreDataHelloWorldUITests.m */; };
 		E2393AD21BC26C830021FC4E /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = E2393AD11BC26C830021FC4E /* CoreDataStack.m */; settings = {ASSET_TAGS = (); }; };
 		E2393AD51BC272410021FC4E /* FileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E2393AD41BC272410021FC4E /* FileUtils.m */; settings = {ASSET_TAGS = (); }; };
+		E2393AD71BC2AD960021FC4E /* FizzBuzzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2393AD61BC2AD960021FC4E /* FizzBuzzTests.m */; settings = {ASSET_TAGS = (); }; };
+		E2393ADA1BC2ADF70021FC4E /* FizzBuzz.m in Sources */ = {isa = PBXBuildFile; fileRef = E2393AD91BC2ADF70021FC4E /* FizzBuzz.m */; settings = {ASSET_TAGS = (); }; };
+		E290C8D01BC2BC4800F8A778 /* Person+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E290C8CD1BC2BC4800F8A778 /* Person+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		E290C8D11BC2BC4800F8A778 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E290C8CF1BC2BC4800F8A778 /* Person.m */; settings = {ASSET_TAGS = (); }; };
+		E290C8D41BC2C78D00F8A778 /* PersonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E290C8D31BC2C78D00F8A778 /* PersonTests.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +57,6 @@
 		E2393AAA1BC2662B0021FC4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2393AAC1BC2662B0021FC4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2393AB11BC2662B0021FC4E /* CoreDataHelloWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataHelloWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2393AB51BC2662B0021FC4E /* CoreDataHelloWorldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelloWorldTests.m; sourceTree = "<group>"; };
 		E2393AB71BC2662B0021FC4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2393ABC1BC2662B0021FC4E /* CoreDataHelloWorldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataHelloWorldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2393AC01BC2662B0021FC4E /* CoreDataHelloWorldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelloWorldUITests.m; sourceTree = "<group>"; };
@@ -62,6 +65,14 @@
 		E2393AD11BC26C830021FC4E /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
 		E2393AD31BC272410021FC4E /* FileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUtils.h; sourceTree = "<group>"; };
 		E2393AD41BC272410021FC4E /* FileUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileUtils.m; sourceTree = "<group>"; };
+		E2393AD61BC2AD960021FC4E /* FizzBuzzTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FizzBuzzTests.m; sourceTree = "<group>"; };
+		E2393AD81BC2ADF70021FC4E /* FizzBuzz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FizzBuzz.h; sourceTree = "<group>"; };
+		E2393AD91BC2ADF70021FC4E /* FizzBuzz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FizzBuzz.m; sourceTree = "<group>"; };
+		E290C8CC1BC2BC4800F8A778 /* Person+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E290C8CD1BC2BC4800F8A778 /* Person+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E290C8CE1BC2BC4800F8A778 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		E290C8CF1BC2BC4800F8A778 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		E290C8D31BC2C78D00F8A778 /* PersonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,19 +123,20 @@
 		E2393A941BC2662B0021FC4E /* CoreDataHelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				E2393ACE1BC266BC0021FC4E /* Controller */,
+				E290C8D21BC2BD0400F8A778 /* Model */,
+				E2393A951BC2662B0021FC4E /* Supporting Files */,
+				E2393ACF1BC266DD0021FC4E /* View */,
 				E2393A981BC2662B0021FC4E /* AppDelegate.h */,
 				E2393A991BC2662B0021FC4E /* AppDelegate.m */,
-				E2393AD01BC26C830021FC4E /* CoreDataStack.h */,
-				E2393AD11BC26C830021FC4E /* CoreDataStack.m */,
+				E2393AA71BC2662B0021FC4E /* Assets.xcassets */,
+				E2393A9B1BC2662B0021FC4E /* CoreDataHelloWorld.xcdatamodeld */,
 				E2393AD31BC272410021FC4E /* FileUtils.h */,
 				E2393AD41BC272410021FC4E /* FileUtils.m */,
-				E2393ACF1BC266DD0021FC4E /* View */,
-				E2393ACE1BC266BC0021FC4E /* Controller */,
-				E2393AA71BC2662B0021FC4E /* Assets.xcassets */,
-				E2393AA91BC2662B0021FC4E /* LaunchScreen.storyboard */,
+				E2393AD81BC2ADF70021FC4E /* FizzBuzz.h */,
+				E2393AD91BC2ADF70021FC4E /* FizzBuzz.m */,
 				E2393AAC1BC2662B0021FC4E /* Info.plist */,
-				E2393A9B1BC2662B0021FC4E /* CoreDataHelloWorld.xcdatamodeld */,
-				E2393A951BC2662B0021FC4E /* Supporting Files */,
+				E2393AA91BC2662B0021FC4E /* LaunchScreen.storyboard */,
 			);
 			path = CoreDataHelloWorld;
 			sourceTree = "<group>";
@@ -134,13 +146,14 @@
 			children = (
 				E2393A961BC2662B0021FC4E /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		E2393AB41BC2662B0021FC4E /* CoreDataHelloWorldTests */ = {
 			isa = PBXGroup;
 			children = (
-				E2393AB51BC2662B0021FC4E /* CoreDataHelloWorldTests.m */,
+				E2393AD61BC2AD960021FC4E /* FizzBuzzTests.m */,
+				E290C8D31BC2C78D00F8A778 /* PersonTests.m */,
 				E2393AB71BC2662B0021FC4E /* Info.plist */,
 			);
 			path = CoreDataHelloWorldTests;
@@ -158,12 +171,12 @@
 		E2393ACE1BC266BC0021FC4E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E2393A9E1BC2662B0021FC4E /* MasterViewController.h */,
-				E2393A9F1BC2662B0021FC4E /* MasterViewController.m */,
 				E2393AA11BC2662B0021FC4E /* DetailViewController.h */,
 				E2393AA21BC2662B0021FC4E /* DetailViewController.m */,
+				E2393A9E1BC2662B0021FC4E /* MasterViewController.h */,
+				E2393A9F1BC2662B0021FC4E /* MasterViewController.m */,
 			);
-			name = Controller;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		E2393ACF1BC266DD0021FC4E /* View */ = {
@@ -171,7 +184,20 @@
 			children = (
 				E2393AA41BC2662B0021FC4E /* Main.storyboard */,
 			);
-			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		E290C8D21BC2BD0400F8A778 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E2393AD01BC26C830021FC4E /* CoreDataStack.h */,
+				E2393AD11BC26C830021FC4E /* CoreDataStack.m */,
+				E290C8CC1BC2BC4800F8A778 /* Person+CoreDataProperties.h */,
+				E290C8CD1BC2BC4800F8A778 /* Person+CoreDataProperties.m */,
+				E290C8CE1BC2BC4800F8A778 /* Person.h */,
+				E290C8CF1BC2BC4800F8A778 /* Person.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,10 +332,13 @@
 			files = (
 				E2393AA31BC2662B0021FC4E /* DetailViewController.m in Sources */,
 				E2393AA01BC2662B0021FC4E /* MasterViewController.m in Sources */,
+				E290C8D11BC2BC4800F8A778 /* Person.m in Sources */,
 				E2393AD51BC272410021FC4E /* FileUtils.m in Sources */,
+				E2393ADA1BC2ADF70021FC4E /* FizzBuzz.m in Sources */,
 				E2393A9A1BC2662B0021FC4E /* AppDelegate.m in Sources */,
 				E2393A971BC2662B0021FC4E /* main.m in Sources */,
 				E2393A9D1BC2662B0021FC4E /* CoreDataHelloWorld.xcdatamodeld in Sources */,
+				E290C8D01BC2BC4800F8A778 /* Person+CoreDataProperties.m in Sources */,
 				E2393AD21BC26C830021FC4E /* CoreDataStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,7 +347,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2393AB61BC2662B0021FC4E /* CoreDataHelloWorldTests.m in Sources */,
+				E290C8D41BC2C78D00F8A778 /* PersonTests.m in Sources */,
+				E2393AD71BC2AD960021FC4E /* FizzBuzzTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +382,7 @@
 				E2393AA51BC2662B0021FC4E /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		E2393AA91BC2662B0021FC4E /* LaunchScreen.storyboard */ = {
@@ -360,6 +391,7 @@
 				E2393AAA1BC2662B0021FC4E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -534,6 +566,7 @@
 				E2393AC71BC2662B0021FC4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2393AC81BC2662B0021FC4E /* Build configuration list for PBXNativeTarget "CoreDataHelloWorldTests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +575,7 @@
 				E2393ACA1BC2662B0021FC4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2393ACB1BC2662B0021FC4E /* Build configuration list for PBXNativeTarget "CoreDataHelloWorldUITests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +584,7 @@
 				E2393ACD1BC2662B0021FC4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

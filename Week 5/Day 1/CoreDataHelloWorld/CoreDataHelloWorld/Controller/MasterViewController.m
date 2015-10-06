@@ -23,7 +23,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(inserTwoObjects)];
     UIBarButtonItem *bulkAddButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(insertBulkNewObject:)];
     self.navigationItem.rightBarButtonItems = @[bulkAddButton, addButton];
     
@@ -36,37 +36,29 @@
 }
 
 
-- (void)insertNewObject:(id)sender {
-   
-    [self insertNewObjectFromEntity:@"Event" withData:[NSDate date] inField:@"timeStamp"];
-    [self insertNewObjectFromEntity:@"Person" withData:@"Han Solo" inField:@"name"];
-        
-    NSError *error = nil;
-    if (![self.managedObjectContext save:&error]) {
-         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
+- (void)inserTwoObjects {
+    [self insertNewObjectFromEntity:@"Event" withData:[NSDate date] inField:@"timeStamp" inContext:self.managedObjectContext];
+    [self insertNewObjectFromEntity:@"Person" withData:@"Han Solo" inField:@"name" inContext:self.managedObjectContext];
 }
 
 - (void)insertBulkNewObject:(id)sender {
     
     for (NSUInteger i = 0; i<10; i++) {
-        [self insertNewObjectFromEntity:@"Event" withData:[NSDate date] inField:@"timeStamp"];
-        [self insertNewObjectFromEntity:@"Person" withData:@"Han Solo" inField:@"name"];
-        
+        [self inserTwoObjects];
     }
+}
+
+- (void)insertNewObjectFromEntity:(NSString *)entity withData:(NSObject *)data inField:(NSString *)field inContext:(NSManagedObjectContext *)context {
+    
+    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:entity
+                                                                      inManagedObjectContext:context];
+    [newManagedObject setValue:data forKey:field];
     
     NSError *error = nil;
     if (![self.managedObjectContext save:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-         abort();
+        abort();
     }
-}
-
-- (void)insertNewObjectFromEntity:(NSString *)entity withData:(NSObject *)data inField:(NSString *)field {
-    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:entity
-                                                                      inManagedObjectContext:self.managedObjectContext];
-    [newManagedObject setValue:data forKey:field];
 }
 
 #pragma mark - Segues

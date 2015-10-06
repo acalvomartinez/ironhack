@@ -6,13 +6,14 @@
         </attribute>
         <userInfo/>
     </entity>
-    <entity name="Person" syncable="YES">
+    <entity name="Person" representedClassName="Person" syncable="YES">
         <attribute name="happy" optional="YES" transient="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="name" attributeType="String" minValueString="0" maxValueString="100" defaultValueString="John Doe" indexed="YES" syncable="YES"/>
+        <attribute name="indentificator" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" minValueString="0" maxValueString="255" defaultValueString="John Doe" syncable="YES"/>
         <attribute name="partnerName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
-        <element name="Person" positionX="430" positionY="189" width="128" height="88"/>
+        <element name="Person" positionX="430" positionY="189" width="128" height="103"/>
     </elements>
 </model>

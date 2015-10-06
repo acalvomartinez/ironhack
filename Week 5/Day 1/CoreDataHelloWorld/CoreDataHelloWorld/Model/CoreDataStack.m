@@ -10,9 +10,24 @@
 
 #import "FileUtils.h"
 
+@interface CoreDataStack ()
+@property (nonatomic, copy) NSString *filename;
+@property (nonatomic, copy) NSString *persistenceType;
+@end
+
 @implementation CoreDataStack
 
 @synthesize managedObjectContext = _managedObjectContext;
+
+- (instancetype)initWithDatabaseFilename:(NSString *)filename
+                      andPersistenceType:(NSString *)persistenceType {
+    self = [super init];
+    if (self) {
+        _filename = filename;
+        _persistenceType = persistenceType;
+    }
+    return self;
+}
 
 - (NSManagedObjectContext *)managedObjectContext {
     if (_managedObjectContext != nil) {
@@ -34,10 +49,10 @@
    
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     
-    NSURL *storeURL = [[FileUtils applicationDocumentsDirectory] URLByAppendingPathComponent:@"CoreDataHelloWorld.sqlite"];
+    NSURL *storeURL = [[FileUtils applicationDocumentsDirectory] URLByAppendingPathComponent:self.filename];
     
     NSError *error = nil;
-    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:self.persistenceType configuration:nil URL:storeURL options:nil error:&error]) {
         // Report any error we got.
         NSMutableDictionary *dict = [NSMutableDictionary dictionary];
         dict[NSLocalizedDescriptionKey] = @"Failed to initialize the application's saved data";

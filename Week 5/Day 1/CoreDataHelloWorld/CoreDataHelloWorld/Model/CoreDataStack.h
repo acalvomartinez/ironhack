@@ -13,6 +13,8 @@
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
+
+- (instancetype)initWithDatabaseFilename:(NSString *)filename andPersistenceType:(NSString *)persistenceType;
 - (void)saveContext;
 
 @end

@@ -53,7 +53,7 @@ static NSString * const kFileNameArtistData = @"artist.dat";
 - (void)toggleFavoriteForArtistWithId:(NSInteger)artistId completion:(void (^)(void))completion {
     dispatch_async(self.service_q, ^{
         [self fetchArtistFromDiskOnCompletion:^(NSArray *artists) {
-            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"artistId==%@",artistId];
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"artistId==%lu",artistId];
             Artist *artist = [[artists filteredArrayUsingPredicate:predicate] firstObject];
             artist.favorited = !artist.favorited;
             dispatch_async(dispatch_get_main_queue(), ^{
