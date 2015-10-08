@@ -23,14 +23,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTz-Cb-O5X">
-                                            <rect key="frame" x="8" y="8" width="584" height="18"/>
+                                            <rect key="frame" x="20" y="8" width="572" height="18"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJh-nk-Baj">
-                                            <rect key="frame" x="8" y="34" width="584" height="24"/>
+                                            <rect key="frame" x="20" y="34" width="572" height="24"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -40,10 +40,10 @@
                                     <animations/>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="fJh-nk-Baj" secondAttribute="bottom" constant="12" id="Deg-rV-2Lb"/>
-                                        <constraint firstItem="jTz-Cb-O5X" firstAttribute="leading" secondItem="G5E-Xq-EeV" secondAttribute="leading" constant="8" id="Idv-EW-36d"/>
+                                        <constraint firstItem="jTz-Cb-O5X" firstAttribute="leading" secondItem="G5E-Xq-EeV" secondAttribute="leading" constant="20" id="Idv-EW-36d"/>
                                         <constraint firstAttribute="trailing" secondItem="jTz-Cb-O5X" secondAttribute="trailing" constant="8" id="J7e-sF-b5b"/>
                                         <constraint firstItem="fJh-nk-Baj" firstAttribute="top" secondItem="jTz-Cb-O5X" secondAttribute="bottom" constant="8" id="L1R-cC-fly"/>
-                                        <constraint firstItem="fJh-nk-Baj" firstAttribute="leading" secondItem="G5E-Xq-EeV" secondAttribute="leading" constant="8" id="QpP-hv-xPy"/>
+                                        <constraint firstItem="fJh-nk-Baj" firstAttribute="leading" secondItem="G5E-Xq-EeV" secondAttribute="leading" constant="20" id="QpP-hv-xPy"/>
                                         <constraint firstItem="jTz-Cb-O5X" firstAttribute="top" secondItem="G5E-Xq-EeV" secondAttribute="top" constant="8" id="Uc7-30-oVm"/>
                                         <constraint firstAttribute="trailing" secondItem="fJh-nk-Baj" secondAttribute="trailing" constant="8" id="qQl-en-1rY"/>
                                     </constraints>
@@ -54,6 +54,30 @@
                                     <outlet property="radarUser" destination="fJh-nk-Baj" id="6tP-MX-JUR"/>
                                     <segue destination="Dvf-3y-e0K" kind="show" identifier="RadarDetailSegue" id="zSw-rA-f3r"/>
                                 </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LH8-QL-6Ec">
+                                <rect key="frame" x="0.0" y="163" width="600" height="71"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LH8-QL-6Ec" id="52N-DN-Qwr">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qN-dw-2si">
+                                            <rect key="frame" x="8" y="18" width="584" height="33"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="4qN-dw-2si" firstAttribute="leading" secondItem="52N-DN-Qwr" secondAttribute="leadingMargin" id="Iz9-OU-nOc"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="4qN-dw-2si" secondAttribute="trailing" id="cde-8b-vBy"/>
+                                        <constraint firstItem="4qN-dw-2si" firstAttribute="centerY" secondItem="52N-DN-Qwr" secondAttribute="centerY" id="k84-ag-uKu"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <animations/>
                             </tableViewCell>
                         </prototypes>
                         <connections>

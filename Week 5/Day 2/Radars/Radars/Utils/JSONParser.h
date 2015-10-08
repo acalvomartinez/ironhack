@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-#import "Radar.h"
+@class RadarJSON;
 
 @interface JSONParser : NSObject
 
-+ (NSArray<Radar *> *)parseJSONString:(NSString *)jsonAsString usingContext:(NSManagedObjectContext *)context;
++ (NSArray<RadarJSON *> *)parseJSONString:(NSString *)jsonAsString;
 
 @end

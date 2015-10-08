@@ -10,6 +10,12 @@
 
 #import <CoreData/CoreData.h>
 
+@class RadarViewCell;
+
 @interface RadarsViewController : UITableViewController
+
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+
+- (void)configureCell:(RadarViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+
 @end

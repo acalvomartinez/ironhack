@@ -7,6 +7,7 @@
 //
 
 #import "RadarsViewController.h"
+#import "RadarsViewController+ACMNSFetchResultsController.h"
 
 #import "EditRadarViewController.h"
 
@@ -16,10 +17,12 @@
 
 #import "RadarAPIWrapper.h"
 #import "JSONParser.h"
+#import "RadarJSON.h"
+#import "JSONRadarMapper.h"
 
 
-@interface RadarsViewController () <NSFetchedResultsControllerDelegate>
-@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@interface RadarsViewController ()
+
 @end
 
 @implementation RadarsViewController
@@ -56,98 +59,15 @@
     return cell;
 }
 
-
-- (void)configureCell:(RadarViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:section];
     Radar *radar = (Radar *)[self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.radar =radar;
+    
+    return radar.user;
 }
-
-
-#pragma mark - Fetched results controller
-
-- (NSFetchedResultsController *)fetchedResultsController
-{
-    if (_fetchedResultsController != nil) {
-        return _fetchedResultsController;
-    }
-    
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:[Radar description]];
-    
-    [fetchRequest setFetchBatchSize:20];
-    
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"user" ascending:YES];
-    [fetchRequest setSortDescriptors:@[sortDescriptor]];
-    
-    _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
-                                                                    managedObjectContext:self.managedObjectContext
-                                                                      sectionNameKeyPath:nil
-                                                                               cacheName:nil];
-    _fetchedResultsController.delegate = self;
-    
-    NSError *error = nil;
-    if (![_fetchedResultsController performFetch:&error]) {
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        
-    }
-    
-    return _fetchedResultsController;
-}
-
-- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
-{
-    [self.tableView beginUpdates];
-}
-
-- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
-           atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
-{
-    switch(type) {
-        case NSFetchedResultsChangeInsert:
-            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        case NSFetchedResultsChangeDelete:
-            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        default:
-            return;
-    }
-}
-
-- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
-       atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
-      newIndexPath:(NSIndexPath *)newIndexPath
-{
-    UITableView *tableView = self.tableView;
-    
-    switch(type) {
-        case NSFetchedResultsChangeInsert:
-            [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        case NSFetchedResultsChangeDelete:
-            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        case NSFetchedResultsChangeUpdate:
-            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
-            break;
-            
-        case NSFetchedResultsChangeMove:
-            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-            [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-    }
-}
-
-- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
-{
-    [self.tableView endUpdates];
-}
-
 
 #pragma mark - Navigation
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"RadarDetailSegue"]) {
         Radar *radar = [self.fetchedResultsController objectAtIndexPath:self.tableView.indexPathForSelectedRow];
@@ -170,13 +90,16 @@
                        completion:^(NSString * _Nullable returnData) {
                            
                            NSAssert([NSThread currentThread] == [NSThread mainThread], @"OMG!");
+                          
+                           NSArray<RadarJSON *> *jsonRadars = [JSONParser parseJSONString:returnData];
                            
-                           //TODO: ASK DIEGO ABOUT HOW TO...
-                           
-                           [JSONParser parseJSONString:returnData usingContext:weakSelf.managedObjectContext];
-                           [weakSelf.tableView reloadData];
-                           
-                           [weakSelf.refreshControl endRefreshing];
+                           if (jsonRadars) {
+                               [JSONRadarMapper mapJSONRadars:jsonRadars inContext:weakSelf.managedObjectContext];
+                               
+                               [weakSelf.tableView reloadData];
+                               
+                               [weakSelf.refreshControl endRefreshing];
+                           }
                            
                        } onError:^(NSError * _Nullable error) {
                            NSLog(@"%@", error);
@@ -184,6 +107,12 @@
                            [weakSelf.refreshControl endRefreshing];
                        }];
     
+}
+
+
+- (void)configureCell:(RadarViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    Radar *radar = (Radar *)[self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.radar =radar;
 }
 
 @end

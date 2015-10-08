@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E205D89B1BC6511700579DD1 /* RadarJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = E205D89A1BC6511700579DD1 /* RadarJSON.m */; settings = {ASSET_TAGS = (); }; };
+		E205D89E1BC654F100579DD1 /* NSDate+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = E205D89D1BC654F100579DD1 /* NSDate+Formatter.m */; settings = {ASSET_TAGS = (); }; };
+		E205D8A01BC6564000579DD1 /* NSDate+FormatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E205D89F1BC6564000579DD1 /* NSDate+FormatterTests.m */; settings = {ASSET_TAGS = (); }; };
+		E211B6231BC6763800BFE2A8 /* TenRadarResultStub.json in Resources */ = {isa = PBXBuildFile; fileRef = E211B6221BC6763800BFE2A8 /* TenRadarResultStub.json */; settings = {ASSET_TAGS = (); }; };
+		E211B6261BC6780000BFE2A8 /* JSONRadarMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E211B6251BC6780000BFE2A8 /* JSONRadarMapper.m */; settings = {ASSET_TAGS = (); }; };
+		E211B62C1BC6948F00BFE2A8 /* RadarsViewController+ACMNSFetchResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = E211B62B1BC6948F00BFE2A8 /* RadarsViewController+ACMNSFetchResultsController.m */; settings = {ASSET_TAGS = (); }; };
+		E211B62E1BC6A99900BFE2A8 /* EmptyRadarResultStub.json in Resources */ = {isa = PBXBuildFile; fileRef = E211B62D1BC6A99900BFE2A8 /* EmptyRadarResultStub.json */; settings = {ASSET_TAGS = (); }; };
 		E2A5DDBB1BC3D10C0059CCC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A5DDBA1BC3D10C0059CCC7 /* main.m */; };
 		E2A5DDBE1BC3D10C0059CCC7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A5DDBD1BC3D10C0059CCC7 /* AppDelegate.m */; };
 		E2A5DDC41BC3D10C0059CCC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2A5DDC21BC3D10C0059CCC7 /* Main.storyboard */; };
@@ -51,6 +58,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E205D8991BC6511700579DD1 /* RadarJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarJSON.h; sourceTree = "<group>"; };
+		E205D89A1BC6511700579DD1 /* RadarJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarJSON.m; sourceTree = "<group>"; };
+		E205D89C1BC654F100579DD1 /* NSDate+Formatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Formatter.h"; sourceTree = "<group>"; };
+		E205D89D1BC654F100579DD1 /* NSDate+Formatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatter.m"; sourceTree = "<group>"; };
+		E205D89F1BC6564000579DD1 /* NSDate+FormatterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+FormatterTests.m"; sourceTree = "<group>"; };
+		E211B6221BC6763800BFE2A8 /* TenRadarResultStub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TenRadarResultStub.json; sourceTree = "<group>"; };
+		E211B6241BC6780000BFE2A8 /* JSONRadarMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONRadarMapper.h; path = ../Utils/JSONRadarMapper.h; sourceTree = "<group>"; };
+		E211B6251BC6780000BFE2A8 /* JSONRadarMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONRadarMapper.m; path = ../Utils/JSONRadarMapper.m; sourceTree = "<group>"; };
+		E211B62A1BC6948F00BFE2A8 /* RadarsViewController+ACMNSFetchResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RadarsViewController+ACMNSFetchResultsController.h"; sourceTree = "<group>"; };
+		E211B62B1BC6948F00BFE2A8 /* RadarsViewController+ACMNSFetchResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RadarsViewController+ACMNSFetchResultsController.m"; sourceTree = "<group>"; };
+		E211B62D1BC6A99900BFE2A8 /* EmptyRadarResultStub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EmptyRadarResultStub.json; sourceTree = "<group>"; };
 		E2A5DDB61BC3D10C0059CCC7 /* Radars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Radars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A5DDBA1BC3D10C0059CCC7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E2A5DDBC1BC3D10C0059CCC7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -125,6 +143,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E211B62F1BC6AA5700BFE2A8 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				E211B6241BC6780000BFE2A8 /* JSONRadarMapper.h */,
+				E211B6251BC6780000BFE2A8 /* JSONRadarMapper.m */,
+			);
+			name = Mapper;
+			sourceTree = "<group>";
+		};
 		E2A5DDAD1BC3D10C0059CCC7 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +201,7 @@
 			children = (
 				E2C002191BC562BA0051C518 /* TestUtils */,
 				E2A5DE2A1BC557ED0059CCC7 /* Stubs */,
+				E205D89F1BC6564000579DD1 /* NSDate+FormatterTests.m */,
 				E2A5DE281BC54D6F0059CCC7 /* JSONParserTests.m */,
 				E2A5DDD31BC3D10C0059CCC7 /* RadarTests.m */,
 				E2A5DDD51BC3D10C0059CCC7 /* Info.plist */,
@@ -193,6 +221,9 @@
 		E2A5DDEC1BC3D1130059CCC7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E211B62F1BC6AA5700BFE2A8 /* Mapper */,
+				E205D8991BC6511700579DD1 /* RadarJSON.h */,
+				E205D89A1BC6511700579DD1 /* RadarJSON.m */,
 				E2A5DDF81BC3D20C0059CCC7 /* Radar+CoreDataProperties.h */,
 				E2A5DDF91BC3D20C0059CCC7 /* Radar+CoreDataProperties.m */,
 				E2A5DDFA1BC3D20C0059CCC7 /* Radar.h */,
@@ -205,7 +236,7 @@
 		E2A5DDFE1BC3D3250059CCC7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				E2A5DE241BC51C670059CCC7 /* JSONModelMapper */,
+				E2A5DE241BC51C670059CCC7 /* Parser */,
 				E2A5DE1F1BC5054B0059CCC7 /* Network */,
 				E2A5DDFF1BC3D3420059CCC7 /* FileUtils.h */,
 				E2A5DE001BC3D3420059CCC7 /* FileUtils.m */,
@@ -219,6 +250,8 @@
 				E2A5DE0B1BC3F2890059CCC7 /* FakeRadarGenerator.m */,
 				E2A5DE101BC3F6080059CCC7 /* NSString+Random.h */,
 				E2A5DE111BC3F6080059CCC7 /* NSString+Random.m */,
+				E205D89C1BC654F100579DD1 /* NSDate+Formatter.h */,
+				E205D89D1BC654F100579DD1 /* NSDate+Formatter.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -228,6 +261,8 @@
 			children = (
 				E2A5DE161BC3FD840059CCC7 /* RadarsViewController.h */,
 				E2A5DE171BC3FD840059CCC7 /* RadarsViewController.m */,
+				E211B62A1BC6948F00BFE2A8 /* RadarsViewController+ACMNSFetchResultsController.h */,
+				E211B62B1BC6948F00BFE2A8 /* RadarsViewController+ACMNSFetchResultsController.m */,
 				E2A5DE1C1BC41A9F0059CCC7 /* EditRadarViewController.h */,
 				E2A5DE1D1BC41A9F0059CCC7 /* EditRadarViewController.m */,
 			);
@@ -255,19 +290,21 @@
 			name = Network;
 			sourceTree = "<group>";
 		};
-		E2A5DE241BC51C670059CCC7 /* JSONModelMapper */ = {
+		E2A5DE241BC51C670059CCC7 /* Parser */ = {
 			isa = PBXGroup;
 			children = (
 				E2A5DE251BC51D4E0059CCC7 /* JSONParser.h */,
 				E2A5DE261BC51D4E0059CCC7 /* JSONParser.m */,
 			);
-			name = JSONModelMapper;
+			name = Parser;
 			sourceTree = "<group>";
 		};
 		E2A5DE2A1BC557ED0059CCC7 /* Stubs */ = {
 			isa = PBXGroup;
 			children = (
 				E2A5DE2B1BC558510059CCC7 /* OneRadarResultStub.json */,
+				E211B6221BC6763800BFE2A8 /* TenRadarResultStub.json */,
+				E211B62D1BC6A99900BFE2A8 /* EmptyRadarResultStub.json */,
 			);
 			name = Stubs;
 			sourceTree = "<group>";
@@ -394,7 +431,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E211B62E1BC6A99900BFE2A8 /* EmptyRadarResultStub.json in Resources */,
 				E2A5DE2C1BC558510059CCC7 /* OneRadarResultStub.json in Resources */,
+				E211B6231BC6763800BFE2A8 /* TenRadarResultStub.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +456,7 @@
 				E2A5DE011BC3D3420059CCC7 /* FileUtils.m in Sources */,
 				E2A5DE1B1BC406940059CCC7 /* RadarViewCell.m in Sources */,
 				E2A5DDBE1BC3D10C0059CCC7 /* AppDelegate.m in Sources */,
+				E205D89E1BC654F100579DD1 /* NSDate+Formatter.m in Sources */,
 				E2A5DE091BC3DEDE0059CCC7 /* NSManagedObjectContext+ACMInsertManagedObject.m in Sources */,
 				E2A5DE0C1BC3F2890059CCC7 /* FakeRadarGenerator.m in Sources */,
 				E2A5DE231BC507C10059CCC7 /* RadarAPIWrapper.m in Sources */,
@@ -425,7 +465,10 @@
 				E2A5DDBB1BC3D10C0059CCC7 /* main.m in Sources */,
 				E2A5DE181BC3FD840059CCC7 /* RadarsViewController.m in Sources */,
 				E2A5DE1E1BC41A9F0059CCC7 /* EditRadarViewController.m in Sources */,
+				E211B6261BC6780000BFE2A8 /* JSONRadarMapper.m in Sources */,
+				E205D89B1BC6511700579DD1 /* RadarJSON.m in Sources */,
 				E2A5DDF31BC3D14F0059CCC7 /* CoreDataStack.m in Sources */,
+				E211B62C1BC6948F00BFE2A8 /* RadarsViewController+ACMNSFetchResultsController.m in Sources */,
 				E2A5DE271BC51D4E0059CCC7 /* JSONParser.m in Sources */,
 				E2A5DDFC1BC3D20C0059CCC7 /* Radar+CoreDataProperties.m in Sources */,
 			);
@@ -438,6 +481,7 @@
 				E2A5DE291BC54D6F0059CCC7 /* JSONParserTests.m in Sources */,
 				E2C0021C1BC562DB0051C518 /* StubFileUtil.m in Sources */,
 				E2A5DDD41BC3D10C0059CCC7 /* RadarTests.m in Sources */,
+				E205D8A01BC6564000579DD1 /* NSDate+FormatterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,7 +14,14 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Radar : NSManagedObject
 
 // Insert code here to declare functionality of your managed object subclass
-+ (Radar *)radarWithUser:(NSString *)user andTitle:(NSString *)title inContext:(NSManagedObjectContext *)context;
++ (Radar *)radarWithUser:(NSString *)user
+                andTitle:(NSString *)title
+                 product:(NSString *)product
+          productVersion:(NSString *)productVersion
+               inContext:(NSManagedObjectContext *)context;
+
++ (NSFetchRequest *)fetchRequestWithFields:(NSArray<NSString *>*)fields
+                                   andOrders:(NSArray<NSNumber *>*)orders;
 
 @end
 
