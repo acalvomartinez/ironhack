@@ -8,9 +8,15 @@
 
 #import "RadarsViewController.h"
 
+#import "EditRadarViewController.h"
+
 #import "CoreDataStack.h"
 #import "RadarViewCell.h"
 #import "Radar.h"
+
+#import "RadarAPIWrapper.h"
+#import "JSONParser.h"
+
 
 @interface RadarsViewController () <NSFetchedResultsControllerDelegate>
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
@@ -25,6 +31,9 @@
     
     self.title = @"Radars";
     
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.tableView addSubview:self.refreshControl];
+    [self.refreshControl addTarget:self action:@selector(refreshButtonPressed:) forControlEvents:UIControlEventValueChanged];
 }
 
 #pragma mark - Table view data source
@@ -72,7 +81,7 @@
     _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                     managedObjectContext:self.managedObjectContext
                                                                       sectionNameKeyPath:nil
-                                                                               cacheName:@"Master"];
+                                                                               cacheName:nil];
     _fetchedResultsController.delegate = self;
     
     NSError *error = nil;
@@ -138,5 +147,43 @@
 }
 
 
+#pragma mark - Navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"RadarDetailSegue"]) {
+        Radar *radar = [self.fetchedResultsController objectAtIndexPath:self.tableView.indexPathForSelectedRow];
+        
+        EditRadarViewController *vc = segue.destinationViewController;
+        vc.radar = radar;
+    }
+}
+
+
+#pragma mark - Actions
+
+- (IBAction)refreshButtonPressed:(UIBarButtonItem *)sender {
+    
+    __weak RadarsViewController *weakSelf = self;
+    
+    RadarAPIWrapper *apiWrapper = [[RadarAPIWrapper alloc] init];
+    
+    [apiWrapper radarsWithBaseURL:@"https://openradar.appspot.com/api/radars"
+                       completion:^(NSString * _Nullable returnData) {
+                           
+                           NSAssert([NSThread currentThread] == [NSThread mainThread], @"OMG!");
+                           
+                           //TODO: ASK DIEGO ABOUT HOW TO...
+                           
+                           [JSONParser parseJSONString:returnData usingContext:weakSelf.managedObjectContext];
+                           [weakSelf.tableView reloadData];
+                           
+                           [weakSelf.refreshControl endRefreshing];
+                           
+                       } onError:^(NSError * _Nullable error) {
+                           NSLog(@"%@", error);
+                           
+                           [weakSelf.refreshControl endRefreshing];
+                       }];
+    
+}
 
 @end

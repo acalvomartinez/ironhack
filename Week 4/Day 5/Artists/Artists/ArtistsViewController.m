@@ -29,6 +29,10 @@
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
     [self loadArtistsFromService];
 }
@@ -58,6 +62,8 @@
     
     Artist *artist = [self.artists objectAtIndex:indexPath.item];
     cell.textLabel.text = artist.name;
+    
+    cell.accessoryType = [artist isFavorited] ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
     
     return cell;
 }

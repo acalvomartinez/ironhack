@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VvV-Bz-WnT">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Radars View Controller-->
@@ -22,16 +23,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTz-Cb-O5X">
-                                            <rect key="frame" x="8" y="8" width="584" height="21"/>
+                                            <rect key="frame" x="8" y="8" width="584" height="18"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJh-nk-Baj">
-                                            <rect key="frame" x="8" y="37" width="584" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJh-nk-Baj">
+                                            <rect key="frame" x="8" y="34" width="584" height="24"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -51,6 +52,7 @@
                                 <connections>
                                     <outlet property="radarText" destination="jTz-Cb-O5X" id="3OQ-cM-oQz"/>
                                     <outlet property="radarUser" destination="fJh-nk-Baj" id="6tP-MX-JUR"/>
+                                    <segue destination="Dvf-3y-e0K" kind="show" identifier="RadarDetailSegue" id="zSw-rA-f3r"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -59,11 +61,62 @@
                             <outlet property="delegate" destination="i1X-mj-o1W" id="RuW-fD-sZU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="BuZ-z9-lZd"/>
+                    <navigationItem key="navigationItem" id="BuZ-z9-lZd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="5Or-3J-YZb">
+                            <connections>
+                                <action selector="refreshButtonPressed:" destination="i1X-mj-o1W" id="wpA-MU-hau"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FKs-GG-cj0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1226" y="100"/>
+        </scene>
+        <!--Edit Radar View Controller-->
+        <scene sceneID="2C2-Qn-L2s">
+            <objects>
+                <viewController id="Dvf-3y-e0K" customClass="EditRadarViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Odd-EB-Wi3"/>
+                        <viewControllerLayoutGuide type="bottom" id="kHf-oO-Bbf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yAB-IN-XvG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JS0-at-A8n">
+                                <rect key="frame" x="20" y="84" width="560" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gRq-Uk-YP1">
+                                <rect key="frame" x="20" y="134" width="560" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JS0-at-A8n" firstAttribute="leading" secondItem="yAB-IN-XvG" secondAttribute="leadingMargin" id="4n6-lv-bBb"/>
+                            <constraint firstItem="gRq-Uk-YP1" firstAttribute="top" secondItem="JS0-at-A8n" secondAttribute="bottom" constant="20" id="Ocr-Da-CCm"/>
+                            <constraint firstItem="JS0-at-A8n" firstAttribute="top" secondItem="Odd-EB-Wi3" secondAttribute="bottom" constant="20" id="QEe-yo-mwz"/>
+                            <constraint firstItem="gRq-Uk-YP1" firstAttribute="trailing" secondItem="yAB-IN-XvG" secondAttribute="trailingMargin" id="TB6-5R-M0o"/>
+                            <constraint firstItem="gRq-Uk-YP1" firstAttribute="leading" secondItem="yAB-IN-XvG" secondAttribute="leadingMargin" id="d9l-S2-RXP"/>
+                            <constraint firstItem="JS0-at-A8n" firstAttribute="trailing" secondItem="yAB-IN-XvG" secondAttribute="trailingMargin" id="nax-WO-zW4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="titleTextView" destination="JS0-at-A8n" id="g8h-Rr-or8"/>
+                        <outlet property="userTextView" destination="gRq-Uk-YP1" id="wwO-Gc-fky"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vm1-hT-nbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1983" y="100"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zrn-f0-Grf">

@@ -2,11 +2,10 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8195" systemVersion="15A284" minimumToolsVersion="Xcode 7.0">
     <entity name="Radar" representedClassName="Radar" syncable="YES">
         <attribute name="product" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="product_version" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" attributeType="String" minValueString="0" maxValueString="255" indexed="YES" syncable="YES"/>
         <attribute name="user" attributeType="String" regularExpressionString="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Radar" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Radar" positionX="-63" positionY="-18" width="128" height="90"/>
     </elements>
 </model>

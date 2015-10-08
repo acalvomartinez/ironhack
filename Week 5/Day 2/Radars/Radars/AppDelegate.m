@@ -26,7 +26,7 @@
     self.cds = [[CoreDataStack alloc] initWithDatabaseFilename:@"radars.sqlite"
                                                       andPersistenceType:NSSQLiteStoreType];
     
-    [self fakeRadarGeneratorInContext:self.cds.managedObjectContext];
+    //[self fakeRadarGeneratorInContext:self.cds.managedObjectContext];
     
     UINavigationController *nvc = (UINavigationController *)self.window.rootViewController;
     

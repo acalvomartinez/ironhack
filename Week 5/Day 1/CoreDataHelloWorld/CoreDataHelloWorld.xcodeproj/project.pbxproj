@@ -139,7 +139,6 @@
 				E2393AD81BC2ADF70021FC4E /* FizzBuzz.h */,
 				E2393AD91BC2ADF70021FC4E /* FizzBuzz.m */,
 				E2393AAC1BC2662B0021FC4E /* Info.plist */,
-				E2393AA91BC2662B0021FC4E /* LaunchScreen.storyboard */,
 			);
 			path = CoreDataHelloWorld;
 			sourceTree = "<group>";
@@ -185,6 +184,7 @@
 		E2393ACF1BC266DD0021FC4E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E2393AA91BC2662B0021FC4E /* LaunchScreen.storyboard */,
 				E2393AA41BC2662B0021FC4E /* Main.storyboard */,
 			);
 			path = View;
@@ -397,7 +397,7 @@
 				E2393AAA1BC2662B0021FC4E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			path = .;
+			path = ../.;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
