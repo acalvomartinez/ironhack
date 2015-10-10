@@ -30,7 +30,8 @@
 
 
 + (NSFetchRequest *)fetchRequestWithFields:(NSArray<NSString *> *)fields
-                                 andOrders:(NSArray<NSNumber *> *)orders {
+                                 andOrders:(NSArray<NSNumber *> *)orders
+                        andDistinctResults:(BOOL)distinct {
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:[Radar description]];
     [fetchRequest setFetchBatchSize:20];
@@ -49,6 +50,8 @@
     
     [fetchRequest setSortDescriptors:sortDescriptors];
     
+    fetchRequest.returnsDistinctResults = distinct;
+        
     return fetchRequest;
 }
 

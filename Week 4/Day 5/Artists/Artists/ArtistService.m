@@ -8,6 +8,8 @@
 
 #import "ArtistService.h"
 
+#import "ArtistJSONParser.h"
+
 #import "Artist.h"
 
 #import "NSDate+Formatter.h"
@@ -45,6 +47,8 @@ static NSString * const kFileNameArtistData = @"artist.dat";
                     }
                 });
                 [self saveArtistsToDisk:artists];
+            } onError:^(NSError *error) {
+                NSLog(@"%@",error);
             }];
         }
     });
@@ -63,8 +67,6 @@ static NSString * const kFileNameArtistData = @"artist.dat";
             });
             [self saveArtistsToDisk:artists];
         }];
-        
-        
     });
 }
 
@@ -109,18 +111,20 @@ static NSString * const kFileNameArtistData = @"artist.dat";
     }
 }
 
-- (void)fetchDataFromRemoteOnCompletion:(void (^)(NSArray *))completion {
+- (void)fetchDataFromRemoteOnCompletion:(void (^)(NSArray *))completion onError:(void (^)(NSError *))errorBlock {
     NSURL *url = [NSURL URLWithString:kArtistJSONURL];
     NSURLSession *urlSession = [NSURLSession sharedSession];
     
     NSURLSessionDataTask *task = [urlSession dataTaskWithURL:url
                                            completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-                                               NSError *parseError;
-                                               NSArray *JSONArray = [NSJSONSerialization JSONObjectWithData:data
-                                                                                                    options:kNilOptions
-                                                                                                      error:&parseError];
                                                
-                                               NSArray *artists = [self artistsFromJSONArray:JSONArray];
+                                               NSError *parseError;
+                                               NSArray *artists = [ArtistJSONParser artistsFromJSONData:data error:parseError];
+                                               
+                                               if (!artists) {
+                                                   errorBlock (parseError);
+                                                   return;
+                                               }
                                                
                                                if (completion) {
                                                     completion(artists);
@@ -132,29 +136,6 @@ static NSString * const kFileNameArtistData = @"artist.dat";
 
 
 
-#pragma mark - Serializiation
 
-- (NSArray *)artistsFromJSONArray:(NSArray *)JSONArray {
-    
-    NSMutableSet *artists = [NSMutableSet new];
-    
-    for (NSDictionary *dictionary in JSONArray) {
-        
-        NSURL *imageURL = [NSURL URLWithString:dictionary[@"image_url"]];
-        NSDate *startDate = [NSDate dateWithString:dictionary[@"start_day"]];
-        NSUInteger artistId = [dictionary[@"id"] integerValue];
-        
-        Artist *artist = [Artist artistWithName:dictionary[@"name"]
-                                longDescription:dictionary[@"description"]
-                                          stage:dictionary[@"stage"]
-                                       imageURL:imageURL
-                                      startDate:startDate
-                                       artistId:artistId];
-        [artists addObject:artist];
-    }
-    
-    return [artists allObjects];
-    
-}
 
 @end

@@ -14,6 +14,9 @@
 		E211B6261BC6780000BFE2A8 /* JSONRadarMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E211B6251BC6780000BFE2A8 /* JSONRadarMapper.m */; settings = {ASSET_TAGS = (); }; };
 		E211B62C1BC6948F00BFE2A8 /* RadarsViewController+ACMNSFetchResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = E211B62B1BC6948F00BFE2A8 /* RadarsViewController+ACMNSFetchResultsController.m */; settings = {ASSET_TAGS = (); }; };
 		E211B62E1BC6A99900BFE2A8 /* EmptyRadarResultStub.json in Resources */ = {isa = PBXBuildFile; fileRef = E211B62D1BC6A99900BFE2A8 /* EmptyRadarResultStub.json */; settings = {ASSET_TAGS = (); }; };
+		E211B6321BC6CA2D00BFE2A8 /* RadarSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E211B6311BC6CA2D00BFE2A8 /* RadarSectionCell.m */; settings = {ASSET_TAGS = (); }; };
+		E24565D21BC7A2F4008426FC /* RadarsAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = E24565D11BC7A2F4008426FC /* RadarsAdapter.m */; settings = {ASSET_TAGS = (); }; };
+		E24565D51BC7AEE4008426FC /* UsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E24565D41BC7AEE4008426FC /* UsersViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E2A5DDBB1BC3D10C0059CCC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A5DDBA1BC3D10C0059CCC7 /* main.m */; };
 		E2A5DDBE1BC3D10C0059CCC7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A5DDBD1BC3D10C0059CCC7 /* AppDelegate.m */; };
 		E2A5DDC41BC3D10C0059CCC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2A5DDC21BC3D10C0059CCC7 /* Main.storyboard */; };
@@ -69,6 +72,12 @@
 		E211B62A1BC6948F00BFE2A8 /* RadarsViewController+ACMNSFetchResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RadarsViewController+ACMNSFetchResultsController.h"; sourceTree = "<group>"; };
 		E211B62B1BC6948F00BFE2A8 /* RadarsViewController+ACMNSFetchResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RadarsViewController+ACMNSFetchResultsController.m"; sourceTree = "<group>"; };
 		E211B62D1BC6A99900BFE2A8 /* EmptyRadarResultStub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EmptyRadarResultStub.json; sourceTree = "<group>"; };
+		E211B6301BC6CA2D00BFE2A8 /* RadarSectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarSectionCell.h; sourceTree = "<group>"; };
+		E211B6311BC6CA2D00BFE2A8 /* RadarSectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarSectionCell.m; sourceTree = "<group>"; };
+		E24565D01BC7A2F4008426FC /* RadarsAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarsAdapter.h; sourceTree = "<group>"; };
+		E24565D11BC7A2F4008426FC /* RadarsAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarsAdapter.m; sourceTree = "<group>"; };
+		E24565D31BC7AEE4008426FC /* UsersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsersViewController.h; sourceTree = "<group>"; };
+		E24565D41BC7AEE4008426FC /* UsersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersViewController.m; sourceTree = "<group>"; };
 		E2A5DDB61BC3D10C0059CCC7 /* Radars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Radars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A5DDBA1BC3D10C0059CCC7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E2A5DDBC1BC3D10C0059CCC7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -152,6 +161,15 @@
 			name = Mapper;
 			sourceTree = "<group>";
 		};
+		E24565CF1BC7A248008426FC /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				E24565D01BC7A2F4008426FC /* RadarsAdapter.h */,
+				E24565D11BC7A2F4008426FC /* RadarsAdapter.m */,
+			);
+			name = Adapters;
+			sourceTree = "<group>";
+		};
 		E2A5DDAD1BC3D10C0059CCC7 = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +239,7 @@
 		E2A5DDEC1BC3D1130059CCC7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E24565CF1BC7A248008426FC /* Adapters */,
 				E211B62F1BC6AA5700BFE2A8 /* Mapper */,
 				E205D8991BC6511700579DD1 /* RadarJSON.h */,
 				E205D89A1BC6511700579DD1 /* RadarJSON.m */,
@@ -265,6 +284,8 @@
 				E211B62B1BC6948F00BFE2A8 /* RadarsViewController+ACMNSFetchResultsController.m */,
 				E2A5DE1C1BC41A9F0059CCC7 /* EditRadarViewController.h */,
 				E2A5DE1D1BC41A9F0059CCC7 /* EditRadarViewController.m */,
+				E24565D31BC7AEE4008426FC /* UsersViewController.h */,
+				E24565D41BC7AEE4008426FC /* UsersViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -276,6 +297,8 @@
 				E2A5DDC21BC3D10C0059CCC7 /* Main.storyboard */,
 				E2A5DE191BC406940059CCC7 /* RadarViewCell.h */,
 				E2A5DE1A1BC406940059CCC7 /* RadarViewCell.m */,
+				E211B6301BC6CA2D00BFE2A8 /* RadarSectionCell.h */,
+				E211B6311BC6CA2D00BFE2A8 /* RadarSectionCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -453,6 +476,7 @@
 			files = (
 				E2A5DDF71BC3D1880059CCC7 /* RadarsModel.xcdatamodeld in Sources */,
 				E2A5DDF41BC3D14F0059CCC7 /* SharedCoreDataStack.m in Sources */,
+				E211B6321BC6CA2D00BFE2A8 /* RadarSectionCell.m in Sources */,
 				E2A5DE011BC3D3420059CCC7 /* FileUtils.m in Sources */,
 				E2A5DE1B1BC406940059CCC7 /* RadarViewCell.m in Sources */,
 				E2A5DDBE1BC3D10C0059CCC7 /* AppDelegate.m in Sources */,
@@ -460,6 +484,7 @@
 				E2A5DE091BC3DEDE0059CCC7 /* NSManagedObjectContext+ACMInsertManagedObject.m in Sources */,
 				E2A5DE0C1BC3F2890059CCC7 /* FakeRadarGenerator.m in Sources */,
 				E2A5DE231BC507C10059CCC7 /* RadarAPIWrapper.m in Sources */,
+				E24565D21BC7A2F4008426FC /* RadarsAdapter.m in Sources */,
 				E2A5DDFD1BC3D20C0059CCC7 /* Radar.m in Sources */,
 				E2A5DE121BC3F6080059CCC7 /* NSString+Random.m in Sources */,
 				E2A5DDBB1BC3D10C0059CCC7 /* main.m in Sources */,
@@ -470,6 +495,7 @@
 				E2A5DDF31BC3D14F0059CCC7 /* CoreDataStack.m in Sources */,
 				E211B62C1BC6948F00BFE2A8 /* RadarsViewController+ACMNSFetchResultsController.m in Sources */,
 				E2A5DE271BC51D4E0059CCC7 /* JSONParser.m in Sources */,
+				E24565D51BC7AEE4008426FC /* UsersViewController.m in Sources */,
 				E2A5DDFC1BC3D20C0059CCC7 /* Radar+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

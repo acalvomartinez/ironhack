@@ -5,6 +5,37 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Users View Controller-->
+        <scene sceneID="h38-wq-iNE">
+            <objects>
+                <tableViewController id="Mxo-d9-W8E" customClass="UsersViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Ox-yT-B7G">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" id="e6l-e7-gcq">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e6l-e7-gcq" id="37K-Zl-uaV">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Mxo-d9-W8E" id="4a5-7c-wF0"/>
+                            <outlet property="delegate" destination="Mxo-d9-W8E" id="wp7-on-M0R"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fMa-Sv-lpl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1983" y="-691"/>
+        </scene>
         <!--Radars View Controller-->
         <scene sceneID="LE6-Qk-oeZ">
             <objects>
@@ -26,14 +57,14 @@
                                             <rect key="frame" x="20" y="8" width="572" height="18"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJh-nk-Baj">
                                             <rect key="frame" x="20" y="34" width="572" height="24"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -55,7 +86,7 @@
                                     <segue destination="Dvf-3y-e0K" kind="show" identifier="RadarDetailSegue" id="zSw-rA-f3r"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LH8-QL-6Ec">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderSectionCell" id="LH8-QL-6Ec" customClass="RadarSectionCell">
                                 <rect key="frame" x="0.0" y="163" width="600" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LH8-QL-6Ec" id="52N-DN-Qwr">
@@ -63,21 +94,26 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qN-dw-2si">
-                                            <rect key="frame" x="8" y="18" width="584" height="33"/>
+                                            <rect key="frame" x="8" y="8" width="584" height="54"/>
                                             <animations/>
+                                            <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <animations/>
                                     <constraints>
                                         <constraint firstItem="4qN-dw-2si" firstAttribute="leading" secondItem="52N-DN-Qwr" secondAttribute="leadingMargin" id="Iz9-OU-nOc"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="4qN-dw-2si" secondAttribute="bottom" id="LyE-64-0Y4"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="4qN-dw-2si" secondAttribute="trailing" id="cde-8b-vBy"/>
-                                        <constraint firstItem="4qN-dw-2si" firstAttribute="centerY" secondItem="52N-DN-Qwr" secondAttribute="centerY" id="k84-ag-uKu"/>
+                                        <constraint firstItem="4qN-dw-2si" firstAttribute="top" secondItem="52N-DN-Qwr" secondAttribute="topMargin" id="pdi-XF-vVi"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="titleLabel" destination="4qN-dw-2si" id="nmy-aA-Y54"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -86,6 +122,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="BuZ-z9-lZd">
+                        <barButtonItem key="leftBarButtonItem" title="Users" id="I26-Bg-sxn">
+                            <connections>
+                                <segue destination="Mxo-d9-W8E" kind="show" identifier="UsersSegue" id="8mp-RY-F6v"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="5Or-3J-YZb">
                             <connections>
                                 <action selector="refreshButtonPressed:" destination="i1X-mj-o1W" id="wpA-MU-hau"/>

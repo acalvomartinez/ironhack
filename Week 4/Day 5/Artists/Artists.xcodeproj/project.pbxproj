@@ -20,6 +20,7 @@
 		E27826FF1BBE7ACD00838EF5 /* ArtistService.m in Sources */ = {isa = PBXBuildFile; fileRef = E27826FE1BBE7ACD00838EF5 /* ArtistService.m */; settings = {ASSET_TAGS = (); }; };
 		E27827021BBE853100838EF5 /* NSDate+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = E27827011BBE853100838EF5 /* NSDate+Formatter.m */; settings = {ASSET_TAGS = (); }; };
 		E27827061BBE8B4900838EF5 /* ArtistsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27827051BBE8B4900838EF5 /* ArtistsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E2DFDFED1BC908EC006785E1 /* ArtistJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DFDFEC1BC908EC006785E1 /* ArtistJSONParser.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		E27827011BBE853100838EF5 /* NSDate+Formatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatter.m"; sourceTree = "<group>"; };
 		E27827041BBE8B4900838EF5 /* ArtistsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistsViewController.h; sourceTree = "<group>"; };
 		E27827051BBE8B4900838EF5 /* ArtistsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistsViewController.m; sourceTree = "<group>"; };
+		E2DFDFEB1BC908EC006785E1 /* ArtistJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistJSONParser.h; sourceTree = "<group>"; };
+		E2DFDFEC1BC908EC006785E1 /* ArtistJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistJSONParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,7 @@
 		E27826CE1BBE738800838EF5 /* Artists */ = {
 			isa = PBXGroup;
 			children = (
+				E2DFDFEA1BC90877006785E1 /* Utils */,
 				E27827031BBE8AEB00838EF5 /* Controllers */,
 				E27826FC1BBE7AB900838EF5 /* Services */,
 				E27826F81BBE76E300838EF5 /* Categories */,
@@ -171,6 +175,15 @@
 				E26A4C8F1BBED1E9002FCFBE /* ArtistDetailViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E2DFDFEA1BC90877006785E1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E2DFDFEB1BC908EC006785E1 /* ArtistJSONParser.h */,
+				E2DFDFEC1BC908EC006785E1 /* ArtistJSONParser.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +289,7 @@
 				E26A4C901BBED1E9002FCFBE /* ArtistDetailViewController.m in Sources */,
 				E27826D41BBE738800838EF5 /* AppDelegate.m in Sources */,
 				E27827021BBE853100838EF5 /* NSDate+Formatter.m in Sources */,
+				E2DFDFED1BC908EC006785E1 /* ArtistJSONParser.m in Sources */,
 				E27827061BBE8B4900838EF5 /* ArtistsViewController.m in Sources */,
 				E26A4C931BBEDAEF002FCFBE /* ImageService.m in Sources */,
 				E27826F71BBE74D000838EF5 /* Artist.m in Sources */,
