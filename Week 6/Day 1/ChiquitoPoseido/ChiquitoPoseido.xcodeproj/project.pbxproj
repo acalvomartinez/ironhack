@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E2546F161BCBB71E00A8E99A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2546F151BCBB71E00A8E99A /* main.m */; };
+		E2546F191BCBB71E00A8E99A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2546F181BCBB71E00A8E99A /* AppDelegate.m */; };
+		E2546F1C1BCBB71E00A8E99A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2546F1B1BCBB71E00A8E99A /* ViewController.m */; };
+		E2546F1F1BCBB71E00A8E99A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2546F1D1BCBB71E00A8E99A /* Main.storyboard */; };
+		E2546F211BCBB71E00A8E99A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2546F201BCBB71E00A8E99A /* Assets.xcassets */; };
+		E2546F241BCBB71E00A8E99A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2546F221BCBB71E00A8E99A /* LaunchScreen.storyboard */; };
+		E2546F2F1BCBB71E00A8E99A /* ChiquitoPoseidoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2546F2E1BCBB71E00A8E99A /* ChiquitoPoseidoTests.m */; };
+		E2546F3A1BCC022F00A8E99A /* notdroid.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2546F391BCC022F00A8E99A /* notdroid.wav */; settings = {ASSET_TAGS = (); }; };
+		E2546F3C1BCC02BC00A8E99A /* force.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2546F3B1BCC02BC00A8E99A /* force.wav */; settings = {ASSET_TAGS = (); }; };
+		E2546F3E1BCC02CB00A8E99A /* saber.wav in Resources */ = {isa = PBXBuildFile; fileRef = E2546F3D1BCC02CB00A8E99A /* saber.wav */; settings = {ASSET_TAGS = (); }; };
+		E2546F411BCC034300A8E99A /* SoundEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = E2546F401BCC034300A8E99A /* SoundEffect.m */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E2546F2B1BCBB71E00A8E99A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2546F091BCBB71E00A8E99A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2546F101BCBB71E00A8E99A;
+			remoteInfo = ChiquitoPoseido;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E2546F111BCBB71E00A8E99A /* ChiquitoPoseido.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChiquitoPoseido.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2546F151BCBB71E00A8E99A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E2546F171BCBB71E00A8E99A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E2546F181BCBB71E00A8E99A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E2546F1A1BCBB71E00A8E99A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E2546F1B1BCBB71E00A8E99A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E2546F1E1BCBB71E00A8E99A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E2546F201BCBB71E00A8E99A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2546F231BCBB71E00A8E99A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E2546F251BCBB71E00A8E99A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2546F2A1BCBB71E00A8E99A /* ChiquitoPoseidoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChiquitoPoseidoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2546F2E1BCBB71E00A8E99A /* ChiquitoPoseidoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChiquitoPoseidoTests.m; sourceTree = "<group>"; };
+		E2546F301BCBB71E00A8E99A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2546F391BCC022F00A8E99A /* notdroid.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = notdroid.wav; sourceTree = "<group>"; };
+		E2546F3B1BCC02BC00A8E99A /* force.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = force.wav; sourceTree = "<group>"; };
+		E2546F3D1BCC02CB00A8E99A /* saber.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = saber.wav; sourceTree = "<group>"; };
+		E2546F3F1BCC034300A8E99A /* SoundEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundEffect.h; sourceTree = "<group>"; };
+		E2546F401BCC034300A8E99A /* SoundEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundEffect.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2546F0E1BCBB71E00A8E99A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2546F271BCBB71E00A8E99A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E2546F081BCBB71E00A8E99A = {
+			isa = PBXGroup;
+			children = (
+				E2546F131BCBB71E00A8E99A /* ChiquitoPoseido */,
+				E2546F2D1BCBB71E00A8E99A /* ChiquitoPoseidoTests */,
+				E2546F121BCBB71E00A8E99A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E2546F121BCBB71E00A8E99A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2546F111BCBB71E00A8E99A /* ChiquitoPoseido.app */,
+				E2546F2A1BCBB71E00A8E99A /* ChiquitoPoseidoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2546F131BCBB71E00A8E99A /* ChiquitoPoseido */ = {
+			isa = PBXGroup;
+			children = (
+				E2546F3F1BCC034300A8E99A /* SoundEffect.h */,
+				E2546F401BCC034300A8E99A /* SoundEffect.m */,
+				E2546F171BCBB71E00A8E99A /* AppDelegate.h */,
+				E2546F181BCBB71E00A8E99A /* AppDelegate.m */,
+				E2546F1A1BCBB71E00A8E99A /* ViewController.h */,
+				E2546F1B1BCBB71E00A8E99A /* ViewController.m */,
+				E2546F1D1BCBB71E00A8E99A /* Main.storyboard */,
+				E2546F201BCBB71E00A8E99A /* Assets.xcassets */,
+				E2546F391BCC022F00A8E99A /* notdroid.wav */,
+				E2546F3D1BCC02CB00A8E99A /* saber.wav */,
+				E2546F3B1BCC02BC00A8E99A /* force.wav */,
+				E2546F221BCBB71E00A8E99A /* LaunchScreen.storyboard */,
+				E2546F141BCBB71E00A8E99A /* Supporting Files */,
+			);
+			path = ChiquitoPoseido;
+			sourceTree = "<group>";
+		};
+		E2546F141BCBB71E00A8E99A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2546F251BCBB71E00A8E99A /* Info.plist */,
+				E2546F151BCBB71E00A8E99A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E2546F2D1BCBB71E00A8E99A /* ChiquitoPoseidoTests */ = {
+			isa = PBXGroup;
+			children = (
+				E2546F2E1BCBB71E00A8E99A /* ChiquitoPoseidoTests.m */,
+				E2546F301BCBB71E00A8E99A /* Info.plist */,
+			);
+			path = ChiquitoPoseidoTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2546F101BCBB71E00A8E99A /* ChiquitoPoseido */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2546F331BCBB71E00A8E99A /* Build configuration list for PBXNativeTarget "ChiquitoPoseido" */;
+			buildPhases = (
+				E2546F0D1BCBB71E00A8E99A /* Sources */,
+				E2546F0E1BCBB71E00A8E99A /* Frameworks */,
+				E2546F0F1BCBB71E00A8E99A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChiquitoPoseido;
+			productName = ChiquitoPoseido;
+			productReference = E2546F111BCBB71E00A8E99A /* ChiquitoPoseido.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E2546F291BCBB71E00A8E99A /* ChiquitoPoseidoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2546F361BCBB71E00A8E99A /* Build configuration list for PBXNativeTarget "ChiquitoPoseidoTests" */;
+			buildPhases = (
+				E2546F261BCBB71E00A8E99A /* Sources */,
+				E2546F271BCBB71E00A8E99A /* Frameworks */,
+				E2546F281BCBB71E00A8E99A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2546F2C1BCBB71E00A8E99A /* PBXTargetDependency */,
+			);
+			name = ChiquitoPoseidoTests;
+			productName = ChiquitoPoseidoTests;
+			productReference = E2546F2A1BCBB71E00A8E99A /* ChiquitoPoseidoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2546F091BCBB71E00A8E99A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Toni;
+				TargetAttributes = {
+					E2546F101BCBB71E00A8E99A = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					E2546F291BCBB71E00A8E99A = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = E2546F101BCBB71E00A8E99A;
+					};
+				};
+			};
+			buildConfigurationList = E2546F0C1BCBB71E00A8E99A /* Build configuration list for PBXProject "ChiquitoPoseido" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E2546F081BCBB71E00A8E99A;
+			productRefGroup = E2546F121BCBB71E00A8E99A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2546F101BCBB71E00A8E99A /* ChiquitoPoseido */,
+				E2546F291BCBB71E00A8E99A /* ChiquitoPoseidoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2546F0F1BCBB71E00A8E99A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2546F3C1BCC02BC00A8E99A /* force.wav in Resources */,
+				E2546F241BCBB71E00A8E99A /* LaunchScreen.storyboard in Resources */,
+				E2546F3E1BCC02CB00A8E99A /* saber.wav in Resources */,
+				E2546F211BCBB71E00A8E99A /* Assets.xcassets in Resources */,
+				E2546F1F1BCBB71E00A8E99A /* Main.storyboard in Resources */,
+				E2546F3A1BCC022F00A8E99A /* notdroid.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2546F281BCBB71E00A8E99A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2546F0D1BCBB71E00A8E99A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2546F1C1BCBB71E00A8E99A /* ViewController.m in Sources */,
+				E2546F191BCBB71E00A8E99A /* AppDelegate.m in Sources */,
+				E2546F411BCC034300A8E99A /* SoundEffect.m in Sources */,
+				E2546F161BCBB71E00A8E99A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2546F261BCBB71E00A8E99A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2546F2F1BCBB71E00A8E99A /* ChiquitoPoseidoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E2546F2C1BCBB71E00A8E99A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2546F101BCBB71E00A8E99A /* ChiquitoPoseido */;
+			targetProxy = E2546F2B1BCBB71E00A8E99A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E2546F1D1BCBB71E00A8E99A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2546F1E1BCBB71E00A8E99A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E2546F221BCBB71E00A8E99A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2546F231BCBB71E00A8E99A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E2546F311BCBB71E00A8E99A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E2546F321BCBB71E00A8E99A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E2546F341BCBB71E00A8E99A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ChiquitoPoseido/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ironhack.ChiquitoPoseido;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E2546F351BCBB71E00A8E99A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ChiquitoPoseido/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ironhack.ChiquitoPoseido;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E2546F371BCBB71E00A8E99A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ChiquitoPoseidoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ironhack.ChiquitoPoseidoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChiquitoPoseido.app/ChiquitoPoseido";
+			};
+			name = Debug;
+		};
+		E2546F381BCBB71E00A8E99A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ChiquitoPoseidoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ironhack.ChiquitoPoseidoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChiquitoPoseido.app/ChiquitoPoseido";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2546F0C1BCBB71E00A8E99A /* Build configuration list for PBXProject "ChiquitoPoseido" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2546F311BCBB71E00A8E99A /* Debug */,
+				E2546F321BCBB71E00A8E99A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2546F331BCBB71E00A8E99A /* Build configuration list for PBXNativeTarget "ChiquitoPoseido" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2546F341BCBB71E00A8E99A /* Debug */,
+				E2546F351BCBB71E00A8E99A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E2546F361BCBB71E00A8E99A /* Build configuration list for PBXNativeTarget "ChiquitoPoseidoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2546F371BCBB71E00A8E99A /* Debug */,
+				E2546F381BCBB71E00A8E99A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E2546F091BCBB71E00A8E99A /* Project object */;
+}
