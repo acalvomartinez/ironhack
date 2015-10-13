@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZkH-HY-Icb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtY-7W-uAD">
+                                <rect key="frame" x="20" y="40" width="560" height="25"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="WtN-dV-B95"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gDO-2m-WAD">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="txR-nP-7h9"/>
+                                    <barButtonItem title="Center" id="Cgq-LL-ztq">
+                                        <connections>
+                                            <action selector="centerButtonPressed:" destination="BYZ-38-t0r" id="3Wz-A8-xtA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Back" id="CYZ-ux-XdW">
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="BYZ-38-t0r" id="uYa-vB-Qlo"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1Bg-Ej-AK0"/>
+                                    <barButtonItem title="Sat" id="xke-U3-hrH">
+                                        <connections>
+                                            <action selector="sastButtonPressed:" destination="BYZ-38-t0r" id="sbj-tV-1wN"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="l1t-ih-9iM"/>
+                                    <barButtonItem title="Hyb" id="8I9-bJ-at9">
+                                        <connections>
+                                            <action selector="hybButtonPressed:" destination="BYZ-38-t0r" id="NyB-H4-eJJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="MPK-Y6-tbG"/>
+                                    <barButtonItem title="Nor" id="Xt5-v5-Jbj">
+                                        <connections>
+                                            <action selector="norButtonPressed:" destination="BYZ-38-t0r" id="fct-eU-Amh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="nZ8-xL-xUd"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="gDO-2m-WAD" secondAttribute="trailing" constant="-20" id="3i5-Yg-YgF"/>
+                            <constraint firstItem="ZkH-HY-Icb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3lz-yV-Iuh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QtY-7W-uAD" secondAttribute="trailing" id="4bY-7I-0ov"/>
+                            <constraint firstItem="ZkH-HY-Icb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GPX-OP-fsf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gDO-2m-WAD" secondAttribute="bottom" id="Hxc-1L-uNn"/>
+                            <constraint firstAttribute="trailing" secondItem="ZkH-HY-Icb" secondAttribute="trailing" id="LQl-yC-RJd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZkH-HY-Icb" secondAttribute="bottom" id="MuU-DE-DAd"/>
+                            <constraint firstItem="QtY-7W-uAD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wrm-3H-YHs"/>
+                            <constraint firstItem="QtY-7W-uAD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="s4c-Q1-ODE"/>
+                            <constraint firstItem="gDO-2m-WAD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="sla-I5-oVs"/>
+                            <constraint firstItem="QtY-7W-uAD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="uPJ-gS-CZH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="locationLabel" destination="QtY-7W-uAD" id="Wht-b3-l7L"/>
+                        <outlet property="map" destination="ZkH-HY-Icb" id="Fw3-Jt-cIf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

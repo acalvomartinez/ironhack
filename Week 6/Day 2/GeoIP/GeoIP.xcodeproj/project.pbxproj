@@ -1,0 +1,663 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		E20116181BCD35780039017D /* mogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E20116191BCD35780039017D /* Build configuration list for PBXAggregateTarget "mogenerator" */;
+			buildPhases = (
+				E201161C1BCD35980039017D /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = mogenerator;
+			productName = mogenerator;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		E20115DB1BCD2C730039017D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E20115DA1BCD2C730039017D /* main.m */; };
+		E20115DE1BCD2C730039017D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E20115DD1BCD2C730039017D /* AppDelegate.m */; };
+		E20115E41BCD2C730039017D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E20115E21BCD2C730039017D /* Main.storyboard */; };
+		E20115E61BCD2C730039017D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E20115E51BCD2C730039017D /* Assets.xcassets */; };
+		E20115E91BCD2C730039017D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E20115E71BCD2C730039017D /* LaunchScreen.storyboard */; };
+		E20116011BCD2CC50039017D /* IP4Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = E20116001BCD2CC50039017D /* IP4Generator.m */; settings = {ASSET_TAGS = (); }; };
+		E20116051BCD2FC20039017D /* IP4GeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E20116041BCD2FC20039017D /* IP4GeneratorTests.m */; settings = {ASSET_TAGS = (); }; };
+		E20116091BCD32370039017D /* GeoIPJSONMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E20116081BCD32370039017D /* GeoIPJSONMapper.m */; settings = {ASSET_TAGS = (); }; };
+		E201160C1BCD325A0039017D /* GeoIPAPIWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E201160B1BCD325A0039017D /* GeoIPAPIWrapper.m */; settings = {ASSET_TAGS = (); }; };
+		E20116171BCD33770039017D /* GeoIPModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E20116151BCD33770039017D /* GeoIPModel.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		E20116211BCD38C00039017D /* _GeoIP.m in Sources */ = {isa = PBXBuildFile; fileRef = E201161E1BCD38C00039017D /* _GeoIP.m */; settings = {ASSET_TAGS = (); }; };
+		E20116221BCD38C00039017D /* GeoIP.m in Sources */ = {isa = PBXBuildFile; fileRef = E20116201BCD38C00039017D /* GeoIP.m */; settings = {ASSET_TAGS = (); }; };
+		E20116271BCD44E20039017D /* GeoIPJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = E20116261BCD44E20039017D /* GeoIPJSON.m */; settings = {ASSET_TAGS = (); }; };
+		E201162B1BCD45E00039017D /* GeoIPJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E201162A1BCD45E00039017D /* GeoIPJSONParser.m */; settings = {ASSET_TAGS = (); }; };
+		E20116321BCD4D160039017D /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = E201162D1BCD4D160039017D /* CoreDataStack.m */; settings = {ASSET_TAGS = (); }; };
+		E20116341BCD4D160039017D /* SharedCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = E20116311BCD4D160039017D /* SharedCoreDataStack.m */; settings = {ASSET_TAGS = (); }; };
+		E20116371BCD4D590039017D /* FileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E20116361BCD4D590039017D /* FileUtils.m */; settings = {ASSET_TAGS = (); }; };
+		E201163B1BCD53250039017D /* GeoIPsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E201163A1BCD53250039017D /* GeoIPsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E201163F1BCD540F0039017D /* GeoIPAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = E201163E1BCD540F0039017D /* GeoIPAdapter.m */; settings = {ASSET_TAGS = (); }; };
+		E20116431BCD6C740039017D /* GeoIPCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E20116421BCD6C740039017D /* GeoIPCell.m */; settings = {ASSET_TAGS = (); }; };
+		E20116461BCD74C60039017D /* GeoIPMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20116451BCD74C60039017D /* GeoIPMapViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E20116481BCD756B0039017D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20116471BCD756B0039017D /* MapKit.framework */; };
+		E201164D1BCD76670039017D /* GeoIPMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E201164C1BCD76670039017D /* GeoIPMapAnnotation.m */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E20115F01BCD2C730039017D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E20115CE1BCD2C730039017D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E20115D51BCD2C730039017D;
+			remoteInfo = GeoIP;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E20115D61BCD2C730039017D /* GeoIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoIP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E20115DA1BCD2C730039017D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E20115DC1BCD2C730039017D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E20115DD1BCD2C730039017D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E20115E31BCD2C730039017D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E20115E51BCD2C730039017D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E20115E81BCD2C730039017D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E20115EA1BCD2C730039017D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E20115EF1BCD2C730039017D /* GeoIPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoIPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E20115F51BCD2C730039017D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E20115FF1BCD2CC50039017D /* IP4Generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IP4Generator.h; sourceTree = "<group>"; };
+		E20116001BCD2CC50039017D /* IP4Generator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IP4Generator.m; sourceTree = "<group>"; };
+		E20116041BCD2FC20039017D /* IP4GeneratorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IP4GeneratorTests.m; sourceTree = "<group>"; };
+		E20116071BCD32370039017D /* GeoIPJSONMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoIPJSONMapper.h; sourceTree = "<group>"; };
+		E20116081BCD32370039017D /* GeoIPJSONMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoIPJSONMapper.m; sourceTree = "<group>"; };
+		E201160A1BCD325A0039017D /* GeoIPAPIWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoIPAPIWrapper.h; sourceTree = "<group>"; };
+		E201160B1BCD325A0039017D /* GeoIPAPIWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoIPAPIWrapper.m; sourceTree = "<group>"; };
+		E20116161BCD33770039017D /* GeoIPModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GeoIPModel.xcdatamodel; sourceTree = "<group>"; };
+		E201161D1BCD38C00039017D /* _GeoIP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _GeoIP.h; sourceTree = "<group>"; };
+		E201161E1BCD38C00039017D /* _GeoIP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _GeoIP.m; sourceTree = "<group>"; };
+		E201161F1BCD38C00039017D /* GeoIP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoIP.h; sourceTree = "<group>"; };
+		E20116201BCD38C00039017D /* GeoIP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoIP.m; sourceTree = "<group>"; };
+		E20116231BCD3F380039017D /* GeoIPServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoIPServiceProtocol.h; sourceTree = "<group>"; };
+		E20116251BCD44E20039017D /* GeoIPJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoIPJSON.h; sourceTree = "<group>"; };
+		E20116261BCD44E20039017D /* GeoIPJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoIPJSON.m; sourceTree = "<group>"; };
+		E20116291BCD45E00039017D /* GeoIPJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoIPJSONParser.h; sourceTree = "<group>"; };
+		E201162A1BCD45E00039017D /* GeoIPJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoIPJSONParser.m; sourceTree = "<group>"; };
+		E201162C1BCD4D160039017D /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		E201162D1BCD4D160039017D /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		E20116301BCD4D160039017D /* SharedCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedCoreDataStack.h; sourceTree = "<group>"; };
+		E20116311BCD4D160039017D /* SharedCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedCoreDataStack.m; sourceTree = "<group>"; };
+		E20116351BCD4D590039017D /* FileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUtils.h; sourceTree = "<group>"; };
+		E20116361BCD4D590039017D /* FileUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileUtils.m; sourceTree = "<group>"; };
+		E20116391BCD53250039017D /* GeoIPsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoIPsViewController.h; sourceTree = "<group>"; };
+		E201163A1BCD53250039017D /* GeoIPsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoIPsViewController.m; sourceTree = "<group>"; };
+		E201163D1BCD540F0039017D /* GeoIPAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoIPAdapter.h; sourceTree = "<group>"; };
+		E201163E1BCD540F0039017D /* GeoIPAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoIPAdapter.m; sourceTree = "<group>"; };
+		E20116411BCD6C740039017D /* GeoIPCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoIPCell.h; sourceTree = "<group>"; };
+		E20116421BCD6C740039017D /* GeoIPCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoIPCell.m; sourceTree = "<group>"; };
+		E20116441BCD74C60039017D /* GeoIPMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoIPMapViewController.h; sourceTree = "<group>"; };
+		E20116451BCD74C60039017D /* GeoIPMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoIPMapViewController.m; sourceTree = "<group>"; };
+		E20116471BCD756B0039017D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E201164B1BCD76670039017D /* GeoIPMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoIPMapAnnotation.h; sourceTree = "<group>"; };
+		E201164C1BCD76670039017D /* GeoIPMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoIPMapAnnotation.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E20115D31BCD2C730039017D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E20116481BCD756B0039017D /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E20115EC1BCD2C730039017D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E20115CD1BCD2C730039017D = {
+			isa = PBXGroup;
+			children = (
+				E20115D81BCD2C730039017D /* GeoIP */,
+				E20115F21BCD2C730039017D /* GeoIPTests */,
+				E20116491BCD75710039017D /* Frameworks */,
+				E20115D71BCD2C730039017D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E20115D71BCD2C730039017D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E20115D61BCD2C730039017D /* GeoIP.app */,
+				E20115EF1BCD2C730039017D /* GeoIPTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E20115D81BCD2C730039017D /* GeoIP */ = {
+			isa = PBXGroup;
+			children = (
+				E20116401BCD6C260039017D /* View */,
+				E20116381BCD52F90039017D /* Controller */,
+				E201160D1BCD32700039017D /* Model */,
+				E20115FE1BCD2C7D0039017D /* Utils */,
+				E20115DC1BCD2C730039017D /* AppDelegate.h */,
+				E20115DD1BCD2C730039017D /* AppDelegate.m */,
+				E20115E51BCD2C730039017D /* Assets.xcassets */,
+				E20115D91BCD2C730039017D /* Supporting Files */,
+			);
+			path = GeoIP;
+			sourceTree = "<group>";
+		};
+		E20115D91BCD2C730039017D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E20115EA1BCD2C730039017D /* Info.plist */,
+				E20115DA1BCD2C730039017D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E20115F21BCD2C730039017D /* GeoIPTests */ = {
+			isa = PBXGroup;
+			children = (
+				E20115F51BCD2C730039017D /* Info.plist */,
+				E20116041BCD2FC20039017D /* IP4GeneratorTests.m */,
+			);
+			path = GeoIPTests;
+			sourceTree = "<group>";
+		};
+		E20115FE1BCD2C7D0039017D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E20116351BCD4D590039017D /* FileUtils.h */,
+				E20116361BCD4D590039017D /* FileUtils.m */,
+				E201162C1BCD4D160039017D /* CoreDataStack.h */,
+				E201162D1BCD4D160039017D /* CoreDataStack.m */,
+				E20116301BCD4D160039017D /* SharedCoreDataStack.h */,
+				E20116311BCD4D160039017D /* SharedCoreDataStack.m */,
+				E20116281BCD45C40039017D /* Parser */,
+				E20116061BCD31EB0039017D /* Networking */,
+				E20115FF1BCD2CC50039017D /* IP4Generator.h */,
+				E20116001BCD2CC50039017D /* IP4Generator.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		E20116061BCD31EB0039017D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E20116231BCD3F380039017D /* GeoIPServiceProtocol.h */,
+				E201160A1BCD325A0039017D /* GeoIPAPIWrapper.h */,
+				E201160B1BCD325A0039017D /* GeoIPAPIWrapper.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		E201160D1BCD32700039017D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E201164A1BCD76390039017D /* MapKit */,
+				E201163C1BCD53EA0039017D /* Adapters */,
+				E20116241BCD437A0039017D /* Mapper */,
+				E201161D1BCD38C00039017D /* _GeoIP.h */,
+				E201161E1BCD38C00039017D /* _GeoIP.m */,
+				E201161F1BCD38C00039017D /* GeoIP.h */,
+				E20116201BCD38C00039017D /* GeoIP.m */,
+				E20116151BCD33770039017D /* GeoIPModel.xcdatamodeld */,
+				E20116251BCD44E20039017D /* GeoIPJSON.h */,
+				E20116261BCD44E20039017D /* GeoIPJSON.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E20116241BCD437A0039017D /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				E20116071BCD32370039017D /* GeoIPJSONMapper.h */,
+				E20116081BCD32370039017D /* GeoIPJSONMapper.m */,
+			);
+			name = Mapper;
+			sourceTree = "<group>";
+		};
+		E20116281BCD45C40039017D /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				E20116291BCD45E00039017D /* GeoIPJSONParser.h */,
+				E201162A1BCD45E00039017D /* GeoIPJSONParser.m */,
+			);
+			name = Parser;
+			sourceTree = "<group>";
+		};
+		E20116381BCD52F90039017D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E20116391BCD53250039017D /* GeoIPsViewController.h */,
+				E201163A1BCD53250039017D /* GeoIPsViewController.m */,
+				E20116441BCD74C60039017D /* GeoIPMapViewController.h */,
+				E20116451BCD74C60039017D /* GeoIPMapViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E201163C1BCD53EA0039017D /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				E201163D1BCD540F0039017D /* GeoIPAdapter.h */,
+				E201163E1BCD540F0039017D /* GeoIPAdapter.m */,
+			);
+			name = Adapters;
+			sourceTree = "<group>";
+		};
+		E20116401BCD6C260039017D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E20115E21BCD2C730039017D /* Main.storyboard */,
+				E20115E71BCD2C730039017D /* LaunchScreen.storyboard */,
+				E20116411BCD6C740039017D /* GeoIPCell.h */,
+				E20116421BCD6C740039017D /* GeoIPCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E20116491BCD75710039017D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E20116471BCD756B0039017D /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E201164A1BCD76390039017D /* MapKit */ = {
+			isa = PBXGroup;
+			children = (
+				E201164B1BCD76670039017D /* GeoIPMapAnnotation.h */,
+				E201164C1BCD76670039017D /* GeoIPMapAnnotation.m */,
+			);
+			name = MapKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E20115D51BCD2C730039017D /* GeoIP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E20115F81BCD2C730039017D /* Build configuration list for PBXNativeTarget "GeoIP" */;
+			buildPhases = (
+				E20115D21BCD2C730039017D /* Sources */,
+				E20115D31BCD2C730039017D /* Frameworks */,
+				E20115D41BCD2C730039017D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoIP;
+			productName = GeoIP;
+			productReference = E20115D61BCD2C730039017D /* GeoIP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E20115EE1BCD2C730039017D /* GeoIPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E20115FB1BCD2C730039017D /* Build configuration list for PBXNativeTarget "GeoIPTests" */;
+			buildPhases = (
+				E20115EB1BCD2C730039017D /* Sources */,
+				E20115EC1BCD2C730039017D /* Frameworks */,
+				E20115ED1BCD2C730039017D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E20115F11BCD2C730039017D /* PBXTargetDependency */,
+			);
+			name = GeoIPTests;
+			productName = GeoIPTests;
+			productReference = E20115EF1BCD2C730039017D /* GeoIPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E20115CE1BCD2C730039017D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Toni;
+				TargetAttributes = {
+					E20115D51BCD2C730039017D = {
+						CreatedOnToolsVersion = 7.0.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					E20115EE1BCD2C730039017D = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = E20115D51BCD2C730039017D;
+					};
+					E20116181BCD35780039017D = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+				};
+			};
+			buildConfigurationList = E20115D11BCD2C730039017D /* Build configuration list for PBXProject "GeoIP" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E20115CD1BCD2C730039017D;
+			productRefGroup = E20115D71BCD2C730039017D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E20115D51BCD2C730039017D /* GeoIP */,
+				E20115EE1BCD2C730039017D /* GeoIPTests */,
+				E20116181BCD35780039017D /* mogenerator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E20115D41BCD2C730039017D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E20115E91BCD2C730039017D /* LaunchScreen.storyboard in Resources */,
+				E20115E61BCD2C730039017D /* Assets.xcassets in Resources */,
+				E20115E41BCD2C730039017D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E20115ED1BCD2C730039017D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E201161C1BCD35980039017D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "mogenerator --template-var arc=true -m GeoIP/GeoIPModel.xcdatamodeld/ -O GeoIP\necho \"💾 Mogenerator finished\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E20115D21BCD2C730039017D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E201160C1BCD325A0039017D /* GeoIPAPIWrapper.m in Sources */,
+				E20116011BCD2CC50039017D /* IP4Generator.m in Sources */,
+				E201162B1BCD45E00039017D /* GeoIPJSONParser.m in Sources */,
+				E20116221BCD38C00039017D /* GeoIP.m in Sources */,
+				E20116271BCD44E20039017D /* GeoIPJSON.m in Sources */,
+				E20116341BCD4D160039017D /* SharedCoreDataStack.m in Sources */,
+				E20116091BCD32370039017D /* GeoIPJSONMapper.m in Sources */,
+				E201163B1BCD53250039017D /* GeoIPsViewController.m in Sources */,
+				E20116171BCD33770039017D /* GeoIPModel.xcdatamodeld in Sources */,
+				E20116371BCD4D590039017D /* FileUtils.m in Sources */,
+				E20116431BCD6C740039017D /* GeoIPCell.m in Sources */,
+				E20115DE1BCD2C730039017D /* AppDelegate.m in Sources */,
+				E20116461BCD74C60039017D /* GeoIPMapViewController.m in Sources */,
+				E20116211BCD38C00039017D /* _GeoIP.m in Sources */,
+				E201164D1BCD76670039017D /* GeoIPMapAnnotation.m in Sources */,
+				E20115DB1BCD2C730039017D /* main.m in Sources */,
+				E201163F1BCD540F0039017D /* GeoIPAdapter.m in Sources */,
+				E20116321BCD4D160039017D /* CoreDataStack.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E20115EB1BCD2C730039017D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E20116051BCD2FC20039017D /* IP4GeneratorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E20115F11BCD2C730039017D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E20115D51BCD2C730039017D /* GeoIP */;
+			targetProxy = E20115F01BCD2C730039017D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E20115E21BCD2C730039017D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E20115E31BCD2C730039017D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E20115E71BCD2C730039017D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E20115E81BCD2C730039017D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E20115F61BCD2C730039017D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E20115F71BCD2C730039017D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E20115F91BCD2C730039017D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GeoIP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ironhack.GeoIP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E20115FA1BCD2C730039017D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GeoIP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ironhack.GeoIP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E20115FC1BCD2C730039017D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GeoIPTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ironhack.GeoIPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoIP.app/GeoIP";
+			};
+			name = Debug;
+		};
+		E20115FD1BCD2C730039017D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GeoIPTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ironhack.GeoIPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoIP.app/GeoIP";
+			};
+			name = Release;
+		};
+		E201161A1BCD35780039017D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E201161B1BCD35780039017D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E20115D11BCD2C730039017D /* Build configuration list for PBXProject "GeoIP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E20115F61BCD2C730039017D /* Debug */,
+				E20115F71BCD2C730039017D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E20115F81BCD2C730039017D /* Build configuration list for PBXNativeTarget "GeoIP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E20115F91BCD2C730039017D /* Debug */,
+				E20115FA1BCD2C730039017D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E20115FB1BCD2C730039017D /* Build configuration list for PBXNativeTarget "GeoIPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E20115FC1BCD2C730039017D /* Debug */,
+				E20115FD1BCD2C730039017D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E20116191BCD35780039017D /* Build configuration list for PBXAggregateTarget "mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E201161A1BCD35780039017D /* Debug */,
+				E201161B1BCD35780039017D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E20116151BCD33770039017D /* GeoIPModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E20116161BCD33770039017D /* GeoIPModel.xcdatamodel */,
+			);
+			currentVersion = E20116161BCD33770039017D /* GeoIPModel.xcdatamodel */;
+			path = GeoIPModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E20115CE1BCD2C730039017D /* Project object */;
+}

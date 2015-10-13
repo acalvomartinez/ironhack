@@ -21,7 +21,7 @@
     
     for (RadarJSON *radarJSON in jsonRadars) {
         Radar *radar = [Radar radarWithUser:radarJSON.user andTitle:radarJSON.title product:radarJSON.product productVersion:radarJSON.productVersion inContext:context];
-       
+        
         [radars addObject:radar];
     }
     
