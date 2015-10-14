@@ -20,7 +20,8 @@
 
 - (void)setGeoIP:(GeoIP *)geoIP {
     self.countryLabel.text = geoIP.country;
-    self.latLonLabel.text = [NSString stringWithFormat:@"%.2f, %.2f", [geoIP.latitude floatValue], [geoIP.longitude floatValue]];
+    //self.latLonLabel.text = [NSString stringWithFormat:@"%.2f, %.2f", [geoIP.latitude floatValue], [geoIP.longitude floatValue]];
+    self.latLonLabel.text = @"";
     self.ipLabel.text = geoIP.ip;
     
     _geoIP = geoIP;

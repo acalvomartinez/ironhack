@@ -11,6 +11,7 @@
 #import "CoreDataStack.h"
 
 #import "GeoIPsViewController.h"
+#import "GeoIPListMapViewController.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong) CoreDataStack *cds;
@@ -24,18 +25,31 @@
     self.cds = [[CoreDataStack alloc] initWithDatabaseFilename:@"geoip.sqlite"
                                             andPersistenceType:NSSQLiteStoreType];
     
+    GeoIPsViewController *listViewController= [self listViewController];
+    listViewController.managedObjectContext = self.cds.managedObjectContext;
+
+    GeoIPListMapViewController *mapListViewController = [self mapLisViewController];
+    mapListViewController.managedObjectContext = self.cds.managedObjectContext;
+    
+    return YES;
+}
+                                                               
+- (GeoIPsViewController *)listViewController {
     UITabBarController *tbvc = (UITabBarController *)self.window.rootViewController;
     
     UINavigationController *nvc = [[tbvc viewControllers] firstObject];
     GeoIPsViewController *vc = (GeoIPsViewController *)nvc.topViewController;
-    vc.managedObjectContext = self.cds.managedObjectContext;
-    
-    
-    
-    return YES;
 
+    return vc;
+}
+
+- (GeoIPListMapViewController *)mapLisViewController {
+    UITabBarController *tbvc = (UITabBarController *)self.window.rootViewController;
     
-    return YES;
+    GeoIPListMapViewController *vc = (GeoIPListMapViewController *)[[tbvc viewControllers] lastObject];
+    vc.title = @"GeoIP Map";
+    
+    return vc;
 }
 
 @end

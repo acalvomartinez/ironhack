@@ -1,5 +1,5 @@
 //
-//  GeoIPsViewController.h
+//  GeoIPListMapViewController.h
 //  GeoIP
 //
 //  Created by Toni on 13/10/15.
@@ -10,9 +10,9 @@
 
 #import <CoreData/CoreData.h>
 
-#import "RotatingTableViewController.h"
+#import "RotatingViewController.h"
 
-@interface GeoIPsViewController : RotatingTableViewController
+@interface GeoIPListMapViewController : RotatingViewController
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 

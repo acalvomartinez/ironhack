@@ -35,14 +35,10 @@ typedef void(^GeoIPCompletionBlock)(NSString *);
             [jsonGeoIPArray addObject: jsonGeoIP];
             
             if ([jsonGeoIPArray count] == [directions count]) {
-                if (completionBlock) {
-                    completionBlock(jsonGeoIPArray);
-                }
+               completionBlock == nil ? : completionBlock(jsonGeoIPArray);
             }
         } onError:^(NSError *error) {
-            if (errorBlock) {
-                errorBlock(error);
-            }
+            errorBlock == nil ? : errorBlock(error);
         }];
     }
 }

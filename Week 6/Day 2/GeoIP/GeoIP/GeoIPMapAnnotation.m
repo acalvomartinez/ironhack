@@ -8,14 +8,25 @@
 
 #import "GeoIPMapAnnotation.h"
 
+@interface GeoIPMapAnnotation ()
+
+@property (nonatomic, copy, readwrite) NSString *title;
+
+@end
+
 @implementation GeoIPMapAnnotation
 
-- (instancetype)initWithCoordinate:(CLLocationCoordinate2D)coordinate {
+- (instancetype)initWithCoordinate:(CLLocationCoordinate2D)coordinate andTitle:(NSString *)title {
     self = [super init];
     if (self) {
+        _title = title;
         _coordinate = coordinate;
     }
     return self;
+}
+
+- (NSString *)title {
+    return _title;
 }
 
 @end

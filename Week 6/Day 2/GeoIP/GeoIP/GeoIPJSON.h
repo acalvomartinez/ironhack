@@ -14,13 +14,13 @@
 @property (nonatomic, copy) NSString *ip;
 @property (nonatomic, strong) NSNumber *latitude;
 @property (nonatomic, strong) NSNumber *longitude;
-@property (nonatomic, strong) NSString *areaCode;
-@property (nonatomic, strong) NSString *asn;
-@property (nonatomic, strong) NSString *continentCode;
-@property (nonatomic, strong) NSString *countryCode;
-@property (nonatomic, strong) NSString *countryCode3;
-@property (nonatomic, strong) NSString *dmaCode;
-@property (nonatomic, strong) NSString *isp;
+@property (nonatomic, copy) NSString *areaCode;
+@property (nonatomic, copy) NSString *asn;
+@property (nonatomic, copy) NSString *continentCode;
+@property (nonatomic, copy) NSString *countryCode;
+@property (nonatomic, copy) NSString *countryCode3;
+@property (nonatomic, copy) NSString *dmaCode;
+@property (nonatomic, copy) NSString *isp;
 
 - (BOOL)isValid;
 

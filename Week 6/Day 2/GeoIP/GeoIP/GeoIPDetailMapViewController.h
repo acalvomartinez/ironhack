@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "RotatingViewController.h"
+
 @class GeoIP;
 
-@interface GeoIPMapViewController : UIViewController
+@interface GeoIPDetailMapViewController : RotatingViewController  
 
 @property (nonatomic, strong) GeoIP *geoIP;
 

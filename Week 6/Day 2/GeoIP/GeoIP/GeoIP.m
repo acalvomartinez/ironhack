@@ -14,9 +14,7 @@
                        longitude:(NSNumber *)longitude
                        inContext:(NSManagedObjectContext *)context {
     
-    GeoIP *geoIP = [[GeoIP alloc] initWithEntity:[GeoIP entityInManagedObjectContext:context]
-                  insertIntoManagedObjectContext:context];
-    
+    GeoIP *geoIP = [GeoIP insertInManagedObjectContext:context];
     
     geoIP.country = country;
     geoIP.ip = ip;

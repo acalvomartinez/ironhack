@@ -19,7 +19,7 @@
 
 #import "GeoIPCell.h"
 
-#import "GeoIPMapViewController.h"
+#import "GeoIPDetailMapViewController.h"
 
 @interface GeoIPsViewController () <GeoIPAdapterDelegate>
 
@@ -42,7 +42,6 @@
     
     self.geoIPAdapter = [[GeoIPAdapter alloc] initWithManagedObjectContext:self.managedObjectContext
                                                                andTableView:self.tableView];
-    
     self.geoIPAdapter.delegate = self;
 }
 
@@ -69,23 +68,18 @@
 #pragma mark - Actions
 
 - (IBAction)refreshButtonPressed:(UIBarButtonItem *)sender {
-    
-    __weak GeoIPsViewController *weakSelf = self;
-    
-    GeoIPAPIWrapper *apiWrapper = [[GeoIPAPIWrapper alloc] init];
-    
     NSArray *directions = [IP4Generator genareteIP4ArrayWithCapacity:3];
     
+    __weak GeoIPsViewController *weakSelf = self;
+    GeoIPAPIWrapper *apiWrapper = [[GeoIPAPIWrapper alloc] init];
     [apiWrapper geoIPsInDirections:directions
                         completion:^(NSArray<NSString *> *jsonGeoIPs) {
-                           
                             [GeoIPJSONParser parseJSONArray:jsonGeoIPs
                                                onCompletion:^(NSArray<GeoIPJSON *> *geoIPJSONs) {
                                                    dispatch_async(dispatch_get_main_queue(), ^{
-                                                       NSArray * geoIPs = [GeoIPJSONMapper mapGeoIPJSONs:geoIPJSONs
-                                                                                               inContext:weakSelf.managedObjectContext];
+                                                       [GeoIPJSONMapper mapGeoIPJSONs:geoIPJSONs
+                                                                            inContext:weakSelf.managedObjectContext];
                                                        
-                                                       NSLog(@"%@",geoIPs);
                                                        [weakSelf.tableView reloadData];
                                                        [weakSelf.refreshControl endRefreshing];
                                                    });
@@ -114,7 +108,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"MapDetailSegue"]) {
-        GeoIPMapViewController *vc = segue.destinationViewController;
+        GeoIPDetailMapViewController *vc = segue.destinationViewController;
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         GeoIP *geoIP = (GeoIP *)[self.geoIPAdapter objectAtIndexPath:indexPath];
         vc.geoIP = geoIP;

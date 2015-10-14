@@ -41,9 +41,15 @@
 		E201163B1BCD53250039017D /* GeoIPsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E201163A1BCD53250039017D /* GeoIPsViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E201163F1BCD540F0039017D /* GeoIPAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = E201163E1BCD540F0039017D /* GeoIPAdapter.m */; settings = {ASSET_TAGS = (); }; };
 		E20116431BCD6C740039017D /* GeoIPCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E20116421BCD6C740039017D /* GeoIPCell.m */; settings = {ASSET_TAGS = (); }; };
-		E20116461BCD74C60039017D /* GeoIPMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20116451BCD74C60039017D /* GeoIPMapViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E20116461BCD74C60039017D /* GeoIPDetailMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20116451BCD74C60039017D /* GeoIPDetailMapViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E20116481BCD756B0039017D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20116471BCD756B0039017D /* MapKit.framework */; };
 		E201164D1BCD76670039017D /* GeoIPMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E201164C1BCD76670039017D /* GeoIPMapAnnotation.m */; settings = {ASSET_TAGS = (); }; };
+		E24090291BCDA78300564287 /* GeoIPListMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E24090281BCDA78300564287 /* GeoIPListMapViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E28F05B51BCE83DE00A911F1 /* MapHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E28F05B41BCE83DE00A911F1 /* MapHelper.m */; settings = {ASSET_TAGS = (); }; };
+		E28F05B81BCE913200A911F1 /* RotatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E28F05B71BCE913200A911F1 /* RotatingViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E28F05BB1BCE91A900A911F1 /* RotatingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E28F05BA1BCE91A900A911F1 /* RotatingTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		E28F05BF1BCE923500A911F1 /* RotatingNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E28F05BE1BCE923500A911F1 /* RotatingNavigationController.m */; settings = {ASSET_TAGS = (); }; };
+		E28F05C21BCE926400A911F1 /* RotatingTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E28F05C11BCE926400A911F1 /* RotatingTabBarController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,11 +102,24 @@
 		E201163E1BCD540F0039017D /* GeoIPAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoIPAdapter.m; sourceTree = "<group>"; };
 		E20116411BCD6C740039017D /* GeoIPCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoIPCell.h; sourceTree = "<group>"; };
 		E20116421BCD6C740039017D /* GeoIPCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoIPCell.m; sourceTree = "<group>"; };
-		E20116441BCD74C60039017D /* GeoIPMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoIPMapViewController.h; sourceTree = "<group>"; };
-		E20116451BCD74C60039017D /* GeoIPMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoIPMapViewController.m; sourceTree = "<group>"; };
+		E20116441BCD74C60039017D /* GeoIPDetailMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoIPDetailMapViewController.h; sourceTree = "<group>"; };
+		E20116451BCD74C60039017D /* GeoIPDetailMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoIPDetailMapViewController.m; sourceTree = "<group>"; };
 		E20116471BCD756B0039017D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E201164B1BCD76670039017D /* GeoIPMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoIPMapAnnotation.h; sourceTree = "<group>"; };
 		E201164C1BCD76670039017D /* GeoIPMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoIPMapAnnotation.m; sourceTree = "<group>"; };
+		E24090271BCDA78300564287 /* GeoIPListMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoIPListMapViewController.h; sourceTree = "<group>"; };
+		E24090281BCDA78300564287 /* GeoIPListMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoIPListMapViewController.m; sourceTree = "<group>"; };
+		E28F05B21BCE4EA400A911F1 /* GeoIPModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "GeoIPModel 2.xcdatamodel"; sourceTree = "<group>"; };
+		E28F05B31BCE83DE00A911F1 /* MapHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapHelper.h; sourceTree = "<group>"; };
+		E28F05B41BCE83DE00A911F1 /* MapHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapHelper.m; sourceTree = "<group>"; };
+		E28F05B61BCE913200A911F1 /* RotatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotatingViewController.h; sourceTree = "<group>"; };
+		E28F05B71BCE913200A911F1 /* RotatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatingViewController.m; sourceTree = "<group>"; };
+		E28F05B91BCE91A900A911F1 /* RotatingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotatingTableViewController.h; sourceTree = "<group>"; };
+		E28F05BA1BCE91A900A911F1 /* RotatingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatingTableViewController.m; sourceTree = "<group>"; };
+		E28F05BD1BCE923500A911F1 /* RotatingNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotatingNavigationController.h; sourceTree = "<group>"; };
+		E28F05BE1BCE923500A911F1 /* RotatingNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatingNavigationController.m; sourceTree = "<group>"; };
+		E28F05C01BCE926400A911F1 /* RotatingTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotatingTabBarController.h; sourceTree = "<group>"; };
+		E28F05C11BCE926400A911F1 /* RotatingTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatingTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,12 +163,12 @@
 		E20115D81BCD2C730039017D /* GeoIP */ = {
 			isa = PBXGroup;
 			children = (
+				E20115DC1BCD2C730039017D /* AppDelegate.h */,
+				E20115DD1BCD2C730039017D /* AppDelegate.m */,
 				E20116401BCD6C260039017D /* View */,
 				E20116381BCD52F90039017D /* Controller */,
 				E201160D1BCD32700039017D /* Model */,
 				E20115FE1BCD2C7D0039017D /* Utils */,
-				E20115DC1BCD2C730039017D /* AppDelegate.h */,
-				E20115DD1BCD2C730039017D /* AppDelegate.m */,
 				E20115E51BCD2C730039017D /* Assets.xcassets */,
 				E20115D91BCD2C730039017D /* Supporting Files */,
 			);
@@ -177,6 +196,8 @@
 		E20115FE1BCD2C7D0039017D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E28F05B31BCE83DE00A911F1 /* MapHelper.h */,
+				E28F05B41BCE83DE00A911F1 /* MapHelper.m */,
 				E20116351BCD4D590039017D /* FileUtils.h */,
 				E20116361BCD4D590039017D /* FileUtils.m */,
 				E201162C1BCD4D160039017D /* CoreDataStack.h */,
@@ -204,7 +225,6 @@
 		E201160D1BCD32700039017D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E201164A1BCD76390039017D /* MapKit */,
 				E201163C1BCD53EA0039017D /* Adapters */,
 				E20116241BCD437A0039017D /* Mapper */,
 				E201161D1BCD38C00039017D /* _GeoIP.h */,
@@ -239,10 +259,13 @@
 		E20116381BCD52F90039017D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E28F05BC1BCE920600A911F1 /* Rotating */,
 				E20116391BCD53250039017D /* GeoIPsViewController.h */,
 				E201163A1BCD53250039017D /* GeoIPsViewController.m */,
-				E20116441BCD74C60039017D /* GeoIPMapViewController.h */,
-				E20116451BCD74C60039017D /* GeoIPMapViewController.m */,
+				E20116441BCD74C60039017D /* GeoIPDetailMapViewController.h */,
+				E20116451BCD74C60039017D /* GeoIPDetailMapViewController.m */,
+				E24090271BCDA78300564287 /* GeoIPListMapViewController.h */,
+				E24090281BCDA78300564287 /* GeoIPListMapViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -263,6 +286,8 @@
 				E20115E71BCD2C730039017D /* LaunchScreen.storyboard */,
 				E20116411BCD6C740039017D /* GeoIPCell.h */,
 				E20116421BCD6C740039017D /* GeoIPCell.m */,
+				E201164B1BCD76670039017D /* GeoIPMapAnnotation.h */,
+				E201164C1BCD76670039017D /* GeoIPMapAnnotation.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -275,13 +300,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E201164A1BCD76390039017D /* MapKit */ = {
+		E28F05BC1BCE920600A911F1 /* Rotating */ = {
 			isa = PBXGroup;
 			children = (
-				E201164B1BCD76670039017D /* GeoIPMapAnnotation.h */,
-				E201164C1BCD76670039017D /* GeoIPMapAnnotation.m */,
+				E28F05B61BCE913200A911F1 /* RotatingViewController.h */,
+				E28F05B71BCE913200A911F1 /* RotatingViewController.m */,
+				E28F05B91BCE91A900A911F1 /* RotatingTableViewController.h */,
+				E28F05BA1BCE91A900A911F1 /* RotatingTableViewController.m */,
+				E28F05BD1BCE923500A911F1 /* RotatingNavigationController.h */,
+				E28F05BE1BCE923500A911F1 /* RotatingNavigationController.m */,
+				E28F05C01BCE926400A911F1 /* RotatingTabBarController.h */,
+				E28F05C11BCE926400A911F1 /* RotatingTabBarController.m */,
 			);
-			name = MapKit;
+			name = Rotating;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,12 +449,18 @@
 				E20116091BCD32370039017D /* GeoIPJSONMapper.m in Sources */,
 				E201163B1BCD53250039017D /* GeoIPsViewController.m in Sources */,
 				E20116171BCD33770039017D /* GeoIPModel.xcdatamodeld in Sources */,
+				E28F05BB1BCE91A900A911F1 /* RotatingTableViewController.m in Sources */,
 				E20116371BCD4D590039017D /* FileUtils.m in Sources */,
+				E28F05BF1BCE923500A911F1 /* RotatingNavigationController.m in Sources */,
 				E20116431BCD6C740039017D /* GeoIPCell.m in Sources */,
+				E28F05C21BCE926400A911F1 /* RotatingTabBarController.m in Sources */,
+				E28F05B81BCE913200A911F1 /* RotatingViewController.m in Sources */,
 				E20115DE1BCD2C730039017D /* AppDelegate.m in Sources */,
-				E20116461BCD74C60039017D /* GeoIPMapViewController.m in Sources */,
+				E24090291BCDA78300564287 /* GeoIPListMapViewController.m in Sources */,
+				E20116461BCD74C60039017D /* GeoIPDetailMapViewController.m in Sources */,
 				E20116211BCD38C00039017D /* _GeoIP.m in Sources */,
 				E201164D1BCD76670039017D /* GeoIPMapAnnotation.m in Sources */,
+				E28F05B51BCE83DE00A911F1 /* MapHelper.m in Sources */,
 				E20115DB1BCD2C730039017D /* main.m in Sources */,
 				E201163F1BCD540F0039017D /* GeoIPAdapter.m in Sources */,
 				E20116321BCD4D160039017D /* CoreDataStack.m in Sources */,
@@ -627,6 +664,7 @@
 				E20115FA1BCD2C730039017D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E20115FB1BCD2C730039017D /* Build configuration list for PBXNativeTarget "GeoIPTests" */ = {
 			isa = XCConfigurationList;
@@ -635,6 +673,7 @@
 				E20115FD1BCD2C730039017D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E20116191BCD35780039017D /* Build configuration list for PBXAggregateTarget "mogenerator" */ = {
 			isa = XCConfigurationList;
@@ -643,6 +682,7 @@
 				E201161B1BCD35780039017D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -650,6 +690,7 @@
 		E20116151BCD33770039017D /* GeoIPModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				E28F05B21BCE4EA400A911F1 /* GeoIPModel 2.xcdatamodel */,
 				E20116161BCD33770039017D /* GeoIPModel.xcdatamodel */,
 			);
 			currentVersion = E20116161BCD33770039017D /* GeoIPModel.xcdatamodel */;

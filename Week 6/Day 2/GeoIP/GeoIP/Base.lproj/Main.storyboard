@@ -74,28 +74,10 @@
             </objects>
             <point key="canvasLocation" x="2184" y="310"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="JUr-2z-n9k">
-            <objects>
-                <navigationController id="gOG-DS-e4p" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ffu-4y-mzI"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cqO-gb-f3N">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="CjH-Wp-wN4" kind="relationship" relationship="rootViewController" id="Cwb-5Y-HQz"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xlD-lX-Gl5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1260" y="1141"/>
-        </scene>
-        <!--GeoIP Map View Controller-->
+        <!--GeoIP Detail Map View Controller-->
         <scene sceneID="eKH-vZ-JsT">
             <objects>
-                <viewController id="CjH-Wp-wN4" customClass="GeoIPMapViewController" sceneMemberID="viewController">
+                <viewController id="CjH-Wp-wN4" customClass="GeoIPDetailMapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4BM-II-jKo"/>
                         <viewControllerLayoutGuide type="bottom" id="jJS-we-Z03"/>
@@ -105,7 +87,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eJi-am-s7O">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <animations/>
                             </mapView>
                         </subviews>
@@ -133,10 +115,46 @@
             </objects>
             <point key="canvasLocation" x="2178" y="1102"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Item-->
+        <scene sceneID="qcv-bT-yju">
+            <objects>
+                <viewController id="5fr-Tl-17R" customClass="GeoIPListMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r2j-0w-yfz"/>
+                        <viewControllerLayoutGuide type="bottom" id="x39-L5-XkK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qGe-AY-cj6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fFc-Mj-ZBy">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </mapView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fFc-Mj-ZBy" firstAttribute="leading" secondItem="qGe-AY-cj6" secondAttribute="leading" id="7G1-uG-eeE"/>
+                            <constraint firstAttribute="trailing" secondItem="fFc-Mj-ZBy" secondAttribute="trailing" id="9MJ-7y-QeF"/>
+                            <constraint firstAttribute="bottom" secondItem="fFc-Mj-ZBy" secondAttribute="bottom" id="BX5-UI-Caw"/>
+                            <constraint firstItem="fFc-Mj-ZBy" firstAttribute="top" secondItem="qGe-AY-cj6" secondAttribute="top" id="qUx-8A-g8V"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="mwP-W3-tMa"/>
+                    <navigationItem key="navigationItem" id="FLL-jw-Cz4"/>
+                    <connections>
+                        <outlet property="map" destination="fFc-Mj-ZBy" id="vhb-6k-JgD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DeF-4b-RNm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1372" y="1102"/>
+        </scene>
+        <!--Rotating Tab Bar Controller-->
         <scene sceneID="cEK-X7-ieO">
             <objects>
-                <tabBarController id="Xpf-of-mR1" sceneMemberID="viewController">
+                <tabBarController id="Xpf-of-mR1" customClass="RotatingTabBarController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="ZNf-Er-Rir">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -145,7 +163,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="CjA-dh-Dwz" kind="relationship" relationship="viewControllers" id="bkx-jM-vhe"/>
-                        <segue destination="gOG-DS-e4p" kind="relationship" relationship="viewControllers" id="hDn-Wa-EmX"/>
+                        <segue destination="5fr-Tl-17R" kind="relationship" relationship="viewControllers" id="gBN-hO-NPF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEq-hN-XUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -155,7 +173,7 @@
         <!--Item-->
         <scene sceneID="uWc-kf-eeg">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CjA-dh-Dwz" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CjA-dh-Dwz" customClass="RotatingNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="9ia-gv-ssu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RqQ-AW-H2t">
@@ -173,7 +191,4 @@
             <point key="canvasLocation" x="1372" y="310"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Cwb-5Y-HQz"/>
-    </inferredMetricsTieBreakers>
 </document>

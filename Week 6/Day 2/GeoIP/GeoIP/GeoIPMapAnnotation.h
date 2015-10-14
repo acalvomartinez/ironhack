@@ -12,7 +12,10 @@
 @interface GeoIPMapAnnotation : NSObject <MKAnnotation>
 
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+@property (nonatomic, copy, readonly) NSString *title;
 
-- (instancetype)initWithCoordinate:(CLLocationCoordinate2D)coordinate;
+- (instancetype)initWithCoordinate:(CLLocationCoordinate2D)coordinate andTitle:(NSString *)title;
+
+- (NSString *)title;
 
 @end

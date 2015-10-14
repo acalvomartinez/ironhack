@@ -37,14 +37,11 @@
     if (_fetchedResultsController != nil) {
         return _fetchedResultsController;
     }
-    
     NSFetchRequest *fetchRequest = [GeoIP fetchRequestWithFields:@[@"country",@"ip"]
                                                        andOrders:@[@YES,@NO]
                                               andDistinctResults:NO];
-    
     _fetchedResultsController = [self fetchedResultsControllerWithFetchRequest:fetchRequest
                                                         withSectionNameKeyPath:nil];
-    
     
     return _fetchedResultsController;
 }
