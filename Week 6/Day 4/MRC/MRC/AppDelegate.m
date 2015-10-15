@@ -18,18 +18,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     NSArray *array = [[NSArray alloc] init];
-    [array release];
     
     NSArray *second = [self newArray];
-    [second release];
     
     NSArray *third = [self newArrayV2];
-    [third release];
     
     NSArray *fourth = [self arrayV3];
-    [fourth retain];
     
-    [fourth release];
     
     
     return YES;
@@ -37,7 +32,6 @@
 
 - (NSArray *)newArray {
     NSArray *array = @[@1, @2, @3];
-    [array retain];
     
     return array;
 }
@@ -52,7 +46,7 @@
 - (NSArray *)arrayV3 {
     NSArray *array = [[NSArray alloc] initWithObjects:@1, @2, @3, nil];
 
-    return [array autorelease];
+    return array;
 }
 
 @end
