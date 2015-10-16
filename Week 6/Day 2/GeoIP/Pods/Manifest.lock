@@ -1,0 +1,16 @@
+PODS:
+  - Kiwi (2.4.0)
+  - ObjectiveSugar (0.9)
+  - OCMock (2.0.1)
+
+DEPENDENCIES:
+  - Kiwi (~> 2.4.0)
+  - ObjectiveSugar (~> 0.5)
+  - OCMock (~> 2.0.1)
+
+SPEC CHECKSUMS:
+  Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
+  ObjectiveSugar: 18409ee1ec578dd8598b55e5008f393488dca5cf
+  OCMock: 7a839b55abfb78e8ec3bf6eaa3cdcc567ac71d2a
+
+COCOAPODS: 0.39.0

@@ -1,0 +1,14 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '9.0'
+inhibit_all_warnings!
+
+xcodeproj 'GeoIP'
+
+pod 'ObjectiveSugar', '~> 0.5'
+
+target :GeoIPTests do
+  pod 'OCMock', '~> 2.0.1'
+  pod 'Kiwi', '~> 2.4.0'
+end
+

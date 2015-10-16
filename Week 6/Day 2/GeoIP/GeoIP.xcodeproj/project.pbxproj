@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		20FAFC799495BEFD5E00B05F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E018BE09A83CD9BB959AE8 /* libPods.a */; };
+		36A1010C27D078064C0ACBDF /* libPods-GeoIPTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25E59C0CCBB518FF7416E62E /* libPods-GeoIPTests.a */; };
 		E20115DB1BCD2C730039017D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E20115DA1BCD2C730039017D /* main.m */; };
 		E20115DE1BCD2C730039017D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E20115DD1BCD2C730039017D /* AppDelegate.m */; };
 		E20115E41BCD2C730039017D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E20115E21BCD2C730039017D /* Main.storyboard */; };
@@ -44,6 +46,8 @@
 		E20116461BCD74C60039017D /* GeoIPDetailMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20116451BCD74C60039017D /* GeoIPDetailMapViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E20116481BCD756B0039017D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20116471BCD756B0039017D /* MapKit.framework */; };
 		E201164D1BCD76670039017D /* GeoIPMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E201164C1BCD76670039017D /* GeoIPMapAnnotation.m */; settings = {ASSET_TAGS = (); }; };
+		E219A2DD1BD13D780050C863 /* KiwiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E219A2DC1BD13D780050C863 /* KiwiTests.m */; settings = {ASSET_TAGS = (); }; };
+		E219A2DF1BD13FF60050C863 /* IP4GeneratorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E219A2DE1BD13FF60050C863 /* IP4GeneratorSpec.m */; settings = {ASSET_TAGS = (); }; };
 		E24090291BCDA78300564287 /* GeoIPListMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E24090281BCDA78300564287 /* GeoIPListMapViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E28F05B51BCE83DE00A911F1 /* MapHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E28F05B41BCE83DE00A911F1 /* MapHelper.m */; settings = {ASSET_TAGS = (); }; };
 		E28F05B81BCE913200A911F1 /* RotatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E28F05B71BCE913200A911F1 /* RotatingViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -63,6 +67,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25E59C0CCBB518FF7416E62E /* libPods-GeoIPTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GeoIPTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B9B6E9B69332F6CA3FD5556 /* Pods-GeoIPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoIPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoIPTests/Pods-GeoIPTests.debug.xcconfig"; sourceTree = "<group>"; };
+		97E018BE09A83CD9BB959AE8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE93CA58E7C2BDF365AF0D4A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B35950FEEFCFF7186A076583 /* Pods-GeoIPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoIPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoIPTests/Pods-GeoIPTests.release.xcconfig"; sourceTree = "<group>"; };
 		E20115D61BCD2C730039017D /* GeoIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoIP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E20115DA1BCD2C730039017D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E20115DC1BCD2C730039017D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -107,6 +116,8 @@
 		E20116471BCD756B0039017D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E201164B1BCD76670039017D /* GeoIPMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoIPMapAnnotation.h; sourceTree = "<group>"; };
 		E201164C1BCD76670039017D /* GeoIPMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoIPMapAnnotation.m; sourceTree = "<group>"; };
+		E219A2DC1BD13D780050C863 /* KiwiTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KiwiTests.m; sourceTree = "<group>"; };
+		E219A2DE1BD13FF60050C863 /* IP4GeneratorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IP4GeneratorSpec.m; sourceTree = "<group>"; };
 		E23616831BD0DB0400254A51 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		E24090271BCDA78300564287 /* GeoIPListMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoIPListMapViewController.h; sourceTree = "<group>"; };
 		E24090281BCDA78300564287 /* GeoIPListMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoIPListMapViewController.m; sourceTree = "<group>"; };
@@ -121,6 +132,7 @@
 		E28F05BE1BCE923500A911F1 /* RotatingNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatingNavigationController.m; sourceTree = "<group>"; };
 		E28F05C01BCE926400A911F1 /* RotatingTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotatingTabBarController.h; sourceTree = "<group>"; };
 		E28F05C11BCE926400A911F1 /* RotatingTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotatingTabBarController.m; sourceTree = "<group>"; };
+		F0A3BBE44350818760A3915D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E20116481BCD756B0039017D /* MapKit.framework in Frameworks */,
+				20FAFC799495BEFD5E00B05F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,12 +149,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36A1010C27D078064C0ACBDF /* libPods-GeoIPTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		461F82A7B5134B00206BCFF4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE93CA58E7C2BDF365AF0D4A /* Pods.debug.xcconfig */,
+				F0A3BBE44350818760A3915D /* Pods.release.xcconfig */,
+				8B9B6E9B69332F6CA3FD5556 /* Pods-GeoIPTests.debug.xcconfig */,
+				B35950FEEFCFF7186A076583 /* Pods-GeoIPTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E20115CD1BCD2C730039017D = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +175,7 @@
 				E20115F21BCD2C730039017D /* GeoIPTests */,
 				E20115D71BCD2C730039017D /* Products */,
 				E23616831BD0DB0400254A51 /* Readme.md */,
+				461F82A7B5134B00206BCFF4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,6 +217,8 @@
 			children = (
 				E20116041BCD2FC20039017D /* IP4GeneratorTests.m */,
 				E20115F51BCD2C730039017D /* Info.plist */,
+				E219A2DC1BD13D780050C863 /* KiwiTests.m */,
+				E219A2DE1BD13FF60050C863 /* IP4GeneratorSpec.m */,
 			);
 			path = GeoIPTests;
 			sourceTree = "<group>";
@@ -298,6 +326,8 @@
 			isa = PBXGroup;
 			children = (
 				E20116471BCD756B0039017D /* MapKit.framework */,
+				97E018BE09A83CD9BB959AE8 /* libPods.a */,
+				25E59C0CCBB518FF7416E62E /* libPods-GeoIPTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -324,9 +354,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E20115F81BCD2C730039017D /* Build configuration list for PBXNativeTarget "GeoIP" */;
 			buildPhases = (
+				5D360CECCDD769CA31484B36 /* Check Pods Manifest.lock */,
 				E20115D21BCD2C730039017D /* Sources */,
 				E20115D31BCD2C730039017D /* Frameworks */,
 				E20115D41BCD2C730039017D /* Resources */,
+				47A35D021540E6A22976D2D9 /* Embed Pods Frameworks */,
+				C8FEA8A06574778F83492682 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -341,9 +374,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E20115FB1BCD2C730039017D /* Build configuration list for PBXNativeTarget "GeoIPTests" */;
 			buildPhases = (
+				D53DEA88612B3AAD15AD1F89 /* Check Pods Manifest.lock */,
 				E20115EB1BCD2C730039017D /* Sources */,
 				E20115EC1BCD2C730039017D /* Frameworks */,
 				E20115ED1BCD2C730039017D /* Resources */,
+				9B832F71E651B8E15E5C83FA /* Embed Pods Frameworks */,
+				9C702764BEDD73882CE4066D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -422,6 +458,96 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		47A35D021540E6A22976D2D9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D360CECCDD769CA31484B36 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9B832F71E651B8E15E5C83FA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoIPTests/Pods-GeoIPTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C702764BEDD73882CE4066D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoIPTests/Pods-GeoIPTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8FEA8A06574778F83492682 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D53DEA88612B3AAD15AD1F89 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		E201161C1BCD35980039017D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 12;
@@ -474,6 +600,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E20116051BCD2FC20039017D /* IP4GeneratorTests.m in Sources */,
+				E219A2DF1BD13FF60050C863 /* IP4GeneratorSpec.m in Sources */,
+				E219A2DD1BD13D780050C863 /* KiwiTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +719,7 @@
 		};
 		E20115F91BCD2C730039017D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE93CA58E7C2BDF365AF0D4A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "GeoIP/Supporting Files/Info.plist";
@@ -602,6 +731,7 @@
 		};
 		E20115FA1BCD2C730039017D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0A3BBE44350818760A3915D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "GeoIP/Supporting Files/Info.plist";
@@ -613,6 +743,7 @@
 		};
 		E20115FC1BCD2C730039017D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B9B6E9B69332F6CA3FD5556 /* Pods-GeoIPTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = GeoIPTests/Info.plist;
@@ -625,6 +756,7 @@
 		};
 		E20115FD1BCD2C730039017D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B35950FEEFCFF7186A076583 /* Pods-GeoIPTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = GeoIPTests/Info.plist;
