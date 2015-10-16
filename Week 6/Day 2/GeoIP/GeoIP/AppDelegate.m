@@ -25,11 +25,17 @@
     self.cds = [[CoreDataStack alloc] initWithDatabaseFilename:@"geoip.sqlite"
                                             andPersistenceType:NSSQLiteStoreType];
     
+    while (!self.cds.managedObjectContext);
+    while (!self.cds.childContext);
+
+    
     GeoIPsViewController *listViewController= [self listViewController];
-    listViewController.managedObjectContext = self.cds.managedObjectContext;
+    listViewController.parentContext = self.cds.managedObjectContext;
+    listViewController.childContext = self.cds.childContext;
 
     GeoIPListMapViewController *mapListViewController = [self mapLisViewController];
-    mapListViewController.managedObjectContext = self.cds.managedObjectContext;
+    mapListViewController.parentContext = self.cds.managedObjectContext;
+    mapListViewController.childContext = self.cds.childContext;
     
     return YES;
 }

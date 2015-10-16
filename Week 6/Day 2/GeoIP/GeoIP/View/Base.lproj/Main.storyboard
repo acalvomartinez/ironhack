@@ -74,8 +74,7 @@
                                 <action selector="removeAllPressed:" destination="G1r-VU-faa" id="yUE-Hv-uUW"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="bj4-hq-TMx">
-                            <color key="tintColor" red="0.42450571060180664" green="0.86658269166946411" blue="0.17154088616371155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bj4-hq-TMx">
                             <connections>
                                 <action selector="megaEvilInsert:" destination="G1r-VU-faa" id="rfw-pf-LFj"/>
                             </connections>

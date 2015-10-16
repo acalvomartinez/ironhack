@@ -12,6 +12,8 @@
 @interface CoreDataStack : NSObject
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (readonly, strong, nonatomic) NSManagedObjectContext *childContext;
+
 
 - (instancetype)initWithDatabaseFilename:(NSString *)filename
                       andPersistenceType:(NSString *)persistenceType NS_DESIGNATED_INITIALIZER;

@@ -58,7 +58,7 @@ typedef void(^GeoIPsMapErrorBlock)(NSError *);
     
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:[GeoIP entityName]];
     NSError *error;
-    NSArray *geoIPs = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    NSArray *geoIPs = [self.childContext executeFetchRequest:fetchRequest error:&error];
     
     if (error) {
         errorBlock == nil ? : errorBlock(error);

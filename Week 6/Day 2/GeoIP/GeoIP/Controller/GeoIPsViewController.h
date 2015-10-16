@@ -14,6 +14,7 @@
 
 @interface GeoIPsViewController : RotatingTableViewController
 
-@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NSManagedObjectContext *parentContext;
+@property (nonatomic, strong) NSManagedObjectContext *childContext;
 
 @end

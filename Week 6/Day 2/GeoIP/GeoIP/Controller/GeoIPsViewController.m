@@ -24,7 +24,6 @@
 @interface GeoIPsViewController () <GeoIPAdapterDelegate>
 
 @property (nonatomic, strong) GeoIPAdapter *geoIPAdapter;
-@property (nonatomic, strong) NSManagedObjectContext *backgroundContext;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *trashButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *addButton;
 
@@ -34,8 +33,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
 
-    NSAssert(self.managedObjectContext != nil, @"ViewControllers needs a managedObjectContext!");
+- (void)viewWillAppear:(BOOL)animated {
     
     self.title = @"List";
     
@@ -43,18 +43,11 @@
     [self.tableView addSubview:self.refreshControl];
     [self.refreshControl addTarget:self action:@selector(refreshButtonPressed:) forControlEvents:UIControlEventValueChanged];
     
-    self.geoIPAdapter = [[GeoIPAdapter alloc] initWithManagedObjectContext:self.managedObjectContext
-                                                               andTableView:self.tableView];
+    [super viewWillAppear:animated];
+    
+    self.geoIPAdapter = [[GeoIPAdapter alloc] initWithManagedObjectContext:self.parentContext
+                                                              andTableView:self.tableView];
     self.geoIPAdapter.delegate = self;
-    
-    self.trashButton.enabled = NO;
-    self.addButton.enabled = NO;
-    
-    __weak typeof(self) weakSelf = self;
-    [self createContextInBackgroundWithCompletionBlock:^{
-        weakSelf.trashButton.enabled = YES;
-        weakSelf.addButton.enabled = YES;
-    }];
 }
 
 #pragma mark - Table view data source
@@ -90,7 +83,7 @@
                                                onCompletion:^(NSArray<GeoIPJSON *> *geoIPJSONs) {
                                                    dispatch_async(dispatch_get_main_queue(), ^{
                                                        [GeoIPJSONMapper mapGeoIPJSONs:geoIPJSONs
-                                                                            inContext:weakSelf.managedObjectContext];
+                                                                            inContext:weakSelf.childContext];
                                                        
                                                        [weakSelf.tableView reloadData];
                                                        [weakSelf.refreshControl endRefreshing];
@@ -108,14 +101,7 @@
 }
 
 - (IBAction)megaEvilInsert:(id)sender {
-    __weak typeof(self) weakSelf = self;
-    [self.backgroundContext performBlockAndWait:^{
-        [weakSelf megaInsert:weakSelf.backgroundContext];
-    }];
-}
-
-- (void)somethingSaved:(NSNotification *)notificationWithContext {
-    [self.managedObjectContext mergeChangesFromContextDidSaveNotification:notificationWithContext];
+    [self megaInsert:self.childContext];
 }
 
 - (void)megaInsert:(NSManagedObjectContext *)context {
@@ -130,32 +116,12 @@
     if (error) {
         NSLog(@"😱");
     }
-}
-
-- (void)createContextInBackgroundWithCompletionBlock:(void(^)(void))completion {
-    __weak typeof(self) weakSelf = self;
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        NSAssert([NSThread currentThread] != [NSThread mainThread], @"OMG!");
-        
-        weakSelf.backgroundContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
-        weakSelf.backgroundContext.persistentStoreCoordinator = weakSelf.managedObjectContext.persistentStoreCoordinator;
-        
-        [[NSNotificationCenter defaultCenter] addObserver:weakSelf
-                                                 selector:@selector(somethingSaved:)
-                                                     name:NSManagedObjectContextDidSaveNotification
-                                                   object:weakSelf.backgroundContext];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            completion == nil ? : completion();
-        });
-    });
+    
+    [self.parentContext save:nil];
 }
 
 - (IBAction)removeAllPressed:(id)sender {
-    __weak typeof(self) weakSelf = self;
-    [self.backgroundContext performBlockAndWait:^{
-        [weakSelf removeAllGeoIPFromContext:weakSelf.backgroundContext];
-    }];
+    [self removeAllGeoIPFromContext:self.childContext];
 }
 
 - (void)removeAllGeoIPFromContext:(NSManagedObjectContext *)context {
@@ -175,6 +141,7 @@
     if (error) {
         NSLog(@"😱");
     }
+    [self.parentContext save:nil]; 
 }
 
 

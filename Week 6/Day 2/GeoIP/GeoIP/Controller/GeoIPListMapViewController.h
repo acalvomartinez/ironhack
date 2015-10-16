@@ -14,6 +14,7 @@
 
 @interface GeoIPListMapViewController : RotatingViewController
 
-@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NSManagedObjectContext *parentContext;    // parent - BG
+@property (nonatomic, strong) NSManagedObjectContext *childContext;     // child - UI
 
 @end
