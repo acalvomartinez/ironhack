@@ -24,6 +24,9 @@
 @interface GeoIPsViewController () <GeoIPAdapterDelegate>
 
 @property (nonatomic, strong) GeoIPAdapter *geoIPAdapter;
+@property (nonatomic, strong) NSManagedObjectContext *backgroundContext;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *trashButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addButton;
 
 @end
 
@@ -43,6 +46,15 @@
     self.geoIPAdapter = [[GeoIPAdapter alloc] initWithManagedObjectContext:self.managedObjectContext
                                                                andTableView:self.tableView];
     self.geoIPAdapter.delegate = self;
+    
+    self.trashButton.enabled = NO;
+    self.addButton.enabled = NO;
+    
+    __weak typeof(self) weakSelf = self;
+    [self createContextInBackgroundWithCompletionBlock:^{
+        weakSelf.trashButton.enabled = YES;
+        weakSelf.addButton.enabled = YES;
+    }];
 }
 
 #pragma mark - Table view data source
@@ -95,10 +107,87 @@
     
 }
 
+- (IBAction)megaEvilInsert:(id)sender {
+    __weak typeof(self) weakSelf = self;
+    [self.backgroundContext performBlockAndWait:^{
+        [weakSelf megaInsert:weakSelf.backgroundContext];
+    }];
+}
+
+- (void)somethingSaved:(NSNotification *)notificationWithContext {
+    [self.managedObjectContext mergeChangesFromContextDidSaveNotification:notificationWithContext];
+}
+
+- (void)megaInsert:(NSManagedObjectContext *)context {
+    for (int i = 0; i < 1000; i++) {
+        GeoIP *geoIP = [GeoIP insertInManagedObjectContext:context];
+        geoIP.ip = [IP4Generator generateRandomIP4];
+        geoIP.country = [NSString stringWithFormat:@"Country %d",i];
+    }
+    
+    NSError *error;
+    [context save:&error];
+    if (error) {
+        NSLog(@"😱");
+    }
+}
+
+- (void)createContextInBackgroundWithCompletionBlock:(void(^)(void))completion {
+    __weak typeof(self) weakSelf = self;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        NSAssert([NSThread currentThread] != [NSThread mainThread], @"OMG!");
+        
+        weakSelf.backgroundContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+        weakSelf.backgroundContext.persistentStoreCoordinator = weakSelf.managedObjectContext.persistentStoreCoordinator;
+        
+        [[NSNotificationCenter defaultCenter] addObserver:weakSelf
+                                                 selector:@selector(somethingSaved:)
+                                                     name:NSManagedObjectContextDidSaveNotification
+                                                   object:weakSelf.backgroundContext];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completion == nil ? : completion();
+        });
+    });
+}
+
+- (IBAction)removeAllPressed:(id)sender {
+    __weak typeof(self) weakSelf = self;
+    [self.backgroundContext performBlockAndWait:^{
+        [weakSelf removeAllGeoIPFromContext:weakSelf.backgroundContext];
+    }];
+}
+
+- (void)removeAllGeoIPFromContext:(NSManagedObjectContext *)context {
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:[GeoIP entityName]];
+    NSError *error;
+    NSArray *geoIPs = [context executeFetchRequest:fetchRequest error:&error];
+    if (error) {
+        return;
+    }
+    
+    [geoIPs enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [context deleteObject:obj];
+    }];
+    
+    error = nil;
+    [context save:&error];
+    if (error) {
+        NSLog(@"😱");
+    }
+}
+
+
+
 #pragma mark - GeoIPAdapterDelegate
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath{
     GeoIP *geoIP = (GeoIP *)[self.geoIPAdapter objectAtIndexPath:indexPath];
+    
+    id <NSFetchedResultsSectionInfo> sectionInfo = [self.geoIPAdapter sections][indexPath.section];
+    CGFloat d = 1 - (CGFloat)(indexPath.row + 1) / (CGFloat)[sectionInfo numberOfObjects];
+    
+    cell.backgroundColor = [UIColor colorWithHue:d saturation:d brightness:d alpha:1];
     
     GeoIPCell *geoIPCell = (GeoIPCell *)cell;
     geoIPCell.geoIP = geoIP;

@@ -68,7 +68,23 @@
                             <outlet property="delegate" destination="G1r-VU-faa" id="x7t-BA-OrP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="bxk-7N-63T"/>
+                    <navigationItem key="navigationItem" id="bxk-7N-63T">
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="YWV-uQ-FUx">
+                            <connections>
+                                <action selector="removeAllPressed:" destination="G1r-VU-faa" id="yUE-Hv-uUW"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="bj4-hq-TMx">
+                            <color key="tintColor" red="0.42450571060180664" green="0.86658269166946411" blue="0.17154088616371155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="megaEvilInsert:" destination="G1r-VU-faa" id="rfw-pf-LFj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="bj4-hq-TMx" id="o7E-Zs-t9C"/>
+                        <outlet property="trashButton" destination="YWV-uQ-FUx" id="kcn-GA-rTm"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MvQ-JO-Ioh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
